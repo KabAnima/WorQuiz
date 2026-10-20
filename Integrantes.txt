@@ -1,5 +1,34 @@
 Francisco Nieto
+RF-M01-01 (Acceso anónimo sin registro)
+RF-M01-03 (Eliminación voluntaria de la sesión)
+RF-M03-04 (Ajuste del nivel de detalle)
+RF-M04-03 (Cuestionario de refuerzo al regresar)
+RF-M05-02 (Creación de listas de tareas)
+RF-M06-03 (Panel de analítica de concentración)
+
 Kevin Beltran
+RF-M02-01 (Carga de documentos PDF)
+RF-M02-02 (Organización y listado de documentos)
+RF-M02-03 (Eliminación de documentos)
+RF-M02-04 (Visualización previa del documento)
+RF-M03-01 (Extracción de texto del PDF)
+testeo y lanzamiento de la app
+
+
 Juan Carlos Arevalo 
+RF-M01-04 (Cambio de modo (Concentración / Estudio))
+RF-M03-02 (Generación de resumen automático)
+RF-M03-03 (Generación de cuestionarios)
+RF-M04-02 (Alerta sonora persistente)
+RF-M04-04  (Configuración de la intensidad de las alertas)
+RF-M05-01 (Desactivación de alertas y restricciones)
+
 Daniel Marin
+RF-M01-02 (Recuperación de sesión previa)
+RF-M04-01 (Detección de cambio de pestaña o abandono)
+RF-M05-03 (Visualización de resúmenes y cuestionarios en modo flexible)
+RF-M06-01 (Guardado automático del progreso)
+RF-M06-02  (Restauración del progreso al reingresar)
+RF-M06-04 (Exportación de datos de progreso)
+
 Ficha : 3532994

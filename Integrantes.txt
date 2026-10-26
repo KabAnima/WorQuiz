@@ -1,5 +1,5 @@
 Francisco Nieto
-RF-M01-01 (Acceso anónimo sin registro)
+RF-M01-01 (Acceso via usuario)
 RF-M01-03 (Eliminación voluntaria de la sesión)
 RF-M03-04 (Ajuste del nivel de detalle)
 RF-M04-03 (Cuestionario de refuerzo al regresar)

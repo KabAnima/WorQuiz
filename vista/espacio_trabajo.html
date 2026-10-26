@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary":"#783800","inverse-primary":"#ffb597","on-error-container":"#93000a","primary-container":"#a54310","outline":"#8a7269","primary":"#822f00","error":"#ba1a1a","inverse-surface":"#303039","surface-container-low":"#f5f2ff","surface":"#fbf8ff","surface-container-high":"#e9e7f3","on-background":"#1b1b24","on-primary-container":"#ffd4c4","on-secondary-fixed":"#1b1b1b","on-primary":"#ffffff","on-secondary":"#ffffff","surface-bright":"#fbf8ff","on-tertiary-fixed-variant":"#733500","tertiary-container":"#964f19","secondary-container":"#e2e2e2","primary-fixed-dim":"#ffb597","surface-variant":"#e3e1ed","on-tertiary-container":"#ffd5bd","secondary-fixed":"#e2e2e2","surface-container":"#efecf9","surface-container-highest":"#e3e1ed","on-surface-variant":"#57423a","on-tertiary":"#ffffff","tertiary-fixed-dim":"#ffb688","tertiary-fixed":"#ffdbc7","surface-tint":"#a1400c","surface-container-lowest":"#ffffff","outline-variant":"#dec0b6","surface-dim":"#dbd8e5","on-secondary-container":"#646464","on-primary-fixed":"#360f00","inverse-on-surface":"#f2effc","on-surface":"#1b1b24","background":"#fbf8ff","secondary":"#5e5e5e","on-primary-fixed-variant":"#7d2d00","on-tertiary-fixed":"#311300","primary-fixed":"#ffdbcd","on-error":"#ffffff","error-container":"#ffdad6","secondary-fixed-dim":"#c6c6c6","on-secondary-fixed-variant":"#474747"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1rem","space-xl":"2rem","space-lg":"1.5rem","margin":"1.5rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem"},fontFamily:{"headline-lg":["Climate Crisis"]},fontSize:{"headline-lg":["32px",{"lineHeight":"64px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-sans text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-4"><span class="text-base font-bold tracking-widest uppercase text-primary">Kanso Focus</span><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-xs tracking-mono font-mono text-on-surface-variant">#anon-8492</span></div><nav class="hidden lg:flex items-center gap-1 p-1 bg-surface-container-low rounded-xl" data-active-classes="bg-primary text-on-primary rounded-lg"><a class="px-4 py-1.5 text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="espacio-y-tareas" href="#">Espacio & Tareas</a><a class="px-4 py-1.5 text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="analitica-de-concentracion" href="#">Analítica de Concentración</a><a class="px-4 py-1.5 text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="cuestionario-de-retencion" href="#">Cuestionario de Retención</a></nav><div class="flex items-center gap-4"><div class="hidden sm:flex items-center gap-1.5 font-mono text-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span>42:18</span></div><a class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error text-xs font-semibold uppercase tracking-wider transition-colors" data-path="sesion-expirada" href="#">Purgar y Cerrar Sesión</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Status banner: Ephemeral & Zero-Storage -->
+<div class="w-full bg-surface-container-high px-6 py-2.5">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs">
+<div class="flex items-center gap-2 text-on-surface-variant font-mono">
+<span class="inline-flex h-2 w-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-semibold text-primary uppercase tracking-wider">Modo Anónimo Activo</span>
+<span class="hidden md:inline text-outline">•</span>
+<span class="hidden md:inline">Datos residentes exclusivamente en RAM volátil — sin cookies, local storage persistente ni telemetría de terceros.</span>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-mono">
+<span class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">memory</span>
+<span>RAM Usada: <strong class="text-on-surface font-semibold">14.8 MB</strong></span>
+</span>
+<span class="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">shield</span>
+<span>AES-GCM-256</span>
+</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto w-full px-6 lg:px-12 py-8">
+<!-- View Density Segmented Control -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-8">
+<div>
+<div class="text-[10px] uppercase font-mono tracking-widest text-primary font-semibold">Configuración de Perspectiva</div>
+<h1 class="text-2xl lg:text-3xl font-serif text-on-surface tracking-tight mt-0.5">Espacio de Trabajo & Enfoque Silencioso</h1>
+</div>
+<div class="flex flex-col items-end gap-1.5 w-full sm:w-auto">
+<div class="p-1 bg-surface-container rounded-xl flex items-center gap-1 shadow-sm w-full sm:w-auto" id="density-selector">
+<button class="density-btn flex-1 sm:flex-initial px-4 py-1.5 rounded-lg text-xs font-mono font-medium transition-all text-on-surface-variant hover:text-on-surface" data-density="compacto" type="button">Compacto</button>
+<button class="density-btn flex-1 sm:flex-initial px-4 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm" data-density="estandar" type="button">Estándar</button>
+<button class="density-btn flex-1 sm:flex-initial px-4 py-1.5 rounded-lg text-xs font-mono font-medium transition-all text-on-surface-variant hover:text-on-surface" data-density="exhaustivo" type="button">Exhaustivo</button>
+</div>
+<span class="text-[11px] text-on-surface-variant font-mono text-right" id="density-desc">Vista equilibrada: información contextual, métricas básicas y accesos directos de flujo.</span>
+</div>
+</div>
+<!-- Active Timer Card (Editorial Hero Spotlight) -->
+<div class="w-full bg-surface-container-lowest rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden mb-12">
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-tertiary/5 blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<!-- Timer Left: Current Task Meta -->
+<div class="lg:col-span-6 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-primary-fixed text-on-primary-fixed">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                EN FOCO ACTIVO
+              </span>
+<span class="text-xs font-mono text-on-surface-variant uppercase tracking-wider">Bloque 2 de 4</span>
+</div>
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif text-on-surface leading-tight tracking-tight mt-1">
+              Investigación sobre arquitecturas sin estado para microfrontends
+            </h2>
+<p class="text-sm text-on-surface-variant font-serif italic mt-3 leading-relaxed">
+              Mapeo de estrategias de aislamiento de estado en memoria local sin serialización secundaria ni almacenamiento persistente en storage DOM.
+            </p>
+</div>
+<!-- Retention trigger toggle -->
+<div class="mt-8 pt-6 bg-surface-container-low/70 rounded-2xl p-4 flex items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl mt-0.5">psychology_alt</span>
+<div>
+<div class="text-xs font-semibold text-on-surface font-mono">Cuestionario de refuerzo al reanudar</div>
+<div class="text-[11px] text-on-surface-variant leading-snug">Presentar 2 preguntas de recuperación activa tras pausas para consolidar memoria.</div>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" id="quiz-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-secondary-container peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-variant after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Timer Right: Circular Display & Actions -->
+<div class="lg:col-span-6 flex flex-col items-center justify-center">
+<div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center">
+<!-- Circular SVG Timer -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 240 240">
+<!-- Background circle -->
+<circle class="stroke-surface-container" cx="120" cy="120" fill="transparent" r="102" stroke-width="12"></circle>
+<!-- Progress circle (43% complete = ~366 offset out of 641) -->
+<circle class="stroke-primary transition-all duration-1000 ease-linear" cx="120" cy="120" fill="transparent" r="102" stroke-dasharray="640.88" stroke-dashoffset="366" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<!-- Center readout -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-xs uppercase font-mono tracking-widest text-on-surface-variant">Tiempo Restante</span>
+<span class="text-5xl sm:text-6xl font-mono font-bold tracking-tight text-on-surface my-1" id="timer-display">14:18</span>
+<span class="text-xs font-mono text-tertiary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                Ciclo Deep-Work
+              </span>
+</div>
+</div>
+<!-- Timer controls -->
+<div class="flex flex-wrap items-center justify-center gap-2 mt-6">
+<button class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-mono text-xs uppercase tracking-wider font-semibold shadow-md hover:opacity-95 transition-all" id="toggle-play-btn" type="button">
+<span class="material-symbols-outlined text-base" id="play-icon">pause</span>
+<span id="play-text">Pausar</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-surface-container-high text-primary hover:bg-surface-variant transition-colors font-mono text-xs uppercase tracking-wider font-semibold" type="button">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span>Completar</span>
+</button>
+<button class="px-3.5 py-3 rounded-xl bg-surface-container hover:bg-surface-variant text-on-surface-variant text-xs font-mono transition-colors" type="button">
+              Pausa Corta (5m)
+            </button>
+<button class="px-3.5 py-3 rounded-xl bg-surface-container hover:bg-surface-variant text-on-surface-variant text-xs font-mono transition-colors" type="button">
+              Pausa Larga (15m)
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid: Workspace & Tasks (Left 8 cols) + Secondary Widgets (Right 4 cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Primary Column: Fast Creation Form & Task Registry -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Fast Task Capture Form -->
+<div class="bg-surface-container-low rounded-2xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-mono uppercase tracking-wider text-primary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">add_task</span>
+              Captura Rápida de Tarea Efímera
+            </span>
+<span class="text-[11px] font-mono text-on-surface-variant">Asignación por bloques Pomodoro</span>
+</div>
+<form class="flex flex-col gap-4" id="new-task-form">
+<div>
+<input class="w-full bg-surface-container-lowest px-4 py-3 rounded-xl text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="task-title-input" placeholder="¿En qué vas a profundizar tu atención ahora?" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center">
+<!-- Pomodoro Effort Selector (1-4) -->
+<div class="sm:col-span-6 flex flex-col gap-1.5">
+<label class="text-[11px] font-mono text-on-surface-variant uppercase">Esfuerzo Estimado (Bloques de 25m):</label>
+<div class="flex items-center gap-2">
+<button class="effort-btn flex-1 py-1.5 rounded-lg bg-surface-container-lowest font-mono text-xs font-semibold text-on-surface-variant hover:text-primary transition-all" data-effort="1" type="button">1</button>
+<button class="effort-btn flex-1 py-1.5 rounded-lg bg-surface-container-lowest font-mono text-xs font-semibold text-on-surface-variant hover:text-primary transition-all" data-effort="2" type="button">2</button>
+<button class="effort-btn flex-1 py-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed font-mono text-xs font-bold transition-all shadow-sm" data-effort="3" type="button">3</button>
+<button class="effort-btn flex-1 py-1.5 rounded-lg bg-surface-container-lowest font-mono text-xs font-semibold text-on-surface-variant hover:text-primary transition-all" data-effort="4" type="button">4</button>
+</div>
+</div>
+<!-- Priority Selector -->
+<div class="sm:col-span-6 flex flex-col gap-1.5">
+<label class="text-[11px] font-mono text-on-surface-variant uppercase">Nivel de Prioridad Cognitiva:</label>
+<div class="flex items-center gap-2">
+<button class="prio-btn flex-1 py-1.5 rounded-lg bg-surface-container-lowest font-mono text-xs text-on-surface-variant hover:text-on-surface transition-all" data-prio="baja" type="button">Baja</button>
+<button class="prio-btn flex-1 py-1.5 rounded-lg bg-surface-container-lowest font-mono text-xs text-on-surface-variant hover:text-on-surface transition-all" data-prio="media" type="button">Media</button>
+<button class="prio-btn flex-1 py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-mono text-xs font-bold transition-all shadow-sm" data-prio="critica" type="button">Crítica</button>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2 text-xs font-mono text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-outline"></span>
+<span>Auto-expira con la ventana del navegador</span>
+</div>
+<button class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary text-xs font-mono font-semibold uppercase tracking-wider hover:opacity-95 transition-opacity shadow-sm flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[16px]">playlist_add</span>
+<span>Encolar Tarea</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Task List Section 1: En Foco Ahora -->
+<div>
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-serif text-lg font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">play_circle</span>
+              En Foco Ahora
+            </h3>
+<span class="text-xs font-mono text-on-surface-variant bg-surface-container px-2.5 py-0.5 rounded-full">Activa actualmente</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+<div class="space-y-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container text-xs font-mono text-on-surface-variant">#Arquitectura</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container text-xs font-mono text-on-surface-variant">#ZeroKnowledge</span>
+<span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-xs font-mono text-tertiary font-semibold">Prioridad Crítica</span>
+</div>
+<h4 class="text-lg font-serif font-bold text-on-surface">Investigación sobre arquitecturas sin estado para microfrontends</h4>
+<p class="text-xs text-on-surface-variant font-serif">Análisis de desacoplamiento de bus de eventos y técnicas de sandboxing en iframe sin retención persistente.</p>
+</div>
+<div class="text-right shrink-0 font-mono">
+<div class="text-xs text-on-surface-variant">Consumo RAM</div>
+<div class="text-sm font-bold text-primary">~3.2 MB</div>
+<div class="text-[11px] text-outline mt-1">2 de 4 bloques</div>
+</div>
+</div>
+<!-- Block tracker bar -->
+<div class="mt-4 pt-4 bg-surface-container-low rounded-xl p-3 flex items-center justify-between gap-4">
+<div class="flex items-center gap-1.5">
+<span class="text-[11px] font-mono uppercase text-on-surface-variant mr-1">Progreso Bloques:</span>
+<span class="w-6 h-6 rounded-md bg-primary text-on-primary flex items-center justify-center font-mono text-[11px] font-bold shadow-sm">1</span>
+<span class="w-6 h-6 rounded-md bg-primary-container text-on-primary flex items-center justify-center font-mono text-[11px] font-bold animate-pulse shadow-sm">2</span>
+<span class="w-6 h-6 rounded-md bg-surface-container text-on-surface-variant flex items-center justify-center font-mono text-[11px]">3</span>
+<span class="w-6 h-6 rounded-md bg-surface-container text-on-surface-variant flex items-center justify-center font-mono text-[11px]">4</span>
+</div>
+<span class="text-xs font-mono text-on-surface-variant">50% del objetivo</span>
+</div>
+</div>
+</div>
+<!-- Task List Section 2: Próximas en Cola -->
+<div>
+<div class="flex items-center justify-between mb-3">
+<h3 class="font-serif text-lg font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-xl">queue</span>
+              Próximas en Cola
+            </h3>
+<span class="text-xs font-mono text-on-surface-variant">3 tareas pendientes</span>
+</div>
+<div class="space-y-3">
+<!-- Queue Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-tertiary-fixed text-on-tertiary-fixed font-bold">ALTA</span>
+<span class="text-xs font-mono text-on-surface-variant">#Criptografía</span>
+<span class="text-xs font-mono text-outline">• 2 Bloques (50m)</span>
+</div>
+<h4 class="font-serif font-bold text-on-surface text-base">Refactorizar módulo criptográfico efímero WebCrypto</h4>
+<p class="text-xs text-on-surface-variant font-serif">Implementar rotación dinámica de vector de inicialización (IV) en cada operación asíncrona.</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-4 py-2 rounded-xl bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Iniciar bloque</span>
+</button>
+</div>
+</div>
+<!-- Queue Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-secondary-container text-on-secondary-container font-semibold">MEDIA</span>
+<span class="text-xs font-mono text-on-surface-variant">#Cognición</span>
+<span class="text-xs font-mono text-outline">• 1 Bloque (25m)</span>
+</div>
+<h4 class="font-serif font-bold text-on-surface text-base">Lectura de paper de fugas cognitivas</h4>
+<p class="text-xs text-on-surface-variant font-serif">Resumen sinóptico sobre atención fragmentada en transición de pestañas de navegación.</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-4 py-2 rounded-xl bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Iniciar bloque</span>
+</button>
+</div>
+</div>
+<!-- Queue Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-secondary-container text-on-secondary-container font-semibold">MEDIA</span>
+<span class="text-xs font-mono text-on-surface-variant">#DiseñoAPI</span>
+<span class="text-xs font-mono text-outline">• 3 Bloques (75m)</span>
+</div>
+<h4 class="font-serif font-bold text-on-surface text-base">Redacción de API Zero-Storage</h4>
+<p class="text-xs text-on-surface-variant font-serif">Definición de interfaces tipadas para consumidores de telemetría ciega.</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-4 py-2 rounded-xl bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Iniciar bloque</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Task List Section 3: Completadas en la Sesión (Collapsible) -->
+<div class="bg-surface-container-low rounded-2xl p-4 shadow-sm">
+<button class="w-full flex items-center justify-between text-left" id="completed-accordion-btn" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-xl">task_alt</span>
+<h3 class="font-serif text-base font-bold text-on-surface">Completadas en la Sesión</h3>
+<span class="bg-surface-container text-on-surface-variant text-xs font-mono px-2 py-0.5 rounded-full">2 finalizadas</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform transform rotate-0" id="accordion-chevron">expand_more</span>
+</button>
+<div class="hidden mt-4 space-y-2 pt-2" id="completed-tasks-list">
+<div class="bg-surface-container-lowest/80 p-3.5 rounded-xl flex items-center justify-between text-xs font-mono">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-sm">done</span>
+<span class="line-through text-on-surface-variant">Configuración de Content Security Policy (CSP) nivel estricto</span>
+</div>
+<span class="text-outline">1 bloque • Finalizado hace 35m</span>
+</div>
+<div class="bg-surface-container-lowest/80 p-3.5 rounded-xl flex items-center justify-between text-xs font-mono">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-outline text-sm">done</span>
+<span class="line-through text-on-surface-variant">Purga de dependencias NPM con tracking analítico</span>
+</div>
+<span class="text-outline">2 bloques • Finalizado hace 1h 12m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Contextual Auxiliary Widgets (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Ephemeral Metrics Card -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs uppercase font-mono tracking-wider text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">query_stats</span>
+              Métricas Efímeras
+            </span>
+<span class="text-[10px] font-mono text-outline uppercase">Sesión #8492</span>
+</div>
+<div class="grid grid-cols-2 gap-3 mb-4">
+<div class="bg-surface-container-low p-3.5 rounded-xl">
+<span class="text-[11px] font-mono text-on-surface-variant uppercase block">Bloques Listos</span>
+<div class="text-2xl font-serif font-bold text-on-surface mt-1">3 <span class="text-xs font-mono text-outline font-normal">/ 8 obj</span></div>
+</div>
+<div class="bg-surface-container-low p-3.5 rounded-xl">
+<span class="text-[11px] font-mono text-on-surface-variant uppercase block">Minutos Foco</span>
+<div class="text-2xl font-serif font-bold text-primary mt-1">75 <span class="text-xs font-mono text-outline font-normal">min</span></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between">
+<div>
+<span class="text-[11px] font-mono text-on-surface-variant uppercase block">Retención Proyectada</span>
+<span class="text-xs font-serif text-on-surface-variant mt-0.5 block">Basado en intervalos de foco</span>
+</div>
+<div class="text-right">
+<span class="text-xl font-mono font-bold text-tertiary">91.4%</span>
+<span class="text-[10px] font-mono text-outline block">± 2.1% err</span>
+</div>
+</div>
+<!-- Retention Mini Sparkline SVG -->
+<div class="mt-4 pt-3 flex items-center justify-between text-[11px] font-mono text-on-surface-variant">
+<span>Curva de olvido contenida:</span>
+<svg class="w-24 h-6 overflow-visible" viewbox="0 0 96 24">
+<path class="stroke-primary" d="M0,20 Q24,18 48,10 T96,6" fill="none" stroke-linecap="round" stroke-width="2.5"></path>
+<circle class="fill-primary" cx="96" cy="6" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Quick Mental Dump (Descarga Mental Rápida) -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs uppercase font-mono tracking-wider text-primary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+              Descarga Mental Rápida
+            </span>
+<span class="text-[10px] font-mono bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full">Sin distracciones</span>
+</div>
+<p class="text-xs text-on-surface-variant font-serif mb-3">
+            Captura pensamientos intrusivos o micro-ideas sin pausar tu bloque de atención activa.
+          </p>
+<form class="space-y-3" id="mental-dump-form">
+<textarea class="w-full bg-surface-container-low p-3 rounded-xl text-xs text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary resize-none" id="mental-dump-input" placeholder="Escribe un pensamiento intrusivo y presiona Intro para archivarlo..." rows="3"></textarea>
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-mono text-outline" id="dump-count">3 notas retenidas en buffer</span>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface text-xs font-mono font-medium transition-colors" type="submit">
+                Archivar en RAM
+              </button>
+</div>
+</form>
+<!-- List of quick captured thoughts -->
+<div class="mt-4 space-y-1.5" id="dump-list">
+<div class="p-2 bg-surface-container-low rounded-lg text-xs font-mono text-on-surface-variant flex items-center justify-between group">
+<span class="truncate pr-2">• Revisar si hay fuga de memoria en Web Workers</span>
+<button class="text-outline hover:text-error opacity-0 group-hover:opacity-100 transition-opacity" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+<div class="p-2 bg-surface-container-low rounded-lg text-xs font-mono text-on-surface-variant flex items-center justify-between group">
+<span class="truncate pr-2">• Comprar café de especialidad tostado claro</span>
+<button class="text-outline hover:text-error opacity-0 group-hover:opacity-100 transition-opacity" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button>
+</div>
+</div>
+</div>
+<!-- Session Ephemerality & Voluntary Destruction (Security Card) -->
+<div class="bg-surface-container-highest/60 rounded-3xl p-6 shadow-md relative overflow-hidden">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-xl">lock_reset</span>
+<h4 class="font-serif font-bold text-on-surface text-base">Eliminación Voluntaria de Sesión</h4>
+</div>
+<div class="space-y-3 mb-5">
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-on-surface-variant">Estado CryptoKey RAM:</span>
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                VIVA (No persistida)
+              </span>
+</div>
+<div class="flex items-center justify-between text-xs font-mono">
+<span class="text-on-surface-variant">Huella de rastreo local:</span>
+<span class="text-on-surface font-semibold">0 bytes</span>
+</div>
+<p class="text-xs text-on-surface-variant font-serif leading-relaxed">
+              Al activar la purga, se sobreescriben todos los buffers de Javascript con ceros criptográficos y se revoca inmediatamente la sesión.
+            </p>
+</div>
+<button class="w-full py-3 px-4 rounded-xl bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm" id="purge-session-btn" type="button">
+<span class="material-symbols-outlined text-base">delete_forever</span>
+<span>Purgar Sesión y Salir</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // 1. Density Selector behavior
+    const densityButtons = document.querySelectorAll('.density-btn');
+    const densityDesc = document.getElementById('density-desc');
+    const descMap = {
+      compacto: "Vista ultracompacta: máxima densidad de tareas, métricas reducidas y foco visual estricto.",
+      estandar: "Vista equilibrada: información contextual, métricas básicas y accesos directos de flujo.",
+      exhaustivo: "Vista detallada: telemetría de memoria completa, cálculo de fatiga cognitiva y registros ampliados."
+    };
+
+    densityButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        densityButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+          b.classList.add('text-on-surface-variant', 'font-medium');
+        });
+        btn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant', 'font-medium');
+        const key = btn.getAttribute('data-density');
+        if (densityDesc && descMap[key]) {
+          densityDesc.innerHTML = descMap[key];
+        }
+      });
+    });
+
+    // 2. Effort & Priority toggle active styling
+    const effortBtns = document.querySelectorAll('.effort-btn');
+    effortBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        effortBtns.forEach(b => {
+          b.classList.remove('bg-primary-fixed', 'text-on-primary-fixed', 'font-bold', 'shadow-sm');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'font-semibold');
+        });
+        btn.classList.add('bg-primary-fixed', 'text-on-primary-fixed', 'font-bold', 'shadow-sm');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+    });
+
+    const prioBtns = document.querySelectorAll('.prio-btn');
+    prioBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        prioBtns.forEach(b => {
+          b.classList.remove('bg-tertiary-fixed', 'text-on-tertiary-fixed', 'font-bold', 'shadow-sm');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed', 'font-bold', 'shadow-sm');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+    });
+
+    // 3. Play / Pause micro-interaction
+    const playBtn = document.getElementById('toggle-play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const playText = document.getElementById('play-text');
+    let isPlaying = true;
+
+    if (playBtn) {
+      playBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          playIcon.textContent = 'pause';
+          playText.textContent = 'Pausar';
+        } else {
+          playIcon.textContent = 'play_arrow';
+          playText.textContent = 'Reanudar';
+        }
+      });
+    }
+
+    // 4. Completed tasks accordion toggle
+    const accordionBtn = document.getElementById('completed-accordion-btn');
+    const completedList = document.getElementById('completed-tasks-list');
+    const chevron = document.getElementById('accordion-chevron');
+
+    if (accordionBtn && completedList) {
+      accordionBtn.addEventListener('click', () => {
+        const isHidden = completedList.classList.contains('hidden');
+        if (isHidden) {
+          completedList.classList.remove('hidden');
+          chevron.classList.add('rotate-180');
+        } else {
+          completedList.classList.add('hidden');
+          chevron.classList.remove('rotate-180');
+        }
+      });
+    }
+
+    // 5. Mental dump live addition
+    const dumpForm = document.getElementById('mental-dump-form');
+    const dumpInput = document.getElementById('mental-dump-input');
+    const dumpList = document.getElementById('dump-list');
+
+    if (dumpForm && dumpInput && dumpList) {
+      dumpForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = dumpInput.value.trim();
+        if (!text) return;
+
+        const newNote = document.createElement('div');
+        newNote.className = "p-2 bg-surface-container-low rounded-lg text-xs font-mono text-on-surface-variant flex items-center justify-between group";
+        newNote.innerHTML = `
+          <span class="truncate pr-2">• ${text}</span>
+          <button type="button" class="text-outline hover:text-error opacity-0 group-hover:opacity-100 transition-opacity">
+            <span class="material-symbols-outlined text-[14px]">close</span>
+          </button>
+        `;
+        
+        const closeBtn = newNote.querySelector('button');
+        closeBtn.addEventListener('click', () => newNote.remove());
+
+        dumpList.prepend(newNote);
+        dumpInput.value = '';
+      });
+    }
+
+    // 6. Fast task submission feedback
+    const taskForm = document.getElementById('new-task-form');
+    const titleInput = document.getElementById('task-title-input');
+
+    if (taskForm && titleInput) {
+      taskForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!titleInput.value.trim()) return;
+        titleInput.value = '';
+        const submitBtn = taskForm.querySelector('button[type="submit"] span:last-child');
+        if (submitBtn) {
+          const original = submitBtn.textContent;
+          submitBtn.textContent = '¡Encolada!';
+          setTimeout(() => {
+            submitBtn.textContent = original;
+          }, 1400);
+        }
+      });
+    }
+
+    // 7. Purge session simulated action
+    const purgeBtn = document.getElementById('purge-session-btn');
+    if (purgeBtn) {
+      purgeBtn.addEventListener('click', () => {
+        if (confirm('¿Confirmas purgar de inmediato toda la memoria volátil y cerrar la sesión anónima?')) {
+          purgeBtn.innerHTML = '<span class="material-symbols-outlined text-base animate-spin">refresh</span><span>Sobreescribiendo RAM...</span>';
+          setTimeout(() => {
+            alert('Memoria local sobreescrita con 0x00. La sesión ha concluido.');
+            window.location.reload();
+          }, 900);
+        }
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest py-8 shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant font-mono"><span>MEMORIA VOLÁTIL // PROTOCOLO ZERO-STORAGE ACTIVO</span><span>LOS DATOS RESIDEN EXCLUSIVAMENTE EN RAM LOCAL</span></div></footer></body></html>

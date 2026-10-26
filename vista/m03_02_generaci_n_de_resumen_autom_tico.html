@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@100..900&family=Climate+Crisis:wght@100..900&family=Vollkorn:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#a1400c","error":"#ba1a1a","inverse-primary":"#ffb597","on-background":"#1b1c1c","surface-container-highest":"#e4e2e2","on-secondary-fixed":"#1b1b1b","background":"#fbf9f8","surface-container-lowest":"#ffffff","surface-bright":"#fbf9f8","on-primary-fixed-variant":"#7d2d00","on-secondary-container":"#646464","primary-container":"#a54310","surface":"#fbf9f8","on-primary-container":"#ffd4c4","on-surface-variant":"#57423a","on-secondary-fixed-variant":"#474747","outline-variant":"#dec0b6","secondary-fixed":"#e2e2e2","on-primary-fixed":"#360f00","inverse-surface":"#303030","on-tertiary-fixed-variant":"#763301","outline":"#8a7269","on-error":"#ffffff","primary":"#822f00","on-surface":"#1b1c1c","on-error-container":"#93000a","inverse-on-surface":"#f2f0f0","tertiary-container":"#984d1b","surface-container":"#efeded","surface-container-low":"#f5f3f3","tertiary":"#7a3603","tertiary-fixed":"#ffdbc9","secondary-fixed-dim":"#c6c6c6","error-container":"#ffdad6","on-tertiary-container":"#ffd5bf","on-secondary":"#ffffff","surface-variant":"#e4e2e2","on-tertiary":"#ffffff","surface-dim":"#dbd9d9","on-primary":"#ffffff","on-tertiary-fixed":"#331200","secondary":"#5e5e5e","tertiary-fixed-dim":"#ffb68d","primary-fixed-dim":"#ffb597","surface-container-high":"#eae8e7","secondary-container":"#e2e2e2","primary-fixed":"#ffdbcd"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{gutter:"1.5rem","space-sm":"0.5rem",margin:"2rem","space-xl":"2.5rem","space-md":"1rem","space-xs":"0.25rem","space-lg":"1.5rem"},fontFamily:{"headline-lg":["Climate Crisis"],"body-md":["Vollkorn"],"label-md":["Chivo"]},fontSize:{"headline-lg":["32px",{lineHeight:"40px",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",fontWeight:"400"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="px-space-lg flex items-center gap-space-sm"><img alt="FocusStudy Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-82Pd4ICD8qWAQFfqLSXO2FYQViY3khWgapaOlC6kOEAagsU3JBNFqn7gE0GpBpvhf8T6ep8MesbMmvP8cHMlc-IDk3GMqPfyUZddoRtmWkqMT8rMJUhGQKWjqRRvQU0vNX_h2d23sO8kL3zQQfCSFWlTrf8loXCqwKygde2ujokoyHA82swkXyRsErkWeGWcCeNfMN041lW8jyw8jVc6TXh1yvli9zMhCHkZNhs1"/><div class="flex flex-col"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold">FocusStudy</span><span class="font-label-md text-label-md text-on-surface-variant text-xs">Bauhaus Studio</span></div></div><div class="px-space-md"><div class="px-space-sm py-space-xs font-label-md text-label-md uppercase tracking-wider text-on-surface-variant text-xs">Protocolos y Módulos</div><nav class="flex flex-col gap-space-xs mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded"><a class="flex items-center gap-space-sm px-space-sm py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md rounded" data-path="modo-concentracion-estudio" href="#"><span class="material-symbols-outlined text-lg">timer</span><span>Modo Concentración / Estudio</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md rounded" data-path="resumen-automatico-ia" href="#"><span class="material-symbols-outlined text-lg">auto_awesome</span><span>Resumen Automático IA</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md rounded" data-path="cuestionarios-interactivos" href="#"><span class="material-symbols-outlined text-lg">quiz</span><span>Cuestionarios Interactivos</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md rounded" data-path="alerta-sonora-persistente" href="#"><span class="material-symbols-outlined text-lg">volume_up</span><span>Alerta Sonora Persistente</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md rounded" data-path="intensidad-de-alertas" href="#"><span class="material-symbols-outlined text-lg">tune</span><span>Intensidad de Alertas</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md rounded" data-path="desactivacion-y-protocolo-de-restricciones" href="#"><span class="material-symbols-outlined text-lg">lock_clock</span><span>Protocolo de Restricciones</span></a></nav></div></div><div class="px-space-md"><div class="bg-surface-container p-space-md rounded flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-on-surface-variant text-xs uppercase">Racha Activa</span><span class="font-label-md text-label-md font-bold text-primary">7 Días</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-4/5"></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high rounded text-on-surface font-label-md text-label-md"><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span><span>Modo: Profundo (RF-M01)</span></div><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded text-on-surface-variant font-label-md text-label-md"><span class="material-symbols-outlined text-base text-tertiary-container">notifications_active</span><span>Alerta Sonora: Nivel 2</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant px-space-sm py-space-xs font-label-md text-label-md"><span class="material-symbols-outlined text-base text-primary">local_fire_department</span><span class="font-bold text-on-surface">14 Pomodoros</span></div><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD61PtW39hz-8HsBVDDLLqilPM4_CBIzImCz3jf64Y86lBssRqhEThT5aYGdccbgm_cU6qQqDbah8hieZdlyrB5zA29mi3ZhAuf5feEoiROiC53tuR3jE7Va8k6c6QMhW3llKgNdaEtdzsmHu2qu89L7j1zmUhxDNe9MScgQFJ2Glr2fh91ImPedR9UJOkXtTgDSDv8bZKIexQ-n09HmMPWm5EVmgzVw9Bh9mcEmVt_"/><span class="font-label-md text-label-md text-on-surface font-bold">Estudiante Bauhaus</span></div></div></header><main class="w-full pt-16 px-space-lg pb-space-xl bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full">
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs z-10">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-label-md text-label-md uppercase tracking-wider text-xs font-bold text-primary">Protocolo RF-M03-02</span>
+<span>•</span>
+<span class="font-label-md text-label-md text-xs">Motor Sintético v4.2 Neural</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary uppercase tracking-tight">SÍNTESIS</span>
+<span class="font-body-md text-body-md text-on-surface-variant italic">/ Extracción Cognitiva de Textos</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm z-10">
+<div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-base text-primary">speed</span>
+<span class="font-label-md text-label-md text-xs text-on-surface">4,820 palabras / 3.2s</span>
+</div>
+<button class="flex items-center gap-space-xs bg-primary text-on-primary px-space-md py-space-xs rounded-lg hover:bg-primary-container transition-colors shadow-sm" id="save-library-btn">
+<span class="material-symbols-outlined text-base">bookmark_add</span>
+<span class="font-label-md text-label-md font-bold text-xs uppercase tracking-wide">Archivar Resumen</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-xs uppercase tracking-wider text-on-surface-variant font-bold">Documento Activo</span>
+<span class="px-space-xs py-0.5 bg-surface-container-highest text-on-surface-variant font-label-md text-label-md text-xs rounded">PDF Fuente</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 bg-primary-fixed flex items-center justify-center rounded-lg text-on-primary-fixed shrink-0">
+<span class="material-symbols-outlined text-xl">menu_book</span>
+</div>
+<div class="min-w-0 flex-1">
+<h2 class="font-label-md text-label-md text-on-surface font-bold truncate">Biología Celular - Capítulo 4: Ciclo de Krebs y Respiración</h2>
+<p class="font-body-md text-body-md text-xs text-on-surface-variant truncate">Cargado vía Canvas LMS • 34 páginas • 18 diagramas</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm pt-space-xs">
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-md text-label-md text-xs transition-colors">
+<span class="material-symbols-outlined text-sm">swap_horiz</span> Cambiar Fuente
+          </button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-md text-label-md text-xs transition-colors">
+<span class="material-symbols-outlined text-sm">add_link</span> URL
+          </button>
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-md text-label-md text-xs transition-colors">
+<span class="material-symbols-outlined text-sm">mic</span> Audio Transcrito
+          </button>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-xs uppercase tracking-wider text-on-surface-variant font-bold">Parámetros de Inferencia</span>
+<span class="material-symbols-outlined text-base text-on-surface-variant">tune</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-xs text-on-surface-variant">Longitud Síntesis</label>
+<div class="flex bg-surface-container rounded-lg p-0.5" id="length-selector">
+<button class="flex-1 py-1 text-xs font-label-md text-label-md text-center rounded bg-surface-container-lowest font-bold text-on-surface shadow-sm">Ejecutivo</button>
+<button class="flex-1 py-1 text-xs font-label-md text-label-md text-center rounded text-on-surface-variant hover:text-on-surface">Medio</button>
+<button class="flex-1 py-1 text-xs font-label-md text-label-md text-center rounded text-on-surface-variant hover:text-on-surface">Extenso</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-xs text-on-surface-variant">Estructura</label>
+<select class="bg-surface-container text-on-surface font-label-md text-label-md text-xs py-1.5 px-space-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary">
+<option selected="">Puntos Clave y Tesis</option>
+<option>Esquema Conceptual Jerárquico</option>
+<option>Fichas Activas (Flashcards)</option>
+<option>Prosa Académica Rigurosa</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-xs text-on-surface-variant">Nivel de Rigor</label>
+<span class="font-label-md text-label-md text-xs text-primary font-bold">Avanzado</span>
+</div>
+<div class="flex items-center gap-space-xs h-full">
+<span class="text-xs font-label-md text-on-surface-variant">Intro</span>
+<input class="w-full accent-primary h-1.5 bg-surface-container-high rounded-lg cursor-pointer" max="3" min="1" type="range" value="3"/>
+<span class="text-xs font-label-md text-on-surface-variant">PhD</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="h-2 w-2 rounded-full bg-surface-tint"></span>
+<span class="font-label-md text-label-md text-xs text-on-surface-variant">Modelo: BioSynthetica-XL • Contexto 32k</span>
+</div>
+<button class="flex items-center gap-space-xs text-primary hover:text-primary-container font-label-md text-label-md text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">refresh</span> Reconfigurar
+          </button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<div class="lg:col-span-5 flex flex-col bg-surface-container-low rounded-xl shadow-sm overflow-hidden h-[740px]">
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary">description</span>
+<span class="font-label-md text-label-md text-xs uppercase font-bold text-on-surface tracking-wider">Texto Fuente Resaltado</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md text-xs">
+<span>Pág 112 / 146</span>
+<div class="flex gap-0.5 ml-space-xs">
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-md leading-relaxed text-on-surface font-body-md text-body-md select-text">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-highest shrink-0">
+<img class="w-full h-full object-cover" data-alt="Microscopic conceptual illustration of cellular mitochondria inner matrix with glowing biochemical electron transport pathways, Bauhaus graphic minimal scientific diagram in ochre, sienna and off-white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD83bQAvse3kDY8jLMqf24XKPocBFi27nbEKNHuW0YpAyK8R5Lg0k4vc9ww9mjwIpurTrXsqpRMQNGu0xPeUu6xMtyuLkW3Jd8i0A4amYqCjAAMlyy0bXsjv1yBDmwbqiLhhhgMjlqyt6wffu6NHFK4cmJDQV2qONL12N7daW_P3tWmV3TJWTnMIj33MPNW-jgGvtejAU0_Ay8YWlFdMaMkuoE4L9Ji8sq4tLIxxgHj"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 bg-inverse-surface/80 text-inverse-on-surface rounded font-label-md text-label-md text-xs">
+              Fig 4.3: Matriz Mitocondrial
+            </div>
+</div>
+<div class="font-label-md text-label-md text-xs uppercase tracking-widest text-primary font-bold">
+            § 4.2 LA RUTA OXIDATIVA DEL PIRUVATO
+          </div>
+<p class="text-on-surface/90 text-sm">
+            La conversión del piruvato citosólico en acetil coenzima A dentro de la matriz representa la bisagra irreversible entre la glucólisis anaeróbica y el metabolismo respiratorio terminal. Este proceso, gobernado por el complejo multienzimático <span class="bg-primary-fixed text-on-primary-fixed px-1 py-0.5 rounded font-bold">piruvato deshidrogenasa (PDH)</span>, comprende tres reacciones acopladas: descarboxilación oxidativa, transferencia del grupo acetilo y regeneración de dinucleótidos.
+          </p>
+<p class="text-on-surface/90 text-sm">
+            En el ciclo subsiguiente del ácido cítrico, cada vuelta metaboliza un residuo acetilo para generar tres moléculas de <span class="bg-tertiary-fixed text-on-tertiary-fixed px-1 py-0.5 rounded font-bold">NADH</span>, una de <span class="bg-tertiary-fixed text-on-tertiary-fixed px-1 py-0.5 rounded font-bold">FADH₂</span> y un enlace fosfato de alta energía en forma de GTP. Los electrones capturados alimentan los complejos I, III y IV de la cresta mitocondrial interna.
+          </p>
+<div class="p-space-sm bg-surface-container rounded-lg">
+<div class="font-label-md text-label-md text-xs uppercase font-bold text-on-surface-variant mb-1">Ecuación Global Estequiométrica:</div>
+<code class="block font-label-md text-label-md text-xs text-primary font-bold overflow-x-auto whitespace-nowrap">
+              Acetil-CoA + 3 NAD⁺ + FAD + GDP + Pi + 2 H₂O → 2 CO₂ + 3 NADH + FADH₂ + GTP + CoA-SH
+            </code>
+</div>
+<p class="text-on-surface/90 text-sm">
+            El control cinético es primordialmente alostérico: una alta relación ATP/ADP e inhibición retroalimentaria por citrato suprimen la <span class="bg-primary-fixed text-on-primary-fixed px-1 py-0.5 rounded font-bold">isocitrato deshidrogenasa</span>, redirigiendo sustratos hacia la síntesis de ácidos grasos si la demanda celular de ATP se encuentra satisfecha.
+          </p>
+</div>
+<div class="p-space-xs bg-surface-container-high flex justify-between items-center text-xs font-label-md text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span> 4 fragmentos detectados como tesis
+          </span>
+<span class="uppercase tracking-wider">Modo lectura analítica</span>
+</div>
+</div>
+<div class="lg:col-span-7 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden h-[740px]">
+<div class="px-space-md py-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-base text-primary">auto_awesome</span>
+<span class="font-label-md text-label-md text-xs uppercase font-bold text-on-surface tracking-wider">Resumen Estructurado por IA</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-highest rounded text-primary font-label-md text-label-md text-xs transition-colors" id="regenerate-formula-btn">
+<span class="material-symbols-outlined text-sm">calculate</span>
+<span>Enfocar Fórmulas</span>
+</button>
+<div class="relative inline-block text-left">
+<button class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container hover:bg-surface-container-highest rounded text-on-surface font-label-md text-label-md text-xs transition-colors" id="export-btn">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Exportar</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-lg leading-normal">
+<div class="bg-surface-container-low rounded-xl p-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-xs uppercase tracking-widest text-primary font-bold">Núcleo Conceptual</span>
+<span class="font-label-md text-label-md text-xs text-on-surface-variant">Índice de Densidad: 88%</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-bold text-lg mb-2">
+              El Ciclo de Krebs opera como el hub de conversión oxidativa central, canalizando carbonos derivados de macronutrientes para cargar transportadores electrónicos hacia la fosforilación oxidativa.
+            </p>
+<p class="font-body-md text-body-md text-sm text-on-surface-variant">
+              No es únicamente un mecanismo productor directo de energía (produce solo 1 GTP directo), sino el generador primario del potencial reductor de la célula mediante 3 NADH y 1 FADH₂ por ciclo.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs text-primary">
+<span class="material-symbols-outlined text-lg">bolt</span>
+<span class="font-label-md text-label-md text-xs uppercase font-bold tracking-wider">Rendimiento Energético Neto</span>
+</div>
+<div class="text-3xl font-headline-lg text-headline-lg text-on-surface mb-1">
+                  12 <span class="font-label-md text-label-md text-sm text-on-surface-variant">ATP equivalentes / acetilo</span>
+</div>
+<div class="space-y-1.5 mt-space-sm">
+<div class="flex justify-between text-xs font-label-md text-on-surface-variant">
+<span>3 NADH (×2.5 ATP)</span>
+<span class="font-bold text-on-surface">7.5 ATP</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[62%]"></div>
+</div>
+<div class="flex justify-between text-xs font-label-md text-on-surface-variant">
+<span>1 FADH₂ (×1.5 ATP)</span>
+<span class="font-bold text-on-surface">1.5 ATP</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[15%]"></div>
+</div>
+<div class="flex justify-between text-xs font-label-md text-on-surface-variant">
+<span>1 GTP (Nivel de Sustrato)</span>
+<span class="font-bold text-on-surface">1.0 ATP</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full w-[10%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-xs font-label-md text-on-surface-variant italic">
+                *Cálculos basados en la relación P/O actualizada de Lehninger.
+              </div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs text-tertiary">
+<span class="material-symbols-outlined text-lg">lock_clock</span>
+<span class="font-label-md text-label-md text-xs uppercase font-bold tracking-wider">Puntos de Regulación Clave</span>
+</div>
+<ul class="space-y-space-xs text-xs font-body-md text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="font-bold text-primary shrink-0">1. Citrato Sintasa:</span>
+<span>Inhibida alostéricamente por alta concentración de ATP, NADH y succinil-CoA.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="font-bold text-primary shrink-0">2. Isocitrato Deshidrogenasa:</span>
+<span>Activada por ADP; inhibida por ATP y NADH. Punto marcapasos de velocidad limitante.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="font-bold text-primary shrink-0">3. α-Cetoglutarato Deshidrogenasa:</span>
+<span>Inhibida por succinil-CoA y NADH.</span>
+</li>
+</ul>
+</div>
+<div class="mt-space-sm p-space-xs bg-surface-container rounded text-xs font-label-md text-on-surface flex items-center justify-between">
+<span>Estado de Carga Energética</span>
+<span class="px-1.5 py-0.5 bg-primary-fixed text-on-primary-fixed font-bold rounded">Alta Inhibición</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-xs uppercase tracking-widest text-on-surface-variant font-bold">Fichas Clave Extraídas (Flashcards)</span>
+<span class="font-label-md text-label-md text-xs text-primary font-bold">3 Fichas Activas</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div>
+<span class="font-label-md text-label-md text-xs text-on-surface-variant uppercase font-bold">Concepto</span>
+<div class="font-label-md text-label-md font-bold text-on-surface text-sm mt-1">Carácter Anfibólico</div>
+</div>
+<div class="font-body-md text-body-md text-xs text-on-surface-variant mt-space-sm line-clamp-3">
+                  Funciona tanto en catabolismo oxidativo como en anabolismo al suministrar precursores para síntesis de aminoácidos y porfirinas.
+                </div>
+<div class="mt-space-sm text-right">
+<span class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">visibility</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div>
+<span class="font-label-md text-label-md text-xs text-on-surface-variant uppercase font-bold">Enzima</span>
+<div class="font-label-md text-label-md font-bold text-on-surface text-sm mt-1">Succinil-CoA Sintetasa</div>
+</div>
+<div class="font-body-md text-body-md text-xs text-on-surface-variant mt-space-sm line-clamp-3">
+                  Único paso donde ocurre fosforilación a nivel de sustrato en el ciclo. Convierte GDP a GTP acoplado a la hidrólisis del enlace tioéster.
+                </div>
+<div class="mt-space-sm text-right">
+<span class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">visibility</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col justify-between hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div>
+<span class="font-label-md text-label-md text-xs text-on-surface-variant uppercase font-bold">Ubicación</span>
+<div class="font-label-md text-label-md font-bold text-on-surface text-sm mt-1">Succinato Deshidrogenasa</div>
+</div>
+<div class="font-body-md text-body-md text-xs text-on-surface-variant mt-space-sm line-clamp-3">
+                  La única enzima del ciclo anclada físicamente a la membrana mitocondrial interna, coincidente con el Complejo II respiratorio.
+                </div>
+<div class="mt-space-sm text-right">
+<span class="material-symbols-outlined text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">visibility</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-xs uppercase tracking-widest text-on-surface-variant font-bold">Conclusiones Operativas de Examen</span>
+<div class="flex flex-col gap-space-xs text-sm font-body-md text-on-surface">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-base text-primary mt-0.5">check_circle</span>
+<span>En ausencia de O₂, el ciclo se bloquea indirectamente debido a la falta de regeneración de NAD⁺ por la cadena transportadora.</span>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-base text-primary mt-0.5">check_circle</span>
+<span>Las reacciones anapleróticas (como piruvato carboxilasa) son indispensables para reponer oxalacetato sustraído para gluconeogénesis.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-xs font-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+<span>Resumen verificado con el texto original • 0 alucinaciones detectadas</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 bg-surface-container-high hover:bg-surface-container-highest rounded text-on-surface font-label-md text-label-md text-xs">
+              Copiar Todo
+            </button>
+<button class="px-space-sm py-1 bg-primary text-on-primary hover:bg-primary-container rounded font-label-md text-label-md text-xs font-bold uppercase tracking-wider">
+              Abrir en Quizzes
+            </button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-xs text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-bold">Telemetría de Red:</span>
+<span class="text-on-surface-variant">Latencia de Inferencia 142ms</span>
+</div>
+<div class="h-4 w-px bg-surface-container-highest hidden sm:block"></div>
+<div class="font-label-md text-label-md text-xs text-on-surface-variant hidden sm:block">
+          Tokens de Entrada: <span class="text-on-surface font-bold">6,430</span> | Tokens de Salida: <span class="text-on-surface font-bold">1,120</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-xs text-on-surface-variant">¿Resultado útil?</span>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-base">thumb_up</span>
+</button>
+<button class="p-1 hover:bg-surface-container rounded text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined text-base">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const saveBtn = document.getElementById('save-library-btn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function() {
+        const originalContent = saveBtn.innerHTML;
+        saveBtn.innerHTML = '<span class="material-symbols-outlined text-base">check</span><span class="font-label-md text-label-md font-bold text-xs uppercase tracking-wide">Archivado</span>';
+        saveBtn.classList.remove('bg-primary');
+        saveBtn.classList.add('bg-surface-tint');
+        setTimeout(() => {
+          saveBtn.innerHTML = originalContent;
+          saveBtn.classList.remove('bg-surface-tint');
+          saveBtn.classList.add('bg-primary');
+        }, 2200);
+      });
+    }
+
+    const regenBtn = document.getElementById('regenerate-formula-btn');
+    if (regenBtn) {
+      regenBtn.addEventListener('click', function() {
+        const icon = regenBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('animate-spin');
+        setTimeout(() => {
+          if (icon) icon.classList.remove('animate-spin');
+        }, 1200);
+      });
+    }
+
+    const lengthButtons = document.querySelectorAll('#length-selector button');
+    lengthButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        lengthButtons.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'font-bold', 'text-on-surface', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        this.classList.add('bg-surface-container-lowest', 'font-bold', 'text-on-surface', 'shadow-sm');
+        this.classList.remove('text-on-surface-variant');
+      });
+    });
+  })();
+</script></main></div></body></html>

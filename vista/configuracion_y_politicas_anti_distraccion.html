@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#ffd4c4","secondary-fixed-dim":"#c0c6db","primary-fixed":"#ffdbcd","on-surface-variant":"#57423a","primary-container":"#a54310","on-secondary-fixed":"#141b2b","surface":"#fbf8ff","inverse-surface":"#303039","surface-tint":"#a1400c","on-secondary-fixed-variant":"#404758","surface-bright":"#fbf8ff","surface-container-lowest":"#ffffff","surface-dim":"#dbd8e5","on-primary":"#ffffff","inverse-on-surface":"#f2effc","primary-fixed-dim":"#ffb597","surface-container":"#efecf9","tertiary-container":"#964f19","surface-container-high":"#e9e7f3","secondary":"#575e70","on-background":"#1b1b24","surface-container-highest":"#e3e1ed","outline-variant":"#dec0b6","inverse-primary":"#ffb597","primary":"#822f00","error":"#ba1a1a","tertiary-fixed":"#ffdbc7","on-secondary":"#ffffff","on-primary-fixed":"#360f00","surface-variant":"#e3e1ed","error-container":"#ffdad6","on-surface":"#1b1b24","on-tertiary-container":"#ffd5bd","tertiary":"#783800","on-secondary-container":"#5c6274","surface-container-low":"#f5f2ff","on-error":"#ffffff","on-tertiary-fixed-variant":"#733500","secondary-container":"#d9dff5","on-error-container":"#93000a","tertiary-fixed-dim":"#ffb688","outline":"#8a7269","on-primary-fixed-variant":"#7d2d00","secondary-fixed":"#dce2f7","on-tertiary":"#ffffff","background":"#fbf8ff","on-tertiary-fixed":"#311300"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2rem","gutter":"1.5rem","margin-sm":"1rem","gutter-sm":"1rem","space-lg":"1.5rem"},"fontFamily":{"headline-sm":["Hanken Grotesk"],"body-lg":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"label-md":["Inter"],"display-hero":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"body-md":["Inter"],"headline-lg":["Hanken Grotesk"],"body-sm":["Inter"],"code-mono":["JetBrains Mono"],"label-code":["JetBrains Mono"],"headline-lg-mobile":["Hanken Grotesk"],"label-sm":["Inter"]},"fontSize":{"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg mb-space-xl flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">menu_book</span></div><div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">WordQuiz</span><span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider block">Academic Suite</span></div></div><div class="px-space-lg mb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Navegación</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="panel-analitica" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Panel &amp; Analítica</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder</span><span>Mis Documentos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="espacio-lectura-resumen-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Espacio de Lectura &amp; Resumen IA</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="sala-enfoque-alertas" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span>Sala de Enfoque &amp; Alertas</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="banco-cuestionarios" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Banco de Cuestionarios</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-md rounded-lg shadow-sm" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-code text-label-code text-on-surface-variant uppercase">Sesión Activa</span><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span></div><p class="font-label-md text-label-md text-on-surface font-semibold">Examen Clínico USMLE</p><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-space-xs"><div class="bg-primary-container h-full w-[68%]"></div></div><div class="flex justify-between font-label-code text-label-code text-on-surface-variant"><span>Meta de lectura</span><span>68%</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md w-96"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar términos, resúmenes, fichas..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="inline-flex p-0.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-medium transition-all" type="button">Modo Estudio</button><button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface transition-all" type="button">Modo Concentración</button></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-code-mono text-code-mono"><span class="material-symbols-outlined text-[16px] text-tertiary">timer</span><span>Foco continuo: 52m</span></div><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-space-lg py-space-lg w-full"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Banner / Page Heading -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-code text-label-code uppercase tracking-wider mb-1">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Módulo de Control Académico · v2.4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Configuración de WordQuiz</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-0.5">
+        Ajuste fino de inteligencia artificial, sensibilidad anti-abandono y preferencias académicas de alta concentración.
+      </p>
+</div>
+<div class="relative z-10 flex items-center gap-space-sm self-start md:self-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">restore</span>
+<span>Restablecer</span>
+</button>
+<button class="px-space-lg py-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-md hover:shadow-lg" id="save-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Guardar Cambios</span>
+</button>
+</div>
+<!-- Soft ambient glow decorative corner -->
+<div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-primary-fixed-dim/20 blur-2xl pointer-events-none"></div>
+</div>
+<!-- Navigation Tab Bar -->
+<div class="bg-surface-container-lowest p-1.5 rounded-xl shadow-sm flex flex-wrap gap-1">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+<span>Políticas Anti-Distracción &amp; Alertas Sonoras</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+<span>Motor de Resúmenes &amp; Síntesis IA</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+<span>Generador de Cuestionarios</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>Sesión, Sincronización &amp; Almacenamiento</span>
+</button>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Primary Left Column: Section 1 & Section 2 -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: Parámetros del Sistema Anti-Cambio de Pestaña -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">radar</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Parámetros Anti-Cambio de Pestaña</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitoreo continuo de foco a través de la Visibility API y aceleración heurística.</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            SENSOR ACTIVO
+          </span>
+</div>
+<!-- Sensibilidad Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Sensibilidad del detector de visibilidad</span>
+<span class="font-label-code text-label-code text-on-surface-variant font-normal">Tolerancia activa: 4s</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-1">
+<label class="cursor-pointer relative p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1">
+<input class="sr-only peer" name="sensitivity" type="radio" value="low"/>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold peer-checked:text-primary-container">Leve</span>
+<span class="material-symbols-outlined text-[18px] text-outline peer-checked:text-primary-container">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tolerancia de 10s</span>
+<p class="font-label-code text-label-code text-secondary mt-1">Ideal para toma de notas cruzadas casual.</p>
+<div class="absolute inset-0 rounded-lg pointer-events-none peer-checked:bg-primary-fixed/20 transition-all"></div>
+</label>
+<label class="cursor-pointer relative p-space-md rounded-lg bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-1">
+<input checked="" class="sr-only peer" name="sensitivity" type="radio" value="moderate"/>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary-container font-semibold">Moderada</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface">Tolerancia de 4s</span>
+<p class="font-label-code text-label-code text-secondary mt-1">Recomendado para sesiones de lectura intensiva.</p>
+<div class="absolute inset-0 rounded-lg pointer-events-none bg-primary-fixed/30"></div>
+</label>
+<label class="cursor-pointer relative p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col gap-1">
+<input class="sr-only peer" name="sensitivity" type="radio" value="strict"/>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold peer-checked:text-primary-container">Estricta</span>
+<span class="material-symbols-outlined text-[18px] text-outline peer-checked:text-primary-container">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0s · Detección Inmediata</span>
+<p class="font-label-code text-label-code text-secondary mt-1">Simulación estricta de examen oficial.</p>
+<div class="absolute inset-0 rounded-lg pointer-events-none peer-checked:bg-primary-fixed/20 transition-all"></div>
+</label>
+</div>
+</div>
+<!-- Alerta Sonora Persistente switch & settings -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Alerta Sonora Persistente</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Reproduce tonos acústicos no bloqueables si el foco se pierde durante el estudio.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="persistent-sound-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container shadow-inner"></div>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2">
+<!-- Patrón Acústico -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Patrón Acústico</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer">
+<option selected="">Pulso Rítmico de Alta Advertencia (Recomendado)</option>
+<option>Frecuencia Binaural Continua</option>
+<option>Chime Progresivo</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Volume Slider & Test Button -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Volumen de Alarma</label>
+<span class="font-code-mono text-code-mono text-primary-container font-semibold" id="volume-val">75%</span>
+</div>
+<div class="flex items-center gap-space-sm h-9">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">volume_down</span>
+<input class="w-full accent-primary-container cursor-pointer" id="volume-slider" max="100" min="0" type="range" value="75"/>
+<button class="shrink-0 px-space-sm py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-sm text-label-sm transition-colors flex items-center gap-1 shadow-sm" id="btn-test-sound" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Probar Sonido</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pausas Justificadas & Descansos -->
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold">Desactivación y Pausas Justificadas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Otorga ventanas para no penalizar consultas a PubMed, UpToDate o bibliografía académica.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container">schedule</span>
+<span class="font-body-md text-body-md text-on-surface">Pausa Corta (Pomodoro)</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">5 min</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-container">coffee</span>
+<span class="font-body-md text-body-md text-on-surface">Pausa Larga (Bloque)</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-semibold">10 min</span>
+</div>
+<label class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">menu_book</span>
+<span class="font-body-md text-body-md text-on-surface">Justificación Bibliográfica</span>
+</div>
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Cuestionario de Refuerzo al Regresar -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">psychology_alt</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Cuestionario de Refuerzo al Regresar</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Interrupción activa con micro-evaluación al reanudar la pestaña.</p>
+</div>
+</div>
+<span class="font-label-code text-label-code text-primary-container bg-primary-fixed/40 px-2 py-0.5 rounded">MODO MNEMOTÉCNICO</span>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Validación Mnemotécnica Obligatoria tras Fuga de Pestaña</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Obliga a resolver 1 reactivo rápido sobre los últimos 3 párrafos leídos antes de desbloquear el texto.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container shadow-inner"></div>
+</label>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Time limit -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tiempo límite para responder al volver</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 text-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">30s</button>
+<button class="py-2 text-center rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm" type="button">45s</button>
+<button class="py-2 text-center rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">60s</button>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Si se agota el tiempo, el reactivo se computa como distracción crítica.</span>
+</div>
+<!-- Penalties configuration -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Penalizaciones configurables por fallo</label>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 text-on-surface font-body-md text-body-md cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span>Descuento de -15 min en racha de concentración diaria</span>
+</label>
+<label class="flex items-center gap-2 text-on-surface font-body-md text-body-md cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span>Registrar evento como 'Incidencia' en reporte analítico</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Preferencias del Motor IA de Resúmenes y Cuestionarios -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Preferencias del Motor IA de Resúmenes y Cuestionarios</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calibración de inferencia semántica y generación de reactivos académicos.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Detail Level Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Nivel de detalle predeterminado de síntesis</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="cursor-pointer text-center p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all flex flex-col items-center">
+<input class="sr-only peer" name="ia-detail" type="radio" value="conciso"/>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-primary-container font-semibold">Conciso</span>
+<span class="font-label-code text-label-code text-secondary">Flashcards</span>
+</label>
+<label class="cursor-pointer text-center p-2 rounded-lg bg-primary-fixed/50 hover:bg-primary-fixed/70 transition-all flex flex-col items-center">
+<input checked="" class="sr-only peer" name="ia-detail" type="radio" value="intermedio"/>
+<span class="font-label-md text-label-md text-primary font-semibold">Intermedio</span>
+<span class="font-label-code text-label-code text-primary">Esquema clínico</span>
+</label>
+<label class="cursor-pointer text-center p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all flex flex-col items-center">
+<input class="sr-only peer" name="ia-detail" type="radio" value="extenso"/>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-primary-container font-semibold">Extenso</span>
+<span class="font-label-code text-label-code text-secondary">Tratado integral</span>
+</label>
+</div>
+</div>
+<!-- Active IA Synthesis Model -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Modelo de síntesis IA activo</label>
+<div class="relative">
+<select class="w-full h-11 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer">
+<option selected="">Claude 3.5 Sonnet (Optimizado para Ciencias de la Salud)</option>
+<option>GPT-4o Academic Reasoner (Alta precisión tabular)</option>
+<option>Gemini 1.5 Pro Flash (Baja latencia en lecturas masivas)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-code text-label-code">
+<span class="material-symbols-outlined text-[14px] text-tertiary">info</span>
+<span>Tokens contextuales asignados: 128,000 por documento.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Gestión de Sesión y Privacidad -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Gestión de Sesión y Privacidad</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sincronización segura de estados de lectura y almacenamiento local protegido.</p>
+</div>
+</div>
+</div>
+<!-- Sync indicator banner -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[24px]">cloud_done</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Autoguardado en la Nube Activo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sincronizado cada 30 segundos vía WebSockets con encriptación en tránsito.</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-label-code text-label-code text-secondary bg-surface-container px-2.5 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>
+<span>Última sinc: Hace 12s</span>
+</div>
+</div>
+<!-- Export & Reset Actions -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2">
+<!-- Export Data -->
+<div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-on-surface">download</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Exportación Global de Progreso</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Descarga el registro completo de tiempos de foco, respuestas a cuestionarios y metadatos.</p>
+<div class="flex items-center gap-2 mt-auto pt-2">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-code text-label-code font-semibold shadow-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">data_object</span>
+<span>Exportar JSON</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-code text-label-code font-semibold shadow-sm transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">table_chart</span>
+<span>Exportar CSV</span>
+</button>
+</div>
+</div>
+<!-- Danger Zone: Reset Session -->
+<div class="p-space-md bg-error-container/40 rounded-lg flex flex-col gap-space-sm">
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span class="font-label-md text-label-md font-semibold">Purgar Datos de Sesión</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elimina voluntariamente las métricas temporales de la sesión actual sin alterar el banco maestro.</p>
+<div class="mt-auto pt-2">
+<button class="px-space-md py-1.5 rounded-lg bg-error text-on-error hover:bg-red-800 font-label-md text-label-md transition-colors flex items-center gap-1 shadow-sm" id="btn-purge-session" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_forever</span>
+<span>Eliminar datos de sesión actual voluntariamente</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Visual Widgets, Insights & Documentation Guidance -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Interactive Focus Shield Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">Estado del Escudo</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-code text-label-code font-semibold">BLINDADO</span>
+</div>
+<!-- SVG Focus Ring Visualization -->
+<div class="flex items-center justify-center py-2 relative">
+<svg class="w-36 h-36 -rotate-90 transform" viewbox="0 0 100 100">
+<!-- Background circle track -->
+<circle class="text-surface-container" cx="50" cy="50" fill="transparent" r="42" stroke="currentColor" stroke-width="8"></circle>
+<!-- Progress indicator ring (92% focus score) -->
+<circle class="text-primary-container" cx="50" cy="50" fill="transparent" r="42" stroke="currentColor" stroke-dasharray="264" stroke-dashoffset="21" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold leading-none">92%</span>
+<span class="font-label-code text-label-code text-on-surface-variant uppercase mt-1">Efectividad</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Fugas interceptadas hoy:</span>
+<span class="font-semibold text-on-surface">14 intentos</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Retención post-alerta:</span>
+<span class="font-semibold text-primary-container">98.4%</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Minutos recuperados:</span>
+<span class="font-semibold text-on-surface">38 min</span>
+</div>
+</div>
+<div class="pt-2">
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+<!-- Rich Visual Academic Context Card with Image Placeholder -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
+<div class="h-44 w-full bg-cover bg-center relative" data-alt="Warm terracotta and amber toned scholarly medical library workspace with books open, modern laptop screen showing flashcards, warm directional sunlight, crisp clean minimal architectural desk setting in academic medicine atmosphere" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXr8xS_zBq5hypjLU8kW-CMRZGsBKajpnqRgpk5RHuKwRhvxdTYYck8_PfvKLPzNfWt6-RM6sBLFr2OP1EDdmFgP_lS7ZofJq0h5wwt1gS7KUlbkfp0vYiYv5pDW1L2uICCs1iUHbSAgHfzO-Is9YbYkBBGM88HrBqLdSIEhggjEGrF-Tg_lFKAqE_nhCTPg9_vDgl3jGW8fE-Ee1UHQylbsfnIFGRBHDLGhBISSRe')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-black/20"></div>
+<div class="absolute top-3 left-3 px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-md font-label-code text-label-code text-on-surface">
+            METODOLOGÍA ACTIVE RECALL
+          </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">¿Por qué políticas estrictas?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Las interrupciones durante la lectura analítica reducen la retención a largo plazo en un 47%. El sistema anti-abandono de WordQuiz garantiza que tu mente consolide conceptos antes de pasar a otra tarea.
+          </p>
+<a class="text-primary-container hover:text-primary font-label-md text-label-md font-semibold inline-flex items-center gap-1 mt-2" href="#">
+<span>Consultar evidencia pedagógica</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Secondary Photo Card for Focus Motivation -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex items-center p-space-md gap-space-md">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a student hands taking precise study notes on a crisp notebook next to a digital tablet displaying quiz statistics with warm terracotta lighting accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZjI-taccaLKE5YFQrUAk7D341XllIN_ziik7Kl-ip7kphcYVq8DZfGLbBSTykQlpOrbWdXWAnhD-5yl_gVPY-IC0W4b8jo2ervtAnAK_-g9oQJKvSe20XU52yhZxrtjAZAz3xOpWydrEBuUkW5TGrVdDUnyETJ97kZXlJGJh2oyg5KWxE5RfeZ2sJqKN-jmO1FszDobAoyXsQF2p8kWtPcmWCACrtJvszN7na5S4P"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-tertiary uppercase">MODO EXAMEN USMLE</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Simulador de Alta Presión</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+            Activa el modo estricto para bloquear completamente la alternancia de ventanas sin aviso.
+          </p>
+</div>
+</div>
+<!-- Quick Shortcuts / Tips Panel -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-primary-container text-[18px]">lightbulb</span>
+<span>Atajos de Teclado del Alumno</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pausa justificada de emergencia</span>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-mono text-label-code shadow-sm">Ctrl + Alt + P</kbd>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lanzar cuestionario rápido</span>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-mono text-label-code shadow-sm">Ctrl + Shift + Q</kbd>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Silenciar alarma tras retorno</span>
+<kbd class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-mono text-label-code shadow-sm">Espacio × 2</kbd>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Logic -->
+<script>
+    (function() {
+      // Volume slider interaction
+      const slider = document.getElementById('volume-slider');
+      const valDisplay = document.getElementById('volume-val');
+      const testBtn = document.getElementById('btn-test-sound');
+      const saveBtn = document.getElementById('save-btn');
+      const purgeBtn = document.getElementById('btn-purge-session');
+
+      if (slider && valDisplay) {
+        slider.addEventListener('input', (e) => {
+          valDisplay.textContent = e.target.value + '%';
+        });
+      }
+
+      // Test sound simulation
+      if (testBtn) {
+        testBtn.addEventListener('click', () => {
+          const originalHTML = testBtn.innerHTML;
+          testBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Sonando...</span>';
+          testBtn.classList.add('bg-primary-container', 'text-on-primary');
+          setTimeout(() => {
+            testBtn.innerHTML = originalHTML;
+            testBtn.classList.remove('bg-primary-container', 'text-on-primary');
+          }, 1400);
+        });
+      }
+
+      // Save notification feedback
+      if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+          const original = saveBtn.innerHTML;
+          saveBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span><span>¡Guardado!</span>';
+          saveBtn.classList.replace('bg-primary-container', 'bg-tertiary-container');
+          setTimeout(() => {
+            saveBtn.innerHTML = original;
+            saveBtn.classList.replace('bg-tertiary-container', 'bg-primary-container');
+          }, 1800);
+        });
+      }
+
+      // Purge session confirmation
+      if (purgeBtn) {
+        purgeBtn.addEventListener('click', () => {
+          if (confirm('¿Confirmas que deseas reiniciar las métricas y penalizaciones de la sesión actual? Esta acción no se puede deshacer.')) {
+            purgeBtn.textContent = 'Métricas reiniciadas';
+            setTimeout(() => {
+              purgeBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">delete_forever</span><span>Eliminar datos de sesión actual voluntariamente</span>';
+            }, 2000);
+          }
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

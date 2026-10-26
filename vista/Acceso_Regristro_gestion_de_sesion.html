@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#e3e1ed","surface-bright":"#fbf8ff","primary-container":"#a54310","surface-container":"#efecf9","tertiary-container":"#964f19","on-secondary-container":"#5c6274","on-tertiary":"#ffffff","on-primary-fixed-variant":"#7d2d00","tertiary":"#783800","on-secondary":"#ffffff","tertiary-fixed":"#ffdbc7","on-secondary-fixed":"#141b2b","tertiary-fixed-dim":"#ffb688","on-error-container":"#93000a","surface-dim":"#dbd8e5","on-error":"#ffffff","on-secondary-fixed-variant":"#404758","secondary-fixed-dim":"#c0c6db","error":"#ba1a1a","surface-container-high":"#e9e7f3","surface-container-highest":"#e3e1ed","on-primary-fixed":"#360f00","primary-fixed-dim":"#ffb597","inverse-primary":"#ffb597","on-background":"#1b1b24","surface-container-lowest":"#ffffff","inverse-on-surface":"#f2effc","secondary-container":"#d9dff5","primary-fixed":"#ffdbcd","outline":"#8a7269","secondary":"#575e70","primary":"#822f00","on-primary":"#ffffff","surface-container-low":"#f5f2ff","on-primary-container":"#ffd4c4","surface-tint":"#a1400c","on-tertiary-fixed-variant":"#733500","on-tertiary-container":"#ffd5bd","on-surface-variant":"#57423a","background":"#fbf8ff","on-tertiary-fixed":"#311300","outline-variant":"#dec0b6","secondary-fixed":"#dce2f7","surface":"#fbf8ff","on-surface":"#1b1b24","error-container":"#ffdad6","inverse-surface":"#303039"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1.5rem","space-xs":"0.25rem","gutter-sm":"1rem"},fontFamily:{"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Inter"],"display-hero":["Hanken Grotesk"],"label-md":["Inter"],"code-mono":["JetBrains Mono"],"headline-md":["Hanken Grotesk"],"label-code":["JetBrains Mono"],"body-sm":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},fontSize:{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex items-center justify-center p-space-md"><main class="w-full max-w-md bg-surface-container-lowest rounded-xl border border-[#e2e8f0] p-space-xl shadow-xs"><div class="flex flex-col w-full">
+<!-- Brand Header / WordQuiz Identity -->
+<div class="flex items-center justify-between pb-space-lg mb-space-md border-b-0">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="font-headline-md text-headline-md tracking-tight text-on-background">WordQuiz</span>
+<span class="font-label-code text-label-code uppercase tracking-wider px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-semibold">Pro v2.4</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Plataforma de Aprendizaje & Autoevaluación Continua</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-DEFAULT bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[16px] text-tertiary">cloud_sync</span>
+<span class="font-label-sm text-label-sm">Sincronizado</span>
+</div>
+</div>
+<!-- Session Recovery Banner (Alert-Style Highlight) -->
+<div class="mb-space-lg p-space-md rounded-lg bg-surface-container-low shadow-sm transition-all duration-300" id="previousSessionBanner">
+<div class="flex items-start justify-between gap-3 mb-space-xs">
+<div class="flex items-center space-x-2 text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+<span class="font-headline-sm text-headline-sm text-on-background">Sesión Previa Detectada</span>
+</div>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded-DEFAULT bg-surface-container-lowest text-primary font-medium shadow-xs">
+        85% Completado
+      </span>
+</div>
+<!-- Details Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-xs mt-space-xs">
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-body-lg text-body-lg font-semibold text-on-surface">Biología Celular & Genética II</span>
+<span class="font-label-code text-label-code text-secondary">ID: #BIO-4091</span>
+</div>
+<!-- Progress Bar Graphic -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden mb-space-sm">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 85%;"></div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-secondary mb-space-md pt-space-xs">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+<span class="font-body-sm text-body-sm">45 min transcurridos</span>
+</div>
+<div class="flex items-center space-x-1.5 justify-end">
+<span class="material-symbols-outlined text-[16px] text-tertiary">save</span>
+<span class="font-body-sm text-body-sm">Guardado hoy, 11:42 AM</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-2 pt-space-xs">
+<button class="w-full sm:flex-1 h-9 bg-primary hover:bg-[#8c370b] text-on-primary rounded-DEFAULT font-label-md text-label-md flex items-center justify-center space-x-2 transition-colors shadow-xs" id="resumeSessionBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Restaurar y Continuar</span>
+</button>
+<button class="w-full sm:w-auto h-9 px-3 bg-surface-container hover:bg-surface-variant text-on-surface-variant hover:text-error rounded-DEFAULT font-label-md text-label-md flex items-center justify-center space-x-1 transition-colors" id="discardSessionBtn" title="Descartar sesión" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+<span class="sm:hidden">Descartar</span>
+</button>
+</div>
+<!-- Delete Confirmation Panel (Hidden by default) -->
+<div class="hidden mt-space-sm p-space-sm rounded-DEFAULT bg-surface-container-high transition-all" id="deleteConfirmPanel">
+<p class="font-body-sm text-body-sm text-error font-medium mb-space-xs">
+          ¿Eliminar de forma permanente los apuntes y respuestas sin calificar?
+        </p>
+<div class="flex items-center justify-end space-x-2">
+<button class="px-2.5 py-1 font-label-sm text-label-sm text-secondary hover:text-on-surface" id="cancelDeleteBtn" type="button">
+            Cancelar
+          </button>
+<button class="px-3 py-1 font-label-sm text-label-sm bg-error text-on-error rounded-DEFAULT font-semibold" id="confirmDeleteBtn" type="button">
+            Confirmar Eliminación
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Session Dismissed Feedback Note -->
+<div class="hidden mb-space-md p-space-sm rounded-DEFAULT bg-surface-container text-secondary flex items-center justify-between" id="sessionDismissedNotice">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm">Sesión anterior eliminada correctamente.</span>
+</div>
+<button class="font-label-code text-label-code text-primary hover:underline" id="undoNoticeBtn" type="button">Ocultar</button>
+</div>
+<!-- Auth Tabs Segmented Control -->
+<div class="w-full mb-space-md">
+<div class="flex bg-surface-container p-1 rounded-lg">
+<button class="flex-1 py-1.5 rounded-DEFAULT font-label-md text-label-md text-center font-medium bg-surface-container-lowest text-primary shadow-xs transition-all" id="tabLogin" type="button">
+        Iniciar Sesión
+      </button>
+<button class="flex-1 py-1.5 rounded-DEFAULT font-label-md text-label-md text-center font-medium text-secondary hover:text-on-surface transition-all" id="tabRegister" type="button">
+        Registrarse
+      </button>
+</div>
+</div>
+<!-- Authentication Forms Container -->
+<form class="space-y-space-md" id="authForm" onsubmit="event.preventDefault();">
+<!-- Registration-Only Field: Full Name -->
+<div class="hidden flex-col space-y-space-xs" id="fieldFullName">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between">
+<span>Nombre completo o apodo académico</span>
+<span class="font-label-code text-label-code text-secondary">Opcional</span>
+</label>
+<div class="relative">
+<input class="w-full h-9 px-3 bg-surface-container-lowest rounded-DEFAULT font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-bright focus:shadow-xs shadow-none transition-all" placeholder="Ej. Dra. Valeria Sotomayor" type="text"/>
+</div>
+</div>
+<!-- User / Email Field -->
+<div class="flex flex-col space-y-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="identifierInput">
+<span id="identifierLabel">Correo institucional o usuario</span>
+<span class="font-label-code text-label-code text-primary">@universidad.edu</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-[18px] text-secondary">alternate_email</span>
+<input class="w-full h-9 pl-9 pr-3 bg-surface-container-low rounded-DEFAULT font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-xs transition-all" id="identifierInput" placeholder="valeria.estudio@edu.es" required="" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="passwordInput">Contraseña de acceso</label>
+<a class="font-label-sm text-label-sm text-primary hover:text-tertiary transition-colors" href="#" id="forgotPasswordLink">¿Olvidaste la clave?</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-2.5 text-[18px] text-secondary">lock</span>
+<input class="w-full h-9 pl-9 pr-9 bg-surface-container-low rounded-DEFAULT font-body-md text-body-md text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest focus:shadow-xs transition-all" id="passwordInput" placeholder="••••••••••••" required="" type="password"/>
+<button class="absolute right-2 text-secondary hover:text-on-surface p-1 flex items-center focus:outline-none" id="togglePasswordBtn" type="button">
+<span class="material-symbols-outlined text-[18px]" id="passwordEyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me / Terms Checkbox -->
+<div class="flex items-center justify-between pt-space-xs">
+<label class="flex items-center space-x-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded-DEFAULT text-primary accent-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary" id="checkboxLabelText">Mantener conectado este dispositivo</span>
+</label>
+</div>
+<!-- Submit Primary Button -->
+<button class="w-full h-10 mt-space-sm bg-primary hover:bg-[#8c370b] text-on-primary rounded-DEFAULT font-headline-sm text-body-lg flex items-center justify-center space-x-2 transition-all shadow-xs" id="submitActionBtn" type="submit">
+<span id="submitBtnText">Ingresar al Aula Virtual</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Security & Storage Trust Footer Indicators -->
+<div class="mt-space-xl pt-space-md bg-surface-container-low rounded-lg p-space-sm flex flex-col sm:flex-row items-center justify-around gap-2 text-secondary">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Autoguardado en Nube</span>
+<span class="font-body-sm text-body-sm text-secondary">Progreso en tiempo real</span>
+</div>
+</div>
+<div class="hidden sm:block h-6 w-[1px] bg-surface-container-highest"></div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Cifrado de Extremo a Extremo</span>
+<span class="font-body-sm text-body-sm text-secondary">Tus apuntes seguros</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initWordQuizAuth() {
+    // Interactive Tab Switching
+    const tabLogin = document.getElementById('tabLogin');
+    const tabRegister = document.getElementById('tabRegister');
+    const fieldFullName = document.getElementById('fieldFullName');
+    const submitBtnText = document.getElementById('submitBtnText');
+    const checkboxLabelText = document.getElementById('checkboxLabelText');
+    const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+
+    tabLogin.addEventListener('click', () => {
+      tabLogin.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      tabLogin.classList.remove('text-secondary');
+      tabRegister.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      tabRegister.classList.add('text-secondary');
+      
+      fieldFullName.classList.add('hidden');
+      submitBtnText.textContent = 'Ingresar al Aula Virtual';
+      checkboxLabelText.textContent = 'Mantener conectado este dispositivo';
+      forgotPasswordLink.classList.remove('hidden');
+    });
+
+    tabRegister.addEventListener('click', () => {
+      tabRegister.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      tabRegister.classList.remove('text-secondary');
+      tabLogin.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-xs');
+      tabLogin.classList.add('text-secondary');
+
+      fieldFullName.classList.remove('hidden');
+      submitBtnText.textContent = 'Crear Cuenta Académica';
+      checkboxLabelText.textContent = 'Acepto la política de privacidad y términos';
+      forgotPasswordLink.classList.add('hidden');
+    });
+
+    // Password visibility toggle
+    const togglePasswordBtn = document.getElementById('togglePasswordBtn');
+    const passwordInput = document.getElementById('passwordInput');
+    const passwordEyeIcon = document.getElementById('passwordEyeIcon');
+
+    togglePasswordBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+      passwordEyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+    });
+
+    // Previous Session Handlers
+    const discardSessionBtn = document.getElementById('discardSessionBtn');
+    const deleteConfirmPanel = document.getElementById('deleteConfirmPanel');
+    const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+    const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+    const previousSessionBanner = document.getElementById('previousSessionBanner');
+    const sessionDismissedNotice = document.getElementById('sessionDismissedNotice');
+    const undoNoticeBtn = document.getElementById('undoNoticeBtn');
+    const resumeSessionBtn = document.getElementById('resumeSessionBtn');
+
+    discardSessionBtn.addEventListener('click', () => {
+      deleteConfirmPanel.classList.toggle('hidden');
+    });
+
+    cancelDeleteBtn.addEventListener('click', () => {
+      deleteConfirmPanel.classList.add('hidden');
+    });
+
+    confirmDeleteBtn.addEventListener('click', () => {
+      previousSessionBanner.classList.add('hidden');
+      sessionDismissedNotice.classList.remove('hidden');
+    });
+
+    undoNoticeBtn.addEventListener('click', () => {
+      sessionDismissedNotice.classList.add('hidden');
+    });
+
+    resumeSessionBtn.addEventListener('click', () => {
+      resumeSessionBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Cargando apuntes...</span>';
+      setTimeout(() => {
+        resumeSessionBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span><span>¡Sesión Restaurada!</span>';
+      }, 700);
+    });
+  })();
+</script></main></body></html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#ffd4c4","secondary-fixed-dim":"#c0c6db","primary-fixed":"#ffdbcd","on-surface-variant":"#57423a","primary-container":"#a54310","on-secondary-fixed":"#141b2b","surface":"#fbf8ff","inverse-surface":"#303039","surface-tint":"#a1400c","on-secondary-fixed-variant":"#404758","surface-bright":"#fbf8ff","surface-container-lowest":"#ffffff","surface-dim":"#dbd8e5","on-primary":"#ffffff","inverse-on-surface":"#f2effc","primary-fixed-dim":"#ffb597","surface-container":"#efecf9","tertiary-container":"#964f19","surface-container-high":"#e9e7f3","secondary":"#575e70","on-background":"#1b1b24","surface-container-highest":"#e3e1ed","outline-variant":"#dec0b6","inverse-primary":"#ffb597","primary":"#822f00","error":"#ba1a1a","tertiary-fixed":"#ffdbc7","on-secondary":"#ffffff","on-primary-fixed":"#360f00","surface-variant":"#e3e1ed","error-container":"#ffdad6","on-surface":"#1b1b24","on-tertiary-container":"#ffd5bd","tertiary":"#783800","on-secondary-container":"#5c6274","surface-container-low":"#f5f2ff","on-error":"#ffffff","on-tertiary-fixed-variant":"#733500","secondary-container":"#d9dff5","on-error-container":"#93000a","tertiary-fixed-dim":"#ffb688","outline":"#8a7269","on-primary-fixed-variant":"#7d2d00","secondary-fixed":"#dce2f7","on-tertiary":"#ffffff","background":"#fbf8ff","on-tertiary-fixed":"#311300"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"2rem","space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2rem","gutter":"1.5rem","margin-sm":"1rem","gutter-sm":"1rem","space-lg":"1.5rem"},"fontFamily":{"headline-sm":["Hanken Grotesk"],"body-lg":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"label-md":["Inter"],"display-hero":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"body-md":["Inter"],"headline-lg":["Hanken Grotesk"],"body-sm":["Inter"],"code-mono":["JetBrains Mono"],"label-code":["JetBrains Mono"],"headline-lg-mobile":["Hanken Grotesk"],"label-sm":["Inter"]},"fontSize":{"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg mb-space-xl flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">menu_book</span></div><div><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight block">WordQuiz</span><span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider block">Academic Suite</span></div></div><div class="px-space-lg mb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Navegación</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="panel-analitica" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Panel &amp; Analítica</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder</span><span>Mis Documentos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="espacio-lectura-resumen-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Espacio de Lectura &amp; Resumen IA</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="sala-enfoque-alertas" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span>Sala de Enfoque &amp; Alertas</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-label-md rounded-lg shadow-sm" data-path="banco-cuestionarios" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Banco de Cuestionarios</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="px-space-md"><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-code text-label-code text-on-surface-variant uppercase">Sesión Activa</span><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span></div><p class="font-label-md text-label-md text-on-surface font-semibold">Examen Clínico USMLE</p><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-space-xs"><div class="bg-primary-container h-full w-[68%]"></div></div><div class="flex justify-between font-label-code text-label-code text-on-surface-variant"><span>Meta de lectura</span><span>68%</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md w-96"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant focus:outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar términos, resúmenes, fichas..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="inline-flex p-0.5 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md"><button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface shadow-sm font-medium transition-all" type="button">Modo Estudio</button><button class="px-space-sm py-1 rounded text-on-surface-variant hover:text-on-surface transition-all" type="button">Modo Concentración</button></div><div class="flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed font-code-mono text-code-mono"><span class="material-symbols-outlined text-[16px] text-tertiary">timer</span><span>Foco continuo: 52m</span></div><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen px-space-lg py-space-lg w-full"><div class="flex flex-col w-full">
+<!-- Decorative Ambient Underlay -->
+<div class="relative w-full overflow-hidden mb-space-xl">
+<div class="absolute -top-16 -right-16 w-80 h-80 rounded-full bg-primary-fixed/25 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 left-1/3 w-64 h-64 rounded-full bg-secondary-fixed/40 blur-2xl pointer-events-none"></div>
+<!-- Header & System Identity -->
+<div class="relative flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl">
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-primary uppercase tracking-widest mb-space-xs">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Módulo de Evaluación Continua · Algoritmo Mnemónico Activo</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Banco de Cuestionarios &amp; Práctica Mnemotécnica
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Baterías adaptativas sincronizadas con tu lectura clínica activa. Refuerza conceptos críticos, monitorea puntos de quiebre cognitivo y bloquea el olvido mediante repetición distribuida.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<button class="inline-flex items-center gap-space-xs px-space-md h-9 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Bitácora de Sesiones</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md h-9 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Test Relámpago (3 min)</span>
+</button>
+</div>
+</div>
+<!-- Top Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Total Cuestionarios -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-on-surface-variant">Archivador Base</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">24</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">activos</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Total Cuestionarios</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-code text-label-code text-secondary">
+<span>+3 nuevos esta semana</span>
+<span class="text-primary font-semibold">18 médicos</span>
+</div>
+</div>
+<!-- Metric 2: Tasa Media de Aciertos -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-on-surface-variant">Rendimiento Global</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">donut_large</span>
+</div>
+</div>
+<div class="mt-space-md flex items-end justify-between">
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">88.6%</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Tasa Media de Aciertos</p>
+</div>
+<!-- Sparkline SVG -->
+<div class="w-16 h-8 text-primary pb-1">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 64 24">
+<path d="M2 18 L16 14 L28 17 L42 9 L54 6 L62 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+<circle class="fill-primary-container" cx="62" cy="2" r="2.5"></circle>
+</svg>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-code text-label-code text-secondary">
+<span class="text-primary font-semibold">+4.2% vs. mes anterior</span>
+<span>1,420 reactivos</span>
+</div>
+</div>
+<!-- Metric 3: Racha Sin Distracción -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-on-surface-variant">Disciplina de Estudio</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface">14</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">días seguidos</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Racha Sin Distracción</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-code text-label-code text-secondary">
+<span>0 fugas de foco ayer</span>
+<span class="text-tertiary font-semibold">Máx: 21d</span>
+</div>
+</div>
+<!-- Metric 4: Refuerzos Pendientes -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-on-surface-variant">Alerta Mnemónica</span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">urgentes</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5">Refuerzos Pendientes</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-code text-label-code text-secondary">
+<span>Disparados por alt-tab</span>
+<button class="text-primary font-semibold underline decoration-primary-fixed-dim hover:text-on-surface transition-colors" type="button">Resolver ya</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Workspace Grid: Generator (Left/Top) + Quiz Bank & Anti-Abandonment (Right/Bottom) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Generator & Anti-Abandonment Ledger (5 cols on XL) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Quick Quiz Generator Panel -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Generador IA Rápido</h2>
+<span class="font-label-code text-label-code text-on-surface-variant">Motor Neuro-Sintético v3.2</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-semibold">Adaptive</span>
+</div>
+<form class="flex flex-col gap-space-md" id="quiz-builder-form" onsubmit="event.preventDefault();">
+<!-- Document Base Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="doc-selector">
+<span>Documento Base</span>
+<span class="font-label-code text-label-code text-primary font-normal">Cap. 4 indexado</span>
+</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary-container transition-all appearance-none cursor-pointer" id="doc-selector">
+<option value="neuro-cap4">Neuroanatomía Clínica - Cap. 4 (Vías Motoras)</option>
+<option value="farma-autonomo">Farmacología del Sistema Nervioso Autónomo</option>
+<option value="fisiopato-cardio">Fisiopatología Cardiovascular y Shock</option>
+<option value="bioq-enzimas">Bioquímica: Cinética Enzimática &amp; Inhibidores</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Question Type Selector -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Tipo de Reactivo</span>
+<div class="grid grid-cols-1 gap-1.5" id="question-types-container">
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 accent-primary-container cursor-pointer" name="question_type" type="radio" value="multiple"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Opción Múltiple (Caso Clínico)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4 opciones con distractores plausibles</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 accent-primary-container cursor-pointer" name="question_type" type="radio" value="tf"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Verdadero / Falso Estricto</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Aserción rápida sobre correlatos anatómicos</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 accent-primary-container cursor-pointer" name="question_type" type="radio" value="mnemonic"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-medium">Preguntas Mnemotécnicas</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-primary font-label-code text-[10px] font-semibold">Alta Fijación</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ganchos verbales y recuperación activa</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Quantity Slider -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Cantidad de Reactivos</span>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-surface-container text-primary font-bold" id="slider-count-label">10 preguntas</span>
+</div>
+<input class="w-full h-2 rounded bg-surface-container-high accent-primary-container cursor-pointer mt-1" id="question-slider" max="20" min="5" oninput="document.getElementById('slider-count-label').innerText = this.value + ' preguntas';" step="5" type="range" value="10"/>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant px-0.5">
+<span>5</span>
+<span>10</span>
+<span>20 (Simulacro)</span>
+</div>
+</div>
+<!-- Adaptive Difficulty Level -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Nivel de Dificultad Adaptativa</span>
+<div class="grid grid-cols-3 gap-1.5" id="difficulty-selector">
+<button class="diff-btn py-1.5 px-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="setDifficulty('basico', this)" type="button">
+                Básico
+              </button>
+<button class="diff-btn py-1.5 px-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md text-center shadow-sm font-semibold transition-colors" onclick="setDifficulty('intermedio', this)" type="button">
+                Intermedio
+              </button>
+<button class="diff-btn py-1.5 px-2 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md text-center hover:bg-surface-container-high transition-colors" onclick="setDifficulty('riguroso', this)" type="button">
+                Examen
+              </button>
+</div>
+</div>
+<!-- Submit Action -->
+<button class="w-full mt-space-xs h-10 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-space-xs shadow-sm hover:opacity-95 transition-all active:scale-[0.99]" id="btn-generate-ai" onclick="simulateGeneration()" type="button">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>Generar Nuevo Test con IA</span>
+</button>
+<div class="hidden font-label-code text-label-code text-center text-primary animate-pulse" id="gen-feedback">
+            Sintetizando vectores de 'Neuroanatomía Clínica'...
+          </div>
+</form>
+</section>
+<!-- Anti-Abandonment Flash Report / Retos Mnemotécnicos Ledger -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">screen_lock_rotation</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Refuerzo Anti-Abandono</h2>
+<span class="font-label-code text-label-code text-on-surface-variant">Disparadores por cambio de pestaña</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code">
+            4 Eventos
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Retos instantáneos activados automáticamente al detectar pérdida de foco durante las sesiones de lectura profunda.
+        </p>
+<!-- Events List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Event 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant font-mono">10:42 AM · Pestaña YouTube</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-primary font-label-code text-label-code font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 1º Intento
+              </span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium">
+              "¿Cuál es el par craneal que emerge por el surco bulboprotuberancial?"
+            </p>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Respuesta: <strong class="text-on-surface">NC VI (Abducens)</strong></span>
+<span class="text-secondary">Tiempo: 4.8s</span>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant font-mono">Ayer 16:15 · Fuga al Desktop</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-primary-fixed text-primary font-label-code text-label-code font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer_off</span> -30s Penalización
+              </span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium">
+              "Identificar el sitio exacto de la decusación del haz corticoespinal lateral."
+            </p>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Falló primer prompt · Re-intento completado</span>
+<span class="text-primary font-semibold">Reto superado</span>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant font-mono">18 Oct · Ventana Externa</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-container text-primary font-label-code text-label-code font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 1º Intento
+              </span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium">
+              "Neurotransmisor principal de las células de Purkinje en el cerebelo."
+            </p>
+<div class="flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Respuesta: <strong class="text-on-surface">GABA</strong></span>
+<span class="text-secondary">Tiempo: 3.1s</span>
+</div>
+</div>
+</div>
+<!-- Ledger Stat Summary -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container rounded-lg p-space-sm font-label-code text-label-code">
+<div>
+<span class="text-on-surface-variant block">Superación 1º Intento:</span>
+<span class="text-on-surface font-bold text-body-md">75.0%</span>
+</div>
+<div class="text-right">
+<span class="text-on-surface-variant block">Penalizaciones acumuladas:</span>
+<span class="text-primary font-bold text-body-md">1 min 30 s</span>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Interactive Quiz Repository (8 cols on XL) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Filter Bar with Visual Tabs -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<!-- Tabs -->
+<div class="inline-flex p-1 rounded-lg bg-surface-container text-on-surface-variant font-label-md text-label-md overflow-x-auto">
+<button class="tab-btn px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-semibold shadow-sm transition-all whitespace-nowrap" onclick="filterQuizzes('todos', this)" type="button">
+            Todos (24)
+          </button>
+<button class="tab-btn px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" onclick="filterQuizzes('documento', this)" type="button">
+            Por Documento
+          </button>
+<button class="tab-btn px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" onclick="filterQuizzes('refuerzo', this)" type="button">
+            Refuerzo Anti-Abandono (3)
+          </button>
+<button class="tab-btn px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" onclick="filterQuizzes('espaciado', this)" type="button">
+            Repaso Espaciado Diario
+          </button>
+</div>
+<!-- Sort/Search Accessory -->
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ordenar por fecha" type="button">
+<span class="material-symbols-outlined text-[18px]">sort</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Filtrar por dificultad" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Quiz Card 1: Motor Pathways (Completed) -->
+<article class="quiz-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden" data-category="todos documento">
+<!-- Status indicator bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex-1">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-code text-label-code font-semibold">
+                Completado (9/10 - 90%)
+              </span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 14 min total
+              </span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span> 1m 24s / reactivo
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">
+              Vías Motoras y Decusación Piramidal
+            </h3>
+<!-- Document Source Badge Link -->
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline mt-1" href="#">
+<span class="material-symbols-outlined text-[14px]">description</span>
+<span>Fuente: Neuroanatomía Clínica - Cap. 4 (Pág. 82-99)</span>
+<span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</div>
+<!-- Micro Score Gauge SVG -->
+<div class="flex items-center gap-3 self-start md:self-auto bg-surface-container-low px-space-md py-space-xs rounded-xl">
+<div class="relative w-12 h-12 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="90, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-code text-[11px] font-bold text-on-surface">90%</span>
+</div>
+<div class="flex flex-col font-label-code text-label-code">
+<span class="text-on-surface font-semibold">2 Intentos</span>
+<span class="text-on-surface-variant">Último: Hoy 09:15</span>
+</div>
+</div>
+</div>
+<!-- Inline Question Preview / Performance Breakdown -->
+<div class="mt-space-md pl-space-xs grid grid-cols-1 sm:grid-cols-3 gap-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div>
+<span class="font-label-code text-label-code text-on-surface-variant uppercase block">Puntos Críticos Fijados</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Haz corticoespinal, motoneurona inferior</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-on-surface-variant uppercase block">Fallo a Repasar</span>
+<span class="font-body-md text-body-md text-primary font-medium">Síndrome de Babinski bilateral</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-on-surface-variant uppercase block">Próxima Repetición</span>
+<span class="font-body-md text-body-md text-secondary font-medium">En 4 días (Espaciado)</span>
+</div>
+</div>
+<!-- Action Ribbon -->
+<div class="mt-space-md pl-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-space-md h-8 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Revisar Retroalimentación &amp; Fallos</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" title="Exportar Anki o PDF" type="button">
+<span class="material-symbols-outlined text-[16px]">ios_share</span>
+<span class="hidden sm:inline">Exportar en PDF / Anki</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md h-8 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Repetir Test</span>
+</button>
+</div>
+</article>
+<!-- Quiz Card 2: Synaptic Receptors (In Progress) -->
+<article class="quiz-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden" data-category="todos espaciado">
+<!-- Status indicator bar (amber/in-progress) -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-tertiary"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex-1">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-semibold">
+                En curso (4/10 respondidas)
+              </span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pause_circle</span> Pausado hace 35 min
+              </span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span> 52s / reactivo
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">
+              Receptores Sinápticos y Modulación GABA-A
+            </h3>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline mt-1" href="#">
+<span class="material-symbols-outlined text-[14px]">description</span>
+<span>Fuente: Farmacología del Sistema Nervioso Autónomo &amp; Central (Pág. 114)</span>
+<span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</div>
+<!-- Progress Visual -->
+<div class="flex items-center gap-3 self-start md:self-auto bg-surface-container-low px-space-md py-space-xs rounded-xl">
+<div class="w-24">
+<div class="flex justify-between font-label-code text-label-code mb-1">
+<span class="text-on-surface-variant">Progreso</span>
+<span class="text-on-surface font-semibold">40%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="bg-tertiary h-full w-[40%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Question Tracker & Resume Actions -->
+<div class="mt-space-md pl-space-xs flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded-full bg-primary-container" title="P1: Correcta"></span>
+<span class="w-3 h-3 rounded-full bg-primary-container" title="P2: Correcta"></span>
+<span class="w-3 h-3 rounded-full bg-primary-container" title="P3: Correcta"></span>
+<span class="w-3 h-3 rounded-full bg-surface-dim" title="P4: Omitida"></span>
+<span class="w-3 h-3 rounded-full bg-surface-container-high" title="P5: Pendiente"></span>
+<span class="w-3 h-3 rounded-full bg-surface-container-high" title="P6: Pendiente"></span>
+<span class="w-3 h-3 rounded-full bg-surface-container-high" title="P7: Pendiente"></span>
+<span class="w-3 h-3 rounded-full bg-surface-container-high" title="P8: Pendiente"></span>
+<span class="w-3 h-3 rounded-full bg-surface-container-high" title="P9: Pendiente"></span>
+<span class="w-3 h-3 rounded-full bg-surface-container-high" title="P10: Pendiente"></span>
+<span class="font-label-code text-label-code text-on-surface-variant ml-2">6 reactivos restantes</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1 px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">ios_share</span>
+<span class="hidden sm:inline">Exportar Flashcards</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md h-8 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Reanudar Test</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Quiz Card 3: Neuromuscular Blockers (Needs Review / Anti-Abandonment Trigger) -->
+<article class="quiz-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden" data-category="todos refuerzo">
+<!-- Status indicator bar (terracotta urgency) -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex-1">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-primary font-label-code text-label-code font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span> Pendiente de refuerzo post-distracción
+              </span>
+<span class="font-label-code text-label-code text-on-surface-variant">Activado automáticamente</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">
+              Fármacos Bloqueantes Neuromusculares (Despolarizantes vs. No Despolarizantes)
+            </h3>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline mt-1" href="#">
+<span class="material-symbols-outlined text-[14px]">description</span>
+<span>Fuente: Farmacología Clínica - Cap. 7 (Succinilcolina &amp; Rocuronio)</span>
+<span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</div>
+<div class="self-start md:self-auto flex items-center gap-2 bg-surface-container-low px-space-md py-space-xs rounded-xl">
+<span class="material-symbols-outlined text-primary text-[24px]">crisis_alert</span>
+<div class="flex flex-col font-label-code text-label-code">
+<span class="text-primary font-bold">Prioridad Alta</span>
+<span class="text-on-surface-variant">Pérdida de retención</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm pl-space-xs">
+          Detectamos una vacilación de 4 minutos y cambio de ventana durante el segmento de "Fase I y II del bloqueo con succinilcolina". La IA generó 5 reactivos de alta fijación para consolidar la memoria muscular antes de pasar al siguiente capítulo.
+        </p>
+<!-- Action Ribbon -->
+<div class="mt-space-md pl-space-xs flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1 px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Exportar PDF</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">style</span>
+<span>Anki Deck (.apkg)</span>
+</button>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-lg h-9 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:opacity-95 transition-opacity shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+<span>Iniciar Reto Inmediato (5 min)</span>
+</button>
+</div>
+</article>
+<!-- Quiz Card 4: Daily Spaced Repetition Pack (Scheduled) -->
+<article class="quiz-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden" data-category="todos espaciado">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-sm pl-space-xs">
+<div class="flex-1">
+<div class="flex items-center gap-space-xs flex-wrap mb-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-code text-label-code font-semibold">
+                Repaso Espaciado Diario
+              </span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Sesión sugerida para hoy
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">
+              Consolidación Hemisférica: Corteza Somatosensorial Primaria (Áreas 3, 1, 2)
+            </h3>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline mt-1" href="#">
+<span class="material-symbols-outlined text-[14px]">description</span>
+<span>Fuente: Atlas Neurofuncional &amp; Vías de Dolor</span>
+<span class="material-symbols-outlined text-[12px]">open_in_new</span>
+</a>
+</div>
+<div class="flex items-center gap-3 self-start md:self-auto bg-surface-container-low px-space-md py-space-xs rounded-xl">
+<div class="flex flex-col font-label-code text-label-code text-right">
+<span class="text-on-surface font-semibold">Intervalo: 7 días</span>
+<span class="text-on-surface-variant">Estabilidad: 92%</span>
+</div>
+</div>
+</div>
+<!-- Action Ribbon -->
+<div class="mt-space-md pl-space-xs flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<span class="font-label-code text-label-code text-on-surface-variant">
+            15 reactivos mnemotécnicos calibrados
+          </span>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1 px-space-sm h-8 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Ajustar Intervalo</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md h-8 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-primary-container hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Iniciar Repaso</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<script>
+  // Tab filtering logic
+  function filterQuizzes(category, element) {
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      tab.classList.add('text-on-surface-variant');
+    });
+    
+    element.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+    element.classList.remove('text-on-surface-variant');
+
+    const cards = document.querySelectorAll('.quiz-card');
+    cards.forEach(card => {
+      const cardCats = card.getAttribute('data-category') || '';
+      if (category === 'todos' || cardCats.includes(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Difficulty button switcher
+  function setDifficulty(level, element) {
+    const btns = document.querySelectorAll('.diff-btn');
+    btns.forEach(btn => {
+      btn.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm', 'font-semibold');
+      btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+
+    element.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    element.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm', 'font-semibold');
+  }
+
+  // Simulated AI Quiz Generation feedback
+  function simulateGeneration() {
+    const btn = document.getElementById('btn-generate-ai');
+    const feedback = document.getElementById('gen-feedback');
+    const originalText = btn.innerHTML;
+
+    btn.disabled = true;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Sintetizando Preguntas...</span>';
+    feedback.classList.remove('hidden');
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+      feedback.classList.add('hidden');
+      alert('¡Nuevo cuestionario de 10 preguntas generado con éxito a partir de "Neuroanatomía Clínica - Cap. 4"!');
+    }, 1800);
+  }
+</script></main></div></body></html>

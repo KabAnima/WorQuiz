@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#e3e1ed","surface-bright":"#fbf8ff","primary-container":"#a54310","surface-container":"#efecf9","tertiary-container":"#964f19","on-secondary-container":"#5c6274","on-tertiary":"#ffffff","on-primary-fixed-variant":"#7d2d00","tertiary":"#783800","on-secondary":"#ffffff","tertiary-fixed":"#ffdbc7","on-secondary-fixed":"#141b2b","tertiary-fixed-dim":"#ffb688","on-error-container":"#93000a","surface-dim":"#dbd8e5","on-error":"#ffffff","on-secondary-fixed-variant":"#404758","secondary-fixed-dim":"#c0c6db","error":"#ba1a1a","surface-container-high":"#e9e7f3","surface-container-highest":"#e3e1ed","on-primary-fixed":"#360f00","primary-fixed-dim":"#ffb597","inverse-primary":"#ffb597","on-background":"#1b1b24","surface-container-lowest":"#ffffff","inverse-on-surface":"#f2effc","secondary-container":"#d9dff5","primary-fixed":"#ffdbcd","outline":"#8a7269","secondary":"#575e70","primary":"#822f00","on-primary":"#ffffff","surface-container-low":"#f5f2ff","on-primary-container":"#ffd4c4","surface-tint":"#a1400c","on-tertiary-fixed-variant":"#733500","on-tertiary-container":"#ffd5bd","on-surface-variant":"#57423a","background":"#fbf8ff","on-tertiary-fixed":"#311300","outline-variant":"#dec0b6","secondary-fixed":"#dce2f7","surface":"#fbf8ff","on-surface":"#1b1b24","error-container":"#ffdad6","inverse-surface":"#303039"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1.5rem","space-xs":"0.25rem","gutter-sm":"1rem"},fontFamily:{"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Inter"],"display-hero":["Hanken Grotesk"],"label-md":["Inter"],"code-mono":["JetBrains Mono"],"headline-md":["Hanken Grotesk"],"label-code":["JetBrains Mono"],"body-sm":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},fontSize:{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-[#e2e8f0] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-[#e2e8f0]"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none font-bold">WordQuiz</span><span class="font-label-code text-label-code text-outline uppercase tracking-wider mt-0.5">Academic Suite</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm mb-space-xs block">Espacio Principal</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="panel-analitica" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Panel &amp; Analítica</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Mis Documentos</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="espacio-de-lectura-resumen-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Espacio de Lectura &amp; Resumen IA</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="sala-de-enfoque-alertas" href="#"><span class="material-symbols-outlined text-[20px]">timer</span><span>Sala de Enfoque &amp; Alertas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md border-t border-[#e2e8f0] flex flex-col gap-space-sm bg-surface-container-low"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-[#059669] animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Sesión Activa</span></div><span class="font-label-code text-label-code text-outline">Estudiante</span></div><div class="flex flex-col gap-1"><div class="flex justify-between font-label-code text-label-code text-on-surface-variant"><span>Almacenamiento PDF</span><span>420 MB / 1 GB</span></div><div class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 42%"></div></div></div><button class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-all font-body-sm text-body-sm w-full text-left mt-space-xs"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></button></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-[#ffffff] border-b border-[#e2e8f0] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full max-w-sm"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-3 rounded-lg border border-[#e2e8f0] bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Buscar resúmenes, PDFs, términos..." type="text"/></div><div class="inline-flex p-1 bg-surface-container rounded-lg"><button class="px-space-sm py-1 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-xs font-semibold">Modo Estudio</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface">Modo Concentración</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low border border-[#e2e8f0]"><span class="material-symbols-outlined text-[16px] text-tertiary-container">bolt</span><span class="font-label-code text-label-code text-on-surface-variant">Foco continuo:</span><span class="font-label-code text-label-code text-tertiary font-bold">52m</span></div><button class="relative p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- Header Section with Breadcrumb and Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">
+<span class="text-tertiary-container font-semibold">Auditoría Biométrica &amp; Foco</span>
+<span>/</span>
+<span class="text-outline">Registro Cronológico v2.4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+          Historial de Sesiones &amp; Registro Analítico de Foco
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Auditoría cronológica de bloques de estudio, cálculo de retención cognitiva y exportación estructurada para comités de seguimiento académico.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs shadow-sm" id="btn-reset-log">
+<span class="material-symbols-outlined text-[18px] text-outline">history_toggle_off</span>
+<span>Restablecer Bitácora de la Semana</span>
+</button>
+<div class="relative inline-block text-left" id="export-dropdown-wrapper">
+<button class="px-space-md py-2 rounded-lg bg-primary-container hover:bg-[#8c370b] text-on-primary font-label-md text-label-md transition-all flex items-center gap-space-xs shadow-md" id="btn-export-main">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+<span>Exportar Reporte Completo (CSV / PDF / JSON)</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 rounded-lg bg-surface-container-lowest shadow-xl py-1 z-30" id="export-menu">
+<button class="w-full text-left px-space-md py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-high flex items-center justify-between" onclick="triggerDownload('CSV')">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary-container">table_view</span> Formato CSV Tabular</span>
+<span class="font-label-code text-label-code text-outline">.csv</span>
+</button>
+<button class="w-full text-left px-space-md py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-high flex items-center justify-between" onclick="triggerDownload('PDF')">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-error">picture_as_pdf</span> Certificado PDF Foliado</span>
+<span class="font-label-code text-label-code text-outline">.pdf</span>
+</button>
+<button class="w-full text-left px-space-md py-2 font-label-md text-label-md text-on-surface hover:bg-surface-container-high flex items-center justify-between" onclick="triggerDownload('JSON')">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary">code_blocks</span> Snapshot JSON Completo</span>
+<span class="font-label-code text-label-code text-outline">.json</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Banner (Simulated Action Feedback) -->
+<div class="hidden bg-secondary-container text-on-secondary-fixed p-space-sm rounded-lg flex items-center justify-between shadow-sm" id="status-toast">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="status-toast-msg">Archivo preparado y firmado criptográficamente.</span>
+</div>
+<button class="text-on-secondary-fixed-variant hover:text-on-secondary-fixed" onclick="document.getElementById('status-toast').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Key Performance Indicators (KPI Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1: Horas Totales -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-primary-fixed-dim/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline">Capacidad Cognitiva</span>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+</div>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">28h 45m</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Horas Totales en Foco</p>
+</div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-[#059669]">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-bold">+14.2%</span>
+<span class="text-outline font-normal">vs. semana previa</span>
+</div>
+</div>
+<!-- KPI 2: Retención Mnemotécnica -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-[#a7f3d0]/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline">Calibración Spaced Recall</span>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-[#059669]">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">91.2%</span>
+<span class="font-label-code text-label-code text-outline">/ 100</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Índice Retención Mnemotécnica</p>
+</div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">done_all</span>
+<span>142 reactivos post-bloque validados</span>
+</div>
+</div>
+<!-- KPI 3: Fugas Interceptadas -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-[#ffdad6]/40 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline">Disipación de Atención</span>
+<div class="w-7 h-7 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">flip_camera_ios</span>
+</div>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">19</span>
+<span class="font-label-code text-label-code text-outline">bloqueos</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Fugas Interceptadas</p>
+</div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>100% resueltas con alerta sonora</span>
+</div>
+</div>
+<!-- KPI 4: Tiempo Recuperado -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -top-6 -right-6 w-24 h-24 bg-tertiary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline">Eficiencia Recuperada</span>
+<div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">rebase_edit</span>
+</div>
+</div>
+<div class="my-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">2h 10m</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Tiempo Ganado en Sesión</p>
+</div>
+<div class="flex items-center gap-space-xs font-label-code text-label-code text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">quiz</span>
+<span>Reingreso forzado por micro-quizzes</span>
+</div>
+</div>
+</div>
+<!-- Visual Chart & Temporal Focus Distribution -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Chart Controls Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-container">stacked_bar_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Distribución Diaria y Picos Circadianos de Concentración
+            </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Intensidad de atención dividida en tres ventanas operativas: Matutina (06:00 - 13:00), Vespertina (13:00 - 19:00) y Nocturna (19:00 - 02:00).
+          </p>
+</div>
+<!-- Filter Segmented Control -->
+<div class="inline-flex p-1 bg-surface-container rounded-lg self-start sm:self-auto" id="chart-range-selector">
+<button class="px-space-sm py-1 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-xs font-semibold range-btn active" data-range="7d">Últimos 7 días</button>
+<button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface range-btn" data-range="30d">30 días</button>
+<button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface range-btn" data-range="semestre">Semestre Actual (2025-1)</button>
+</div>
+</div>
+<!-- Interactive SVG Chart Viewport -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-md relative overflow-hidden">
+<!-- Legend and Meta Indicators -->
+<div class="flex flex-wrap items-center justify-between pb-space-sm gap-2">
+<div class="flex items-center gap-space-md font-label-code text-label-code">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-[#a54310]"></span>
+<span class="text-on-surface font-medium">Matutino (6h - 13h)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-[#d97706]"></span>
+<span class="text-on-surface font-medium">Vespertino (13h - 19h)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-[#575e70]"></span>
+<span class="text-on-surface font-medium">Nocturno (19h - 02h)</span>
+</div>
+<div class="flex items-center gap-1.5 ml-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-[#ba1a1a]"></span>
+<span class="text-error font-medium">Marcador de Alerta Disparada</span>
+</div>
+</div>
+<div class="font-label-code text-label-code text-outline">
+            Umbral óptimo: ≥ 4.0h/día
+          </div>
+</div>
+<!-- SVG Vector Visualization Chart -->
+<div class="relative w-full h-64">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 840 220" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid-lines" patternunits="userSpaceOnUse" width="120">
+<line stroke="#dec0b6" stroke-dasharray="3,3" stroke-width="0.5" x1="0" x2="840" y1="40" y2="40"></line>
+</pattern>
+</defs>
+<!-- Grid Backdrop -->
+<rect fill="url(#grid-lines)" height="200" opacity="0.35" width="840"></rect>
+<!-- Optimal Target Baseline -->
+<line opacity="0.8" stroke="#059669" stroke-dasharray="6,4" stroke-width="1.5" x1="0" x2="840" y1="70" y2="70"></line>
+<text fill="#059669" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="835" y="65">Meta Cognitiva (5.0h)</text>
+<!-- Day 1: Lunes 17 Feb -->
+<g class="transition-all hover:opacity-90 cursor-pointer">
+<!-- Nocturno -->
+<rect fill="#575e70" height="45" rx="3" width="36" x="50" y="150"></rect>
+<!-- Vespertino -->
+<rect fill="#d97706" height="42" rx="3" width="36" x="50" y="105"></rect>
+<!-- Matutino -->
+<rect fill="#a54310" height="42" rx="3" width="36" x="50" y="60"></rect>
+<!-- Alert dot -->
+<circle cx="68" cy="52" fill="#ba1a1a" r="4"></circle>
+<text fill="#57423a" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="68" y="212">Lun 17</text>
+</g>
+<!-- Day 2: Martes 18 Feb -->
+<g class="transition-all hover:opacity-90 cursor-pointer">
+<rect fill="#575e70" height="30" rx="3" width="36" x="160" y="165"></rect>
+<rect fill="#d97706" height="52" rx="3" width="36" x="160" y="110"></rect>
+<rect fill="#a54310" height="32" rx="3" width="36" x="160" y="75"></rect>
+<text fill="#57423a" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="178" y="212">Mar 18</text>
+</g>
+<!-- Day 3: Miércoles 19 Feb -->
+<g class="transition-all hover:opacity-90 cursor-pointer">
+<rect fill="#575e70" height="20" rx="3" width="36" x="270" y="175"></rect>
+<rect fill="#d97706" height="48" rx="3" width="36" x="270" y="125"></rect>
+<rect fill="#a54310" height="78" rx="3" width="36" x="270" y="45"></rect>
+<!-- Alert dots -->
+<circle cx="68" cy="52" fill="#ba1a1a" r="3.5"></circle>
+<circle cx="288" cy="38" fill="#ba1a1a" r="4"></circle>
+<text fill="#57423a" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="288" y="212">Mié 19</text>
+</g>
+<!-- Day 4: Jueves 20 Feb -->
+<g class="transition-all hover:opacity-90 cursor-pointer">
+<rect fill="#575e70" height="45" rx="3" width="36" x="380" y="150"></rect>
+<rect fill="#d97706" height="58" rx="3" width="36" x="380" y="90"></rect>
+<rect fill="#a54310" height="33" rx="3" width="36" x="380" y="55"></rect>
+<text fill="#57423a" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="398" y="212">Jue 20</text>
+</g>
+<!-- Day 5: Viernes 21 Feb -->
+<g class="transition-all hover:opacity-90 cursor-pointer">
+<rect fill="#575e70" height="35" rx="3" width="36" x="490" y="160"></rect>
+<rect fill="#d97706" height="38" rx="3" width="36" x="490" y="120"></rect>
+<rect fill="#a54310" height="38" rx="3" width="36" x="490" y="80"></rect>
+<circle cx="508" cy="72" fill="#ba1a1a" r="4"></circle>
+<text fill="#57423a" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="508" y="212">Vie 21</text>
+</g>
+<!-- Day 6: Sábado 22 Feb -->
+<g class="transition-all hover:opacity-90 cursor-pointer">
+<rect fill="#575e70" height="55" rx="3" width="36" x="600" y="140"></rect>
+<rect fill="#d97706" height="42" rx="3" width="36" x="600" y="95"></rect>
+<rect fill="#a54310" height="52" rx="3" width="36" x="600" y="40"></rect>
+<text fill="#57423a" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="618" y="212">Sáb 22</text>
+</g>
+<!-- Day 7: Domingo 23 Feb (Hoy) -->
+<g class="transition-all hover:opacity-90 cursor-pointer">
+<rect fill="#575e70" height="25" rx="3" width="36" x="710" y="170"></rect>
+<rect fill="#d97706" height="38" rx="3" width="36" x="710" y="130"></rect>
+<rect fill="#a54310" height="38" rx="3" width="36" x="710" y="90"></rect>
+<!-- Highlight current day -->
+<rect fill="none" height="112" rx="6" stroke="#a54310" stroke-dasharray="2,2" stroke-width="1.5" width="44" x="706" y="86"></rect>
+<text fill="#a54310" font-family="JetBrains Mono" font-size="11" font-weight="700" text-anchor="middle" x="728" y="212">Dom 23 (Hoy)</text>
+</g>
+</svg>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Resumen de ciclo: 7 de 7 días completados con al menos 1 bloque de lectura crítica.</span>
+<span class="font-bold text-tertiary">Pico de mayor retención: 09:30 AM (Miércoles)</span>
+</div>
+</div>
+</div>
+<!-- Main Table: Detailed Study Sessions History -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header & Live Filtering Bar -->
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">manage_search</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Bitácora Detallada de Sesiones</h2>
+<span class="ml-space-xs px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-code text-label-code">
+              6 Sesiones Registradas
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Registro inmutable de trazabilidad de audio-alertas, modo de inmersión y re-evaluaciones cognitivas.
+          </p>
+</div>
+<!-- Table Filters -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">filter_list</span>
+<select class="h-9 pl-8 pr-8 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer appearance-none" id="filter-discipline">
+<option value="all">Todas las Asignaturas</option>
+<option value="Cardiología">Cardiología Clínica</option>
+<option value="Farmacología">Farmacología &amp; Bioquímica</option>
+<option value="Neuroanatomía">Neuroanatomía Quirúrgica</option>
+<option value="Derecho">Derecho Procesal Penal</option>
+</select>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">bolt</span>
+<select class="h-9 pl-8 pr-8 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary-container cursor-pointer appearance-none" id="filter-mode">
+<option value="all">Todos los Modos</option>
+<option value="Estricto">Concentración Estricto</option>
+<option value="Flexible">Estudio Flexible</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Responsive Data Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse" id="sessions-table">
+<thead>
+<tr class="bg-surface-container-high font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-space-md">Fecha &amp; Bloque</th>
+<th class="py-3 px-space-md">Asignatura &amp; Documento</th>
+<th class="py-3 px-space-md">Duración Neta</th>
+<th class="py-3 px-space-md">Modo Operativo</th>
+<th class="py-3 px-space-md">Alertas Disparadas</th>
+<th class="py-3 px-space-md">Reactivos al Volver</th>
+<th class="py-3 px-space-md">Estado</th>
+<th class="py-3 px-space-md text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Cardiología -->
+<tr class="hover:bg-surface-container-low transition-colors session-row" data-discipline="Cardiología" data-mode="Estricto">
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="font-bold text-on-surface">23 Feb 2025</div>
+<div class="text-outline">09:15 - 11:35</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#ba1a1a]"></span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">Cardiología Clínica</span>
+</div>
+<div class="text-on-surface-variant font-code-mono text-code-mono text-[11px] truncate max-w-xs">
+                  insuficiencia_cardiaca_congestiva_v4.pdf (p. 42-88)
+                </div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<span class="font-bold text-primary-container">2h 20m</span>
+<span class="text-outline block text-[10px]">96% eficacia</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-code text-label-code text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">lock</span>
+                  Estricto
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold">
+                    1 alerta
+                  </span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-container" title="Pestaña oculta 8s">volume_up</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 font-label-code text-label-code">
+<span class="text-[#059669] font-bold">4</span>
+<span class="text-outline">/</span>
+<span class="text-error font-bold">0</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-[#ecfdf5] text-[#059669] font-label-code text-[10px] font-bold">100% OK</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-[#059669]">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+                  Sincronizado
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsModal('SES-CARDIO-8902')" title="Ver Desglose Mnemotécnico">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary-container" onclick="triggerSessionCSV('SES-CARDIO-8902')" title="Descargar CSV de Sesión">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Farmacología -->
+<tr class="hover:bg-surface-container-low transition-colors session-row" data-discipline="Farmacología" data-mode="Flexible">
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="font-bold text-on-surface">22 Feb 2025</div>
+<div class="text-outline">16:40 - 18:10</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#d97706]"></span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">Farmacología &amp; Bioquímica</span>
+</div>
+<div class="text-on-surface-variant font-code-mono text-code-mono text-[11px] truncate max-w-xs">
+                  agonistas_adrenergicos_farmacocinetica.pdf
+                </div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<span class="font-bold text-on-surface">1h 30m</span>
+<span class="text-outline block text-[10px]">88% eficacia</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high font-label-code text-label-code text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+                  Flexible
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-[#fff7ed] text-[#c2410c] font-label-code text-label-code font-bold">
+                    3 alertas
+                  </span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Inactividad ocular">notifications_active</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 font-label-code text-label-code">
+<span class="text-[#059669] font-bold">5</span>
+<span class="text-outline">/</span>
+<span class="text-error font-bold">1</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-label-code text-[10px]">83% OK</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-[#059669]">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+                  Sincronizado
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsModal('SES-PHARM-2201')" title="Ver Desglose Mnemotécnico">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary-container" onclick="triggerSessionCSV('SES-PHARM-2201')" title="Descargar CSV de Sesión">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Neuroanatomía -->
+<tr class="hover:bg-surface-container-low transition-colors session-row" data-discipline="Neuroanatomía" data-mode="Estricto">
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="font-bold text-on-surface">21 Feb 2025</div>
+<div class="text-outline">20:10 - 23:45</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#783800]"></span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">Neuroanatomía Quirúrgica</span>
+</div>
+<div class="text-on-surface-variant font-code-mono text-code-mono text-[11px] truncate max-w-xs">
+                  vias_somatosensoriales_tallo_encefalico.pdf
+                </div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<span class="font-bold text-primary-container">3h 35m</span>
+<span class="text-outline block text-[10px]">98% eficacia</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-code text-label-code text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">lock</span>
+                  Estricto
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold">
+                    0 alertas
+                  </span>
+<span class="material-symbols-outlined text-[16px] text-[#059669]">check</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 font-label-code text-label-code">
+<span class="text-[#059669] font-bold">8</span>
+<span class="text-outline">/</span>
+<span class="text-error font-bold">0</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-[#ecfdf5] text-[#059669] font-label-code text-[10px] font-bold">100% OK</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-[#059669]">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+                  Sincronizado
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsModal('SES-NEURO-5541')" title="Ver Desglose Mnemotécnico">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary-container" onclick="triggerSessionCSV('SES-NEURO-5541')" title="Descargar CSV de Sesión">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Derecho Procesal Penal -->
+<tr class="hover:bg-surface-container-low transition-colors session-row" data-discipline="Derecho" data-mode="Flexible">
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="font-bold text-on-surface">20 Feb 2025</div>
+<div class="text-outline">10:00 - 12:00</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#575e70]"></span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">Derecho Procesal Penal</span>
+</div>
+<div class="text-on-surface-variant font-code-mono text-code-mono text-[11px] truncate max-w-xs">
+                  cadena_custodia_jurisprudencia_comparada.pdf
+                </div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<span class="font-bold text-on-surface">2h 00m</span>
+<span class="text-outline block text-[10px]">85% eficacia</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high font-label-code text-label-code text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+                  Flexible
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-[#fff7ed] text-[#c2410c] font-label-code text-label-code font-bold">
+                    4 alertas
+                  </span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">hearing</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 font-label-code text-label-code">
+<span class="text-[#059669] font-bold">3</span>
+<span class="text-outline">/</span>
+<span class="text-error font-bold">2</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-label-code text-[10px]">60% OK</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-[#059669]">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+                  Sincronizado
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsModal('SES-LAW-1109')" title="Ver Desglose Mnemotécnico">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary-container" onclick="triggerSessionCSV('SES-LAW-1109')" title="Descargar CSV de Sesión">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Cardiología Clínica (Electrocardiografía) -->
+<tr class="hover:bg-surface-container-low transition-colors session-row" data-discipline="Cardiología" data-mode="Estricto">
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="font-bold text-on-surface">19 Feb 2025</div>
+<div class="text-outline">07:30 - 10:15</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#ba1a1a]"></span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">Cardiología Clínica</span>
+</div>
+<div class="text-on-surface-variant font-code-mono text-code-mono text-[11px] truncate max-w-xs">
+                  arritmias_ventriculares_y_analisis_ecg.pdf
+                </div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<span class="font-bold text-primary-container">2h 45m</span>
+<span class="text-outline block text-[10px]">99% eficacia</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-code text-label-code text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">lock</span>
+                  Estricto
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold">
+                    0 alertas
+                  </span>
+<span class="material-symbols-outlined text-[16px] text-[#059669]">check</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 font-label-code text-label-code">
+<span class="text-[#059669] font-bold">6</span>
+<span class="text-outline">/</span>
+<span class="text-error font-bold">0</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-[#ecfdf5] text-[#059669] font-label-code text-[10px] font-bold">100% OK</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-[#059669]">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+                  Sincronizado
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsModal('SES-CARDIO-7731')" title="Ver Desglose Mnemotécnico">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary-container" onclick="triggerSessionCSV('SES-CARDIO-7731')" title="Descargar CSV de Sesión">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Farmacología (Quimioterapia) -->
+<tr class="hover:bg-surface-container-low transition-colors session-row" data-discipline="Farmacología" data-mode="Estricto">
+<td class="py-3 px-space-md font-label-code text-label-code">
+<div class="font-bold text-on-surface">18 Feb 2025</div>
+<div class="text-outline">14:00 - 15:45</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#d97706]"></span>
+<span class="font-semibold text-on-surface font-label-md text-label-md">Farmacología &amp; Bioquímica</span>
+</div>
+<div class="text-on-surface-variant font-code-mono text-code-mono text-[11px] truncate max-w-xs">
+                  antimetabolitos_y_agentes_alquilantes.pdf
+                </div>
+</td>
+<td class="py-3 px-space-md font-label-code text-label-code">
+<span class="font-bold text-primary-container">1h 45m</span>
+<span class="text-outline block text-[10px]">93% eficacia</span>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-code text-label-code text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary-container">lock</span>
+                  Estricto
+                </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-code text-label-code font-bold">
+                    1 alerta
+                  </span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">notifications_active</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 font-label-code text-label-code">
+<span class="text-[#059669] font-bold">4</span>
+<span class="text-outline">/</span>
+<span class="text-error font-bold">0</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-[#ecfdf5] text-[#059669] font-label-code text-[10px] font-bold">100% OK</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-code text-label-code text-[#059669]">
+<span class="material-symbols-outlined text-[14px]">cloud_done</span>
+                  Sincronizado
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface" onclick="openDetailsModal('SES-PHARM-9011')" title="Ver Desglose Mnemotécnico">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary-container" onclick="triggerSessionCSV('SES-PHARM-9011')" title="Descargar CSV de Sesión">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Bottom Log Summary -->
+<div class="px-space-lg py-3 bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-code text-label-code text-on-surface-variant">
+<div>Mostrando 6 de 6 bloques auditados en el ciclo seleccionado</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface shadow-xs opacity-50 cursor-not-allowed">Anterior</button>
+<span class="px-2 font-bold text-on-surface">Página 1 de 1</span>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface shadow-xs opacity-50 cursor-not-allowed">Siguiente</button>
+</div>
+</div>
+</div>
+<!-- Data Governance & Voluntary Privacy Deletion Module -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Privacy Policy and Integrity Context -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">policy</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Gobernanza de Datos &amp; Autonomía del Estudiante
+            </h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            WordQuiz implementa una política estricta de <span class="text-on-surface font-medium">cero retención involuntaria</span>. Los registros de atención ocular, picos sonoros y latencia de reactivos residen bajo cifrado local y en su partición estudiantil privada. Ningún dato biométrico o de comportamiento cognitivo se comparte con evaluadores sin su exportación formal explícita.
+          </p>
+<div class="mt-space-md grid grid-cols-1 sm:grid-cols-2 gap-space-md font-body-sm text-body-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-[#059669]">verified_user</span>
+                Cifrado AES-256 en Reposo
+              </span>
+<span class="text-on-surface-variant">Los registros se firman con su par de claves públicas para validación curricular.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-code text-label-code font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">schedule</span>
+                Depuración Automática
+              </span>
+<span class="text-on-surface-variant">Los archivos temporales de telemetría auditiva caducan a los 90 días naturales.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<span class="font-label-code text-label-code text-outline">
+            ID de Auditoría Estudiantil: <span class="text-on-surface font-bold">WQ-STU-88219-MX</span>
+</span>
+<a class="font-label-md text-label-md text-primary-container hover:underline flex items-center gap-1" href="#">
+<span>Consultar Acuerdo de Confidencialidad Académica</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Action Card: Voluntary Session Purge -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-error mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">delete_sweep</span>
+<h4 class="font-headline-sm text-headline-sm font-semibold">Purga Selectiva de Bitácora</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Elimine definitivamente bloques de estudio que considere atípicos, ensayos no representativos o sesiones con interrupciones ambientales inevitables.
+          </p>
+<div class="my-space-md flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Alcance de la purga:</label>
+<select class="w-full h-9 px-3 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface focus:outline-none focus:ring-1 focus:ring-error" id="purge-scope">
+<option value="today">Sesiones de hoy únicamente</option>
+<option value="low-efficiency">Sesiones con &lt; 70% de eficacia</option>
+<option value="all-week">Restablecer semana en curso</option>
+<option value="complete">Eliminar historial completo de la materia seleccionada</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full py-2.5 rounded-lg bg-error-container hover:bg-[#ffdad6] text-on-error-container font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2" id="btn-purge">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Confirmar Purga Voluntaria</span>
+</button>
+<span class="font-label-code text-label-code text-outline text-center">
+            Esta acción es irreversible y recalculará sus KPIs.
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detail Slide-Over Modal / Modal de Desglose Mnemotécnico (Simulado) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md" id="session-modal">
+<div class="fixed inset-0 bg-on-surface/40 backdrop-blur-xs" onclick="closeDetailsModal()"></div>
+<div class="relative bg-surface-container-lowest rounded-xl max-w-xl w-full p-space-lg shadow-xl z-10 flex flex-col gap-space-md max-h-[921px] overflow-y-auto">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modal-title">Desglose de Sesión SES-CARDIO-8902</h3>
+<span class="font-label-code text-label-code text-outline" id="modal-subtitle">Insuficiencia Cardiaca Congestiva v4.pdf</span>
+</div>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container text-on-surface-variant" onclick="closeDetailsModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid grid-cols-3 gap-space-sm bg-surface-container-low p-space-md rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-outline">Atención Media</span>
+<span class="font-headline-sm text-headline-sm font-bold text-[#059669]">96.4%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-outline">Desconexiones</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">1 intento</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-outline">Latencia Quiz</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary-container">1.8s</span>
+</div>
+</div>
+<!-- Intercepted Distractions Log -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Trazabilidad de la Interrupción (09:48 AM)</span>
+<div class="p-space-sm rounded-lg bg-surface-container flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">warning</span>
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">Cambio de pestaña no autorizado hacia cliente de mensajería</span>
+<span class="text-on-surface-variant">Señal sonora de 440Hz activada tras 5 segundos. Estudiante regresó a la lectura en 8 segundos totales. Reactivo de seguridad respondido correctamente.</span>
+</div>
+</div>
+</div>
+<!-- Cognitive Recall Items Summary -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Reactivos al Volver Aplicados</span>
+<div class="space-y-2 font-body-sm text-body-sm">
+<div class="p-2 rounded bg-surface-container-lowest flex items-center justify-between shadow-xs">
+<span class="truncate max-w-sm">Mecanismo de acción de los inhibidores SGLT2 en IC-FEr</span>
+<span class="px-2 py-0.5 rounded bg-[#ecfdf5] text-[#059669] font-label-code text-label-code font-bold">Superado (+100 pts)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex items-center justify-between shadow-xs">
+<span class="truncate max-w-sm">Diferenciación entre péptido BNP vs NT-proBNP sérico</span>
+<span class="px-2 py-0.5 rounded bg-[#ecfdf5] text-[#059669] font-label-code text-label-code font-bold">Superado (+100 pts)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="closeDetailsModal()">Cerrar</button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm" onclick="triggerSessionCSV('SES-CARDIO-8902'); closeDetailsModal();">Exportar Esta Sesión (.csv)</button>
+</div>
+</div>
+</div>
+<!-- Inline Client Interactions Logic -->
+<script>
+    // Export Dropdown Toggle
+    const exportBtn = document.getElementById('btn-export-main');
+    const exportMenu = document.getElementById('export-menu');
+    
+    if (exportBtn && exportMenu) {
+      exportBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        exportMenu.classList.toggle('hidden');
+      });
+      document.addEventListener('click', () => {
+        exportMenu.classList.add('hidden');
+      });
+    }
+
+    // Trigger Download Notification Simulation
+    function triggerDownload(format) {
+      const toast = document.getElementById('status-toast');
+      const msg = document.getElementById('status-toast-msg');
+      if (toast && msg) {
+        msg.textContent = `Reporte exportado exitosamente en formato ${format}. Hash SHA-256 verificado.`;
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 5000);
+      }
+      if (exportMenu) exportMenu.classList.add('hidden');
+    }
+
+    function triggerSessionCSV(sessionId) {
+      const toast = document.getElementById('status-toast');
+      const msg = document.getElementById('status-toast-msg');
+      if (toast && msg) {
+        msg.textContent = `Descargando bitácora granular: ${sessionId}.csv`;
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+        }, 4000);
+      }
+    }
+
+    // Modal Control
+    function openDetailsModal(sessionId) {
+      const modal = document.getElementById('session-modal');
+      const title = document.getElementById('modal-title');
+      if (title) title.textContent = `Desglose de Sesión ${sessionId}`;
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeDetailsModal() {
+      const modal = document.getElementById('session-modal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    // Filter Table by Discipline and Mode
+    const filterDiscipline = document.getElementById('filter-discipline');
+    const filterMode = document.getElementById('filter-mode');
+    const rows = document.querySelectorAll('.session-row');
+
+    function applyFilters() {
+      const discVal = filterDiscipline ? filterDiscipline.value : 'all';
+      const modeVal = filterMode ? filterMode.value : 'all';
+
+      rows.forEach(row => {
+        const rowDisc = row.getAttribute('data-discipline');
+        const rowMode = row.getAttribute('data-mode');
+
+        const matchDisc = (discVal === 'all' || rowDisc === discVal);
+        const matchMode = (modeVal === 'all' || rowMode === modeVal);
+
+        if (matchDisc && matchMode) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    if (filterDiscipline) filterDiscipline.addEventListener('change', applyFilters);
+    if (filterMode) filterMode.addEventListener('change', applyFilters);
+
+    // Range selector visual toggling
+    const rangeBtns = document.querySelectorAll('.range-btn');
+    rangeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        rangeBtns.forEach(b => {
+          b.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-semibold');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+
+        const toast = document.getElementById('status-toast');
+        const msg = document.getElementById('status-toast-msg');
+        if (toast && msg) {
+          msg.textContent = `Rango temporal actualizado: vista '${btn.textContent.trim()}'.`;
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 3000);
+        }
+      });
+    });
+
+    // Reset & Purge Actions
+    const btnReset = document.getElementById('btn-reset-log');
+    if (btnReset) {
+      btnReset.addEventListener('click', () => {
+        if (confirm('¿Desea archivar y restablecer la bitácora activa de la semana actual? Se creará una copia de seguridad automática.')) {
+          triggerDownload('ZIP-RESPALDO');
+        }
+      });
+    }
+
+    const btnPurge = document.getElementById('btn-purge');
+    if (btnPurge) {
+      btnPurge.addEventListener('click', () => {
+        const scope = document.getElementById('purge-scope').value;
+        if (confirm(`¿Confirma purgar el registro bajo el criterio seleccionado [${scope}]? Esta acción no se puede deshacer.`)) {
+          const toast = document.getElementById('status-toast');
+          const msg = document.getElementById('status-toast-msg');
+          if (toast && msg) {
+            msg.textContent = 'Purga voluntaria completada. Índices de privacidad y analítica actualizados.';
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 4000);
+          }
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

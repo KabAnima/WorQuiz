@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-dim":"#dbd8e5","surface-container-high":"#e9e7f3","secondary-container":"#d9dff5","on-background":"#1b1b24","error":"#ba1a1a","surface-container-lowest":"#ffffff","on-primary":"#ffffff","inverse-on-surface":"#f2effc","secondary-fixed":"#dce2f7","on-secondary-fixed-variant":"#404758","outline":"#8a7269","on-error":"#ffffff","tertiary":"#783800","on-tertiary-fixed":"#311300","surface-container-highest":"#e3e1ed","surface-container":"#efecf9","primary-fixed":"#ffdbcd","surface-bright":"#fbf8ff","on-primary-fixed":"#360f00","surface-variant":"#e3e1ed","tertiary-container":"#964f19","on-secondary-fixed":"#141b2b","primary-container":"#a54310","tertiary-fixed":"#ffdbc7","inverse-surface":"#303039","primary-fixed-dim":"#ffb597","on-surface-variant":"#57423a","secondary":"#575e70","inverse-primary":"#ffb597","on-secondary-container":"#5c6274","tertiary-fixed-dim":"#ffb688","on-surface":"#1b1b24","on-tertiary":"#ffffff","outline-variant":"#dec0b6","on-tertiary-container":"#ffd5bd","surface":"#fbf8ff","on-error-container":"#93000a","on-primary-fixed-variant":"#7d2d00","primary":"#822f00","on-secondary":"#ffffff","surface-tint":"#a1400c","on-tertiary-fixed-variant":"#733500","on-primary-container":"#ffd4c4","error-container":"#ffdad6","secondary-fixed-dim":"#c0c6db","surface-container-low":"#f5f2ff","background":"#fbf8ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-sm":"1rem","gutter-sm":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","margin":"2rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2rem"},"fontFamily":{"code-mono":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"display-hero":["Hanken Grotesk"],"label-sm":["Inter"],"label-code":["JetBrains Mono"],"body-lg":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"label-md":["Inter"],"headline-md":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"]},"fontSize":{"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-space-md flex items-center gap-space-sm bg-surface-container-low"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-[0_1px_2px_rgba(0,0,0,0.08)]"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col leading-tight"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">WordQuiz</span><span class="font-label-code text-label-code text-primary font-medium uppercase">Academic Suite</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Espacio Principal</span></div><nav class="flex-1 px-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="panel-analitica" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Panel &amp; Analítica</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Mis Documentos</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="espacio-lectura-resumen-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Lectura &amp; Resumen IA</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="sala-enfoque-alertas" href="#"><span class="material-symbols-outlined text-[20px]">timelapse</span><span>Sala Enfoque &amp; Alertas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="banco-cuestionarios" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Banco Cuestionarios</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="evaluaciones-simulacros" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span>Evaluaciones &amp; Test</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="historial-auditoria" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Historial &amp; Auditoría</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="configuracion-politicas" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Configuración &amp; Políticas</span></a></nav><div class="p-space-sm m-space-sm bg-surface-container rounded-lg"><div class="flex items-center justify-between"><span class="font-label-code text-label-code text-on-surface-variant">Sincronización</span><span class="font-label-code text-label-code text-primary font-semibold">Activa</span></div><div class="mt-1 w-full bg-surface-dim rounded-full h-1"><div class="bg-primary-container h-1 rounded-full w-4/5"></div></div><p class="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">Módulo IA calibrado</p></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 w-full px-space-md flex items-center justify-between gap-space-md"><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-4 bg-surface-container-lowest text-on-surface rounded-lg font-body-md text-body-md outline-none placeholder:text-on-surface-variant shadow-[0_1px_2px_rgba(17,24,39,0.04)] focus:ring-1 focus:ring-primary-container" placeholder="Buscar resúmenes, fichas nemotécnicas, lecturas..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center bg-surface-container-high p-0.5 rounded-lg"><button class="px-3 py-1 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface font-medium shadow-[0_1px_2px_rgba(0,0,0,0.04)]" type="button">Estudio</button><button class="px-3 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">Concentración</button></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-1 rounded-lg shadow-[0_1px_2px_rgba(17,24,39,0.04)]"><span class="material-symbols-outlined text-[18px] text-primary">timer</span><span class="font-code-mono text-code-mono text-on-surface font-medium">00:48:15</span><span class="inline-flex items-center gap-1 ml-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-code text-label-code font-medium"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>Anti-abandono</span></div><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg space-y-space-lg max-w-7xl mx-auto w-full">
+<!-- Encabezado de la Pantalla -->
+<header class="relative overflow-hidden bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-sm mb-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-code text-label-code font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+            PORTABILIDAD ACADÉMICA V2.4
+          </span>
+<span class="font-label-code text-label-code text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">verified_user</span>
+            Bases sincronizadas al 100% | Matrícula: #WQ-88219-MX
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+          Centro de Exportación de Progreso &amp; Portabilidad Académica
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+          Descarga de métricas de foco continuo, rendimiento de cuestionarios mnemotécnicos y exportación estructurada compatible con Anki y sistemas LMS universitarios.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm shrink-0">
+<div class="bg-surface-container px-space-md py-2 rounded-lg flex items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Última réplica</span>
+<span class="font-code-mono text-code-mono font-medium text-on-surface">Hoy, 14:32:09</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-primary-container">cloud_done</span>
+</div>
+<button class="px-space-md py-2 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.98]" id="btn-quick-sync" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Regenerar Todo</span>
+</button>
+</div>
+</header>
+<!-- Tarjetas de Exportación Rápida Destacadas -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+            Exportaciones Rápidas Preensambladas
+          </h2>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">Archivos optimizados listos para transferencia</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Tarjeta 1: Anki -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container"></div>
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">style</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code font-medium">.APKG</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">Barajas para Anki</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              142 tarjetas mnemotécnicas generadas por IA de las últimas 3 semanas con algoritmo Spaced Repetition preconfigurado.
+            </p>
+<div class="mt-space-sm p-space-xs bg-surface-container-low rounded-lg space-y-1">
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Tarjetas activas:</span>
+<span class="font-semibold text-on-surface">142 items</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Intervalo base:</span>
+<span class="font-semibold text-on-surface">SM-2 Adaptativo</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<button class="w-full py-2 bg-primary-container hover:bg-primary text-on-primary rounded font-label-md text-label-md font-medium flex items-center justify-center gap-1 shadow-sm transition-colors" onclick="triggerDownload('wordquiz-anki-deck-week42.apkg')" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Descargar .apkg</span>
+</button>
+</div>
+</article>
+<!-- Tarjeta 2: PDF Oficial -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code text-label-code font-medium">PDF LEGAL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">Auditoría &amp; Foco</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Dossier ejecutivo de 6 páginas con gráficas circadianas, porcentaje de retención (91.2%) y horas de estudio certificables.
+            </p>
+<div class="mt-space-sm p-space-xs bg-surface-container-low rounded-lg space-y-1">
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Retención global:</span>
+<span class="font-semibold text-primary">91.2% medido</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Firma cripto:</span>
+<span class="font-semibold text-on-surface">RSA-4096</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<button class="w-full py-2 bg-on-background hover:bg-inverse-surface text-surface-container-lowest rounded font-label-md text-label-md font-medium flex items-center justify-center gap-1 shadow-sm transition-colors" onclick="triggerDownload('auditoria-academica-focus-wq.pdf')" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Generar Informe</span>
+</button>
+</div>
+</article>
+<!-- Tarjeta 3: CSV/Excel -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-surface-dim"></div>
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">table_chart</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-code text-label-code font-medium">CSV / XLS</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">Métricas Crudas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Registros cronológicos de cada intento, latencia de respuesta tras abandono y penalizaciones temporales acumuladas.
+            </p>
+<div class="mt-space-sm p-space-xs bg-surface-container-low rounded-lg space-y-1">
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Filas auditadas:</span>
+<span class="font-semibold text-on-surface">3,480 eventos</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Métricas de latencia:</span>
+<span class="font-semibold text-on-surface">ms precisión</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<button class="w-full py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-md text-label-md font-medium flex items-center justify-center gap-1 shadow-sm transition-colors" onclick="triggerDownload('telemetria-respuestas-foco.csv')" type="button">
+<span class="material-symbols-outlined text-[16px]">table_view</span>
+<span>Exportar CSV</span>
+</button>
+</div>
+</article>
+<!-- Tarjeta 4: JSON Backup -->
+<article class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary"></div>
+<div>
+<div class="flex items-start justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">data_object</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-code text-label-code font-medium">JSON SCHEMA</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-snug">Backup Estructurado</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Paquete íntegro con documentos indexados, resúmenes jerárquicos estructurados y bancos de cuestionarios relacionales.
+            </p>
+<div class="mt-space-sm p-space-xs bg-surface-container-low rounded-lg space-y-1">
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Documentos raíz:</span>
+<span class="font-semibold text-on-surface">28 archivos</span>
+</div>
+<div class="flex justify-between font-label-code text-label-code text-on-surface-variant">
+<span>Esquema validado:</span>
+<span class="font-semibold text-on-surface">OpenAPI 3.1</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<button class="w-full py-2 bg-surface-container-highest hover:bg-surface-container-high text-on-surface rounded font-label-md text-label-md font-medium flex items-center justify-center gap-1 shadow-sm transition-colors" onclick="triggerDownload('wordquiz-snapshot-completo.json')" type="button">
+<span class="material-symbols-outlined text-[16px]">archive</span>
+<span>Generar Backup</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Bento Grid: Filtros Personalizados & Diagnóstico Gráfico -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Panel de Configuración Personalizada -->
+<section class="lg:col-span-8 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-xs gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">tune</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Filtros y Configuración Personalizada</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Acota el dataset antes de empaquetar tus registros académicos.
+            </p>
+</div>
+<span class="font-label-code text-label-code px-2 py-1 rounded bg-surface-container text-on-surface-variant self-start sm:self-auto">
+            Estimado: ~4.2 MB
+          </span>
+</div>
+<!-- 1. Rango de Fechas -->
+<div class="space-y-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">
+            Rango de Cobertura Temporal
+          </label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm" id="date-range-buttons">
+<button class="date-btn active px-3 py-2 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-medium text-center transition-colors" type="button">
+              Últimos 7 días
+            </button>
+<button class="date-btn px-3 py-2 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface hover:bg-surface-container transition-colors font-medium text-center" type="button">
+              Este Mes
+            </button>
+<button class="date-btn px-3 py-2 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface hover:bg-surface-container transition-colors font-medium text-center" type="button">
+              Semestre 2025-1
+            </button>
+<button class="date-btn px-3 py-2 rounded-lg font-label-md text-label-md bg-surface-container-high text-on-surface hover:bg-surface-container transition-colors font-medium text-center flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Personalizado</span>
+</button>
+</div>
+</div>
+<!-- 2. Selector de Asignaturas -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+              Asignaturas Indexadas
+            </label>
+<button class="font-label-code text-label-code text-primary-container hover:underline" id="select-all-btn" type="button">
+              Seleccionar todas
+            </button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-sm">
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Medicina</span>
+<span class="font-label-code text-label-code text-on-surface-variant">42 fichas</span>
+</div>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Neuroanatomía</span>
+<span class="font-label-code text-label-code text-on-surface-variant">61 fichas</span>
+</div>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Farmacología</span>
+<span class="font-label-code text-label-code text-on-surface-variant">25 fichas</span>
+</div>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<input class="w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-medium text-on-surface">Derecho Procesal</span>
+<span class="font-label-code text-label-code text-on-surface-variant">14 fichas</span>
+</div>
+</label>
+</div>
+</div>
+<!-- 3. Privacidad y Configuración Especial -->
+<div class="pt-space-xs p-space-md bg-surface-container-low rounded-lg space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-[15px]">Anonimizar métricas biométricas &amp; tiempo de fuga</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Disocia el tracking de micro-parpadeos y registros de audio ambiental del expediente exportado.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="anon-toggle" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-space-xs gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>Incluye metadatos de auditoría antimanipulación (Hash SHA-256 en header).</span>
+</div>
+<button class="px-space-md py-2 bg-on-background hover:bg-inverse-surface text-surface-container-lowest font-label-md text-label-md font-medium rounded-lg flex items-center gap-space-xs shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">build_circle</span>
+<span>Compilar Exportación a Medida</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Panel Lateral: Telemetría de Retención y Cobertura Visual -->
+<section class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Resumen de Cobertura</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-code text-label-code font-semibold">91.2% Foco Neto</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight">Distribución por Disciplina</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Horas netas computables preparadas para validación académica.</p>
+<!-- SVG Visual Donut / Breakdown -->
+<div class="py-space-md flex items-center justify-center">
+<div class="relative w-40 h-40 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"></path>
+<!-- Segment 1: Neuroanatomía (45%) -->
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="45, 100" stroke-linecap="round" stroke-width="3.8"></path>
+<!-- Segment 2: Medicina (30%) offset 45 -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="30, 100" stroke-dashoffset="-45" stroke-linecap="round" stroke-width="3.8"></path>
+<!-- Segment 3: Farmacología (16%) offset 75 -->
+<path class="text-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="16, 100" stroke-dashoffset="-75" stroke-linecap="round" stroke-width="3.8"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface leading-none">48h</span>
+<span class="font-label-code text-label-code text-on-surface-variant mt-1">Registradas</span>
+</div>
+</div>
+</div>
+<!-- Leyenda compacta -->
+<div class="space-y-1.5 pt-space-xs font-label-code text-label-code">
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+                Neuroanatomía
+              </span>
+<span class="font-semibold">21h 35m (45%)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                Medicina General
+              </span>
+<span class="font-semibold">14h 20m (30%)</span>
+</div>
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+                Farmacología
+              </span>
+<span class="font-semibold">07h 45m (16%)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm mt-space-sm">
+<span class="material-symbols-outlined text-[24px] text-primary">school</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Validez para Créditos ECTs</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Compatible con exportador Moodle / Canvas LMS</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Historial de Exportaciones Recientes & Registros Descargados -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[22px]">history</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Historial de Exportaciones &amp; Auditoría SHA-256</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Registros inmutables generados para este usuario. Los archivos expiran automáticamente en 7 días por política de retención.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded font-label-md text-label-md transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<span>Filtrar</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-error rounded font-label-md text-label-md transition-colors flex items-center gap-1" onclick="clearExportHistory()" type="button">
+<span class="material-symbols-outlined text-[16px]">clear_all</span>
+<span>Limpiar Historial</span>
+</button>
+</div>
+</div>
+<!-- Tabla Responsive -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md font-semibold rounded-l-lg">Archivo Generado</th>
+<th class="py-2.5 px-space-md font-semibold">Fecha / Hora</th>
+<th class="py-2.5 px-space-md font-semibold">Formato</th>
+<th class="py-2.5 px-space-md font-semibold">Tamaño</th>
+<th class="py-2.5 px-space-md font-semibold">Hash SHA-256 (Integridad)</th>
+<th class="py-2.5 px-space-md font-semibold text-right rounded-r-lg">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface" id="export-history-table">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-medium text-on-surface">dossier_academico_neuro_2025.pdf</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">2025-05-18 13:12:44</td>
+<td class="py-space-sm px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-code text-label-code">PDF</span>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono">3.4 MB</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">
+<span class="select-all" title="e7f2b90c8a34...091f">e7f2b90c8a34...091f</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1.5 hover:bg-surface-container rounded text-primary transition-colors" title="Volver a Descargar" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant hover:text-error transition-colors" onclick="deleteHistoryRow(this)" title="Eliminar archivo" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-medium text-on-surface">anki_deck_farmacologia_completo.apkg</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">2025-05-17 09:41:10</td>
+<td class="py-space-sm px-space-md">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-code text-label-code">APKG</span>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono">1.1 MB</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">
+<span class="select-all" title="99c104ab7210...ff42">99c104ab7210...ff42</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1.5 hover:bg-surface-container rounded text-primary transition-colors" title="Volver a Descargar" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant hover:text-error transition-colors" onclick="deleteHistoryRow(this)" title="Eliminar archivo" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-medium text-on-surface">raw_focus_metrics_semestre1.csv</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">2025-05-15 18:22:01</td>
+<td class="py-space-sm px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-code text-label-code">CSV</span>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono">842 KB</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">
+<span class="select-all" title="31bb899014df...a190">31bb899014df...a190</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1.5 hover:bg-surface-container rounded text-primary transition-colors" title="Volver a Descargar" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant hover:text-error transition-colors" onclick="deleteHistoryRow(this)" title="Eliminar archivo" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-medium text-on-surface">full_backup_workspace_json.zip</span>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">2025-05-10 11:05:58</td>
+<td class="py-space-sm px-space-md">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-code text-label-code">JSON</span>
+</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono">14.6 MB</td>
+<td class="py-space-sm px-space-md font-code-mono text-code-mono text-on-surface-variant">
+<span class="select-all" title="445a6c01eec9...cb88">445a6c01eec9...cb88</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-1.5 hover:bg-surface-container rounded text-primary transition-colors" title="Volver a Descargar" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant hover:text-error transition-colors" onclick="deleteHistoryRow(this)" title="Eliminar archivo" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Pie de Página de Gobernanza, Soberanía & Purga Inmediata -->
+<footer class="bg-surface-container-high/60 p-space-lg rounded-xl space-y-space-md">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-1 max-w-2xl">
+<div class="flex items-center gap-space-xs text-on-surface font-headline-sm text-headline-sm font-semibold text-[16px]">
+<span class="material-symbols-outlined text-[20px] text-tertiary">lock_reset</span>
+<span>Soberanía del Estudiante &amp; Cumplimiento Normativo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            WordQuiz cumple rigurosamente con los protocolos <strong>GDPR (Art. 20 - Portabilidad de Datos)</strong> y estándares <strong>FERPA</strong> de confidencialidad académica. Eres el único propietario de tus grafos cognitivos y registros biométricos de concentración.
+          </p>
+</div>
+<!-- Botón de purga inmediata -->
+<div class="shrink-0 flex flex-col sm:flex-row gap-space-xs w-full md:w-auto">
+<button class="px-space-md py-2 bg-error-container hover:bg-error text-on-error-container hover:text-on-error rounded-lg font-label-md text-label-md font-medium transition-colors flex items-center justify-center gap-space-xs" onclick="showPurgeConfirmation()" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Purgar Backups Locales</span>
+</button>
+<a class="px-space-md py-2 bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg font-label-md text-label-md font-medium transition-colors flex items-center justify-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span>Políticas de Retención</span>
+</a>
+</div>
+</div>
+<!-- Certificaciones micro-row -->
+<div class="pt-space-xs border-t border-surface-dim/40 flex flex-wrap items-center justify-between gap-space-xs font-label-code text-label-code text-on-surface-variant">
+<span>Cifrado en tránsito: TLS 1.3 | Cifrado en reposo: AES-256 GCM</span>
+<span>Auditoría de nodo: Servidor Educativo UE-West (Frankfurt)</span>
+</div>
+</footer>
+</div>
+<!-- Toast Notificación Dinámico -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="export-toast">
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm font-body-md text-body-md">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">download_done</span>
+<span id="toast-message">Descarga iniciada con éxito.</span>
+</div>
+</div>
+<!-- Script interactivo ligero para el Centro de Exportación -->
+<script>
+    function triggerDownload(fileName) {
+      const toast = document.getElementById('export-toast');
+      const message = document.getElementById('toast-message');
+      message.textContent = `Generando paquete: ${fileName}...`;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        message.textContent = `Descarga completada: ${fileName}`;
+        setTimeout(() => {
+          toast.classList.add('translate-y-24', 'opacity-0');
+          toast.classList.remove('translate-y-0', 'opacity-100');
+        }, 2500);
+      }, 1000);
+    }
+
+    function deleteHistoryRow(btn) {
+      const row = btn.closest('tr');
+      row.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      row.style.opacity = '0';
+      row.style.transform = 'translateX(20px)';
+      setTimeout(() => {
+        row.remove();
+      }, 300);
+    }
+
+    function clearExportHistory() {
+      if (confirm('¿Deseas vaciar la lista de descargas y hashes temporales? Esta acción no borra tus métricas primarias.')) {
+        const tableBody = document.getElementById('export-history-table');
+        tableBody.innerHTML = '<tr><td colspan="6" class="py-space-md px-space-md text-center text-on-surface-variant font-label-md">Historial de descargas vacío.</td></tr>';
+      }
+    }
+
+    function showPurgeConfirmation() {
+      const confirmed = confirm('ADVERTENCIA DE SEGURIDAD:\n\nEsta acción eliminará todos los archivos .apkg, .pdf y copias cacheadas en este dispositivo de forma irreversible. ¿Continuar con la purga?');
+      if (confirmed) {
+        alert('Se han purgado de forma segura todos los archivos temporales y copias locales de WordQuiz.');
+      }
+    }
+
+    // Interactive date filter buttons
+    document.querySelectorAll('#date-range-buttons .date-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#date-range-buttons .date-btn').forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary');
+          b.classList.add('bg-surface-container-high', 'text-on-surface');
+        });
+        btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+        btn.classList.add('bg-primary-container', 'text-on-primary');
+      });
+    });
+
+    // Toggle select all subjects
+    document.getElementById('select-all-btn').addEventListener('click', () => {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"][class*="accent-primary-container"]');
+      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+      checkboxes.forEach(cb => cb.checked = !allChecked);
+    });
+  </script>
+</div></main></div></body></html>

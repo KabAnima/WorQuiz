@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#e3e1ed","surface-bright":"#fbf8ff","primary-container":"#a54310","surface-container":"#efecf9","tertiary-container":"#964f19","on-secondary-container":"#5c6274","on-tertiary":"#ffffff","on-primary-fixed-variant":"#7d2d00","tertiary":"#783800","on-secondary":"#ffffff","tertiary-fixed":"#ffdbc7","on-secondary-fixed":"#141b2b","tertiary-fixed-dim":"#ffb688","on-error-container":"#93000a","surface-dim":"#dbd8e5","on-error":"#ffffff","on-secondary-fixed-variant":"#404758","secondary-fixed-dim":"#c0c6db","error":"#ba1a1a","surface-container-high":"#e9e7f3","surface-container-highest":"#e3e1ed","on-primary-fixed":"#360f00","primary-fixed-dim":"#ffb597","inverse-primary":"#ffb597","on-background":"#1b1b24","surface-container-lowest":"#ffffff","inverse-on-surface":"#f2effc","secondary-container":"#d9dff5","primary-fixed":"#ffdbcd","outline":"#8a7269","secondary":"#575e70","primary":"#822f00","on-primary":"#ffffff","surface-container-low":"#f5f2ff","on-primary-container":"#ffd4c4","surface-tint":"#a1400c","on-tertiary-fixed-variant":"#733500","on-tertiary-container":"#ffd5bd","on-surface-variant":"#57423a","background":"#fbf8ff","on-tertiary-fixed":"#311300","outline-variant":"#dec0b6","secondary-fixed":"#dce2f7","surface":"#fbf8ff","on-surface":"#1b1b24","error-container":"#ffdad6","inverse-surface":"#303039"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1.5rem","space-xs":"0.25rem","gutter-sm":"1rem"},fontFamily:{"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Inter"],"display-hero":["Hanken Grotesk"],"label-md":["Inter"],"code-mono":["JetBrains Mono"],"headline-md":["Hanken Grotesk"],"label-code":["JetBrains Mono"],"body-sm":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},fontSize:{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-[#e2e8f0] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-[#e2e8f0]"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none font-bold">WordQuiz</span><span class="font-label-code text-label-code text-outline uppercase tracking-wider mt-0.5">Academic Suite</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm mb-space-xs block">Espacio Principal</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="panel-analitica" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Panel & Analítica</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Mis Documentos</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="espacio-de-lectura-resumen-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Espacio de Lectura & Resumen IA</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="sala-de-enfoque-alertas" href="#"><span class="material-symbols-outlined text-[20px]">timer</span><span>Sala de Enfoque & Alertas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md border-t border-[#e2e8f0] flex flex-col gap-space-sm bg-surface-container-low"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-[#059669] animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Sesión Activa</span></div><span class="font-label-code text-label-code text-outline">Estudiante</span></div><div class="flex flex-col gap-1"><div class="flex justify-between font-label-code text-label-code text-on-surface-variant"><span>Almacenamiento PDF</span><span>420 MB / 1 GB</span></div><div class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 42%"></div></div></div><button class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-all font-body-sm text-body-sm w-full text-left mt-space-xs"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></button></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-[#ffffff] border-b border-[#e2e8f0] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full max-w-sm"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-3 rounded-lg border border-[#e2e8f0] bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Buscar resúmenes, PDFs, términos..." type="text"/></div><div class="inline-flex p-1 bg-surface-container rounded-lg"><button class="px-space-sm py-1 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-xs font-semibold">Modo Estudio</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface">Modo Concentración</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low border border-[#e2e8f0]"><span class="material-symbols-outlined text-[16px] text-tertiary-container">bolt</span><span class="font-label-code text-label-code text-on-surface-variant">Foco continuo:</span><span class="font-label-code text-label-code text-tertiary font-bold">52m</span></div><button class="relative p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Bar / Focus Ambient Banner -->
+<div class="px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- Hero / Mode Controller & Pomodoro Header -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-wrap items-center gap-space-lg">
+<!-- Interactive Mode Switcher -->
+<div class="flex items-center p-1 bg-surface-container rounded-lg">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1.5" id="btn-mode-study" onclick="toggleMainMode('study')">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Modo Estudio</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary shadow-sm font-semibold flex items-center gap-1.5 transition-all" id="btn-mode-focus" onclick="toggleMainMode('focus')">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span>Modo Concentración</span>
+</button>
+</div>
+<!-- Anti-distraction Shield Badge -->
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-lg font-label-code text-label-code font-bold" id="shield-badge">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>ESCUDO ACTIVO (12 Bloqueos)</span>
+</div>
+<span class="hidden sm:inline-block w-px h-6 bg-surface-variant"></span>
+<!-- Pomodoro Active Clock -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-3 h-3 rounded-full bg-primary-container animate-ping"></div>
+<span class="font-label-code text-label-code text-outline uppercase tracking-wider">Bloque de Inmersión</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-headline-lg lg:text-display-hero font-bold tracking-tight text-primary-container leading-none" id="timer-display">45:00</span>
+<span class="font-label-code text-label-code text-secondary font-medium">/ 50m</span>
+</div>
+</div>
+</div>
+<!-- Quick Session Controls -->
+<div class="flex items-center gap-space-sm self-end lg:self-center">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all" id="timer-toggle-btn" onclick="togglePomodoroTimer()">
+<span class="material-symbols-outlined text-[18px]" id="timer-icon">pause</span>
+<span id="timer-text">Pausar</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-all" onclick="resetPomodoroTimer()" title="Reiniciar sesión">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary-container hover:bg-tertiary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Concluir Bloque</span>
+</button>
+</div>
+</div>
+<!-- Visual Banner with Academic Imagery & Quote -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-sm">
+<div class="max-w-xl flex flex-col gap-1.5 z-10">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-code text-label-code uppercase tracking-wider font-semibold">Sesión de Alto Rendimiento</span>
+<span class="font-label-sm text-label-sm text-outline">Facultad de Medicina & Derecho Comparado</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Consistencia del 96.4% esta semana</h2>
+<p class="font-body-md text-body-md text-secondary">Has alcanzado la zona de flujo 4 días consecutivos. La retención semántica por síntesis IA ha mejorado un +18% frente al mes anterior.</p>
+</div>
+<div class="flex items-center gap-space-md z-10">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-variant flex-shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="High resolution detailed macro photo of an open vintage medical anatomical study atlas next to modern minimal glass coffee tumbler under warm terracotta morning directional reading lamp, soft depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-RN-vft3FZwDBpoW4D5DN29hVdXH5rGKIzRTpqTvxXGVe7EVJ2C2PMsijohmLylRaalWircTjrXOj3L-fAHqsNIPGc7zre_shUw-bY_uKf_nvJf_XcSrewrrcL1XEIxndBEczB7bPy6iOMtQp6BI6Vj3ijXPZY-rnFmo8f9x9h7wh_zEbKhZoN8RVfSzrQ2IS-HkD7s7-dgiML7ey-WY8K1J04auR_ykxcwiPljSk"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code text-label-code text-primary font-semibold">PRÓXIMO REPASO</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">Neuroanatomía: Vías Motoras</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Programado en 1h 20m</span>
+</div>
+</div>
+<div class="absolute -right-8 -bottom-8 w-48 h-48 bg-primary-fixed opacity-30 rounded-full blur-2xl pointer-events-none"></div>
+</div>
+<!-- 2. Concentrated Analytics Grid -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-code text-label-code uppercase tracking-widest text-outline">Métricas de Foco & Asimilación</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Analítica de Concentración</h3>
+</div>
+<!-- Export Dropdown / Action Menu -->
+<div class="relative inline-block text-left" id="export-dropdown-wrapper">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold shadow-sm transition-all" onclick="toggleExportMenu()">
+<span class="material-symbols-outlined text-[18px] text-primary-container">file_download</span>
+<span>Exportar Datos de Progreso</span>
+<span class="material-symbols-outlined text-[16px] text-outline">arrow_drop_down</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 rounded-lg bg-surface-container-lowest shadow-xl py-1 z-30" id="export-menu">
+<a class="flex items-center gap-space-sm px-space-md py-2 text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm" href="javascript:void(0)" onclick="simulateExport('CSV')">
+<span class="material-symbols-outlined text-[18px] text-secondary">table_chart</span>
+<span>Descargar métricas (.CSV)</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-2 text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm" href="javascript:void(0)" onclick="simulateExport('PDF')">
+<span class="material-symbols-outlined text-[18px] text-primary-container">picture_as_pdf</span>
+<span>Informe de Foco (.PDF)</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-2 text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm" href="javascript:void(0)" onclick="simulateExport('Reporte Académico')">
+<span class="material-symbols-outlined text-[18px] text-tertiary">school</span>
+<span>Reporte Académico Institucional</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Metric Cards (4 Bento Items) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">center_focus_strong</span>
+</div>
+<span class="px-2 py-0.5 rounded-lg bg-[#ecfdf5] text-[#059669] font-label-code text-label-code font-bold">+2.1% sem.</span>
+</div>
+<div class="mt-space-md">
+<span class="font-display-hero text-headline-lg font-bold text-on-surface leading-none">96.4%</span>
+<div class="font-body-md text-body-md text-secondary mt-1 font-medium">Índice de Foco Continuo</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Media diaria sin desvío de mirada</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary-container"></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+<span class="px-2 py-0.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold">Objetivo: 5h</span>
+</div>
+<div class="mt-space-md">
+<span class="font-display-hero text-headline-lg font-bold text-on-surface leading-none">4h 15m</span>
+<div class="font-body-md text-body-md text-secondary mt-1 font-medium">Tiempo en Zona de Flujo</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">85% del objetivo completado hoy</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-tertiary"></div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">security</span>
+</div>
+<span class="px-2 py-0.5 rounded-lg bg-[#fff7ed] text-[#c2410c] font-label-code text-label-code font-bold">100% efectivas</span>
+</div>
+<div class="mt-space-md">
+<span class="font-display-hero text-headline-lg font-bold text-on-surface leading-none">12</span>
+<div class="font-body-md text-body-md text-secondary mt-1 font-medium">Abandonos Prevenidos</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Pestañas restringidas y recordatorios</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-outline"></div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-[#059669]">
+<span class="material-symbols-outlined text-[22px]">quiz</span>
+</div>
+<span class="px-2 py-0.5 rounded-lg bg-[#ecfdf5] text-[#059669] font-label-code text-label-code font-bold">92% Promedio</span>
+</div>
+<div class="mt-space-md">
+<span class="font-display-hero text-headline-lg font-bold text-on-surface leading-none">8</span>
+<div class="font-body-md text-body-md text-secondary mt-1 font-medium">Cuestionarios IA Completados</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">64 de 70 reactivos acertados</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-[#059669]"></div>
+</div>
+</div>
+<!-- Weekly Flow Chart Visual (Inline SVG Chart) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Curva de Foco Continuo & Horas Ininterrumpidas</h4>
+<p class="font-body-sm text-body-sm text-secondary">Rendimiento cronometrado por día de la semana lectiva actual (Lunes a Domingo)</p>
+</div>
+<div class="flex items-center gap-space-md font-label-code text-label-code">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-sm bg-primary-container"></span>
+<span class="text-on-surface">Horas Foco (h)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-0.5 bg-tertiary"></span>
+<span class="text-on-surface">Umbral Óptimo (4.0h)</span>
+</div>
+</div>
+</div>
+<!-- Responsive SVG Area Chart -->
+<div class="w-full h-56 pt-2">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 760 180">
+<defs>
+<lineargradient id="focusGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#a54310" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#a54310" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#efecf9" stroke-width="1" x1="40" x2="740" y1="20" y2="20"></line>
+<line stroke="#efecf9" stroke-width="1" x1="40" x2="740" y1="60" y2="60"></line>
+<line stroke="#efecf9" stroke-width="1" x1="40" x2="740" y1="100" y2="100"></line>
+<line stroke="#efecf9" stroke-width="1" x1="40" x2="740" y1="140" y2="140"></line>
+<!-- Y Axis labels -->
+<text class="fill-[#8a7269] text-[10px] font-mono" x="10" y="24">6h</text>
+<text class="fill-[#8a7269] text-[10px] font-mono" x="10" y="64">4h</text>
+<text class="fill-[#8a7269] text-[10px] font-mono" x="10" y="104">2h</text>
+<text class="fill-[#8a7269] text-[10px] font-mono" x="10" y="144">0h</text>
+<!-- Optimum Threshold Line (4h = Y 60) -->
+<line stroke="#964f19" stroke-dasharray="4 4" stroke-width="1.5" x1="40" x2="740" y1="60" y2="60"></line>
+<!-- Area Fill -->
+<polygon fill="url(#focusGradient)" points="60,140 60,85 170,55 280,45 390,70 500,30 610,65 720,95 720,140"></polygon>
+<!-- Main Data Line -->
+<polyline fill="none" points="60,85 170,55 280,45 390,70 500,30 610,65 720,95" stroke="#a54310" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+<!-- Data Points -->
+<circle cx="60" cy="85" fill="#ffffff" r="4.5" stroke="#a54310" stroke-width="2.5"></circle>
+<circle cx="170" cy="55" fill="#ffffff" r="4.5" stroke="#a54310" stroke-width="2.5"></circle>
+<circle cx="280" cy="45" fill="#ffffff" r="4.5" stroke="#a54310" stroke-width="2.5"></circle>
+<circle cx="390" cy="70" fill="#ffffff" r="4.5" stroke="#a54310" stroke-width="2.5"></circle>
+<circle cx="500" cy="30" fill="#a54310" r="5.5" stroke="#ffffff" stroke-width="2.5"></circle>
+<circle cx="610" cy="65" fill="#ffffff" r="4.5" stroke="#a54310" stroke-width="2.5"></circle>
+<circle cx="720" cy="95" fill="#ffffff" r="4.5" stroke="#a54310" stroke-width="2.5"></circle>
+<!-- Highlight Value on Friday (500, 30) -->
+<rect fill="#1b1b24" height="18" rx="4" width="50" x="475" y="6"></rect>
+<text class="text-[10px] font-mono font-bold" fill="#ffffff" text-anchor="middle" x="500" y="19">5h 30m</text>
+<!-- X Axis Days -->
+<text class="fill-[#57423a] text-[11px] font-sans font-medium" text-anchor="middle" x="60" y="165">Lun</text>
+<text class="fill-[#57423a] text-[11px] font-sans font-medium" text-anchor="middle" x="170" y="165">Mar</text>
+<text class="fill-[#57423a] text-[11px] font-sans font-medium" text-anchor="middle" x="280" y="165">Mié</text>
+<text class="fill-[#57423a] text-[11px] font-sans font-medium" text-anchor="middle" x="390" y="165">Jue</text>
+<text class="fill-[#a54310] text-[11px] font-sans font-bold" text-anchor="middle" x="500" y="165">Vie (Hoy)</text>
+<text class="fill-[#57423a] text-[11px] font-sans font-medium" text-anchor="middle" x="610" y="165">Sáb</text>
+<text class="fill-[#57423a] text-[11px] font-sans font-medium" text-anchor="middle" x="720" y="165">Dom</text>
+</svg>
+</div>
+</div>
+</div>
+<!-- Dual Layout: Tasks System (Left) and PDF Document Management (Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- 3. Task Management & Reading Goals (5 cols on lg) -->
+<section class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline">Planificación Activa</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Metas de Lectura & Tareas</h3>
+</div>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface font-label-code text-label-code font-bold" id="task-counter">3 pendientes</span>
+</div>
+<!-- Priority Filter Buttons -->
+<div class="flex flex-wrap gap-1.5 p-1 bg-surface-container-low rounded-lg">
+<button class="task-filter-btn px-2.5 py-1 rounded-lg font-label-code text-label-code bg-surface-container-lowest text-on-surface font-bold shadow-xs" onclick="filterTasks('all')">Todos</button>
+<button class="task-filter-btn px-2.5 py-1 rounded-lg font-label-code text-label-code text-secondary hover:text-on-surface" onclick="filterTasks('urgente')">Urgente</button>
+<button class="task-filter-btn px-2.5 py-1 rounded-lg font-label-code text-label-code text-secondary hover:text-on-surface" onclick="filterTasks('lectura')">Lectura Hoy</button>
+<button class="task-filter-btn px-2.5 py-1 rounded-lg font-label-code text-label-code text-secondary hover:text-on-surface" onclick="filterTasks('repaso')">Repaso Espaciado</button>
+</div>
+<!-- Quick Creation Form -->
+<form class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-lg" id="new-task-form" onsubmit="handleAddTask(event)">
+<input class="w-full h-9 px-space-sm rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container" id="task-title-input" placeholder="Añadir nueva tarea o meta de lectura..." required="" type="text"/>
+<div class="flex flex-col sm:flex-row gap-space-xs">
+<!-- Linked Doc Selector -->
+<select class="flex-1 h-8 px-2 rounded-lg bg-surface-container-lowest font-label-code text-label-code text-on-surface focus:outline-none" id="task-doc-select">
+<option value="Neuroanatomía_Cap4.pdf">Neuroanatomía_Cap4.pdf</option>
+<option value="Contratos_Mercantiles_2025.pdf">Contratos_Mercantiles_2025.pdf</option>
+<option value="Historia_Filosofica_Sintesis.pdf">Historia_Filosofica_Sintesis.pdf</option>
+<option value="Sin documento">Sin documento adjunto</option>
+</select>
+<!-- Priority Selector -->
+<select class="h-8 px-2 rounded-lg bg-surface-container-lowest font-label-code text-label-code text-on-surface focus:outline-none" id="task-prio-select">
+<option value="urgente">Urgente</option>
+<option value="lectura">Lectura de hoy</option>
+<option value="repaso">Repaso espaciado</option>
+</select>
+<!-- Time estimate input -->
+<input class="w-24 h-8 px-2 rounded-lg bg-surface-container-lowest font-label-code text-label-code text-on-surface focus:outline-none" id="task-time-input" placeholder="Tiempo (ej. 30m)" type="text" value="30m"/>
+<button class="h-8 px-3 rounded-lg bg-primary-container text-on-primary font-label-code text-label-code font-bold hover:bg-tertiary transition-colors flex items-center justify-center gap-1" type="submit">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Añadir</span>
+</button>
+</div>
+</form>
+<!-- Interactive Checklist -->
+<div class="flex flex-col gap-2 max-h-[460px] overflow-y-auto pr-1" id="tasks-container">
+<!-- Task Item 1 -->
+<div class="task-item group flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low shadow-xs transition-all" data-category="urgente">
+<input class="mt-1 w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" onchange="toggleTaskDone(this)" type="checkbox"/>
+<div class="flex-1 min-w-0 flex flex-col gap-0.5">
+<div class="flex items-center justify-between gap-2">
+<span class="task-title font-body-md text-body-md text-on-surface font-semibold truncate">Leer sección de Corteza Motora Primaria</span>
+<span class="px-1.5 py-0.5 rounded bg-[#fee2e2] text-[#991b1b] font-label-code text-label-code font-bold uppercase shrink-0">Urgente</span>
+</div>
+<div class="flex items-center gap-2 font-label-code text-label-code text-outline">
+<span class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">description</span>
+                    Neuroanatomía_Cap4.pdf
+                  </span>
+<span>•</span>
+<span>Est: 45m</span>
+<span>•</span>
+<span class="text-tertiary-container font-medium">Bloque pomodoro 1</span>
+</div>
+</div>
+</div>
+<!-- Task Item 2 -->
+<div class="task-item group flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low shadow-xs transition-all" data-category="lectura">
+<input class="mt-1 w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" onchange="toggleTaskDone(this)" type="checkbox"/>
+<div class="flex-1 min-w-0 flex flex-col gap-0.5">
+<div class="flex items-center justify-between gap-2">
+<span class="task-title font-body-md text-body-md text-on-surface font-semibold truncate">Revisar cláusulas de arbitraje comercial</span>
+<span class="px-1.5 py-0.5 rounded bg-[#fef3c7] text-[#92400e] font-label-code text-label-code font-bold uppercase shrink-0">Lectura Hoy</span>
+</div>
+<div class="flex items-center gap-2 font-label-code text-label-code text-outline">
+<span class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">description</span>
+                    Contratos_Mercantiles_2025.pdf
+                  </span>
+<span>•</span>
+<span>Est: 30m</span>
+<span>•</span>
+<span class="text-secondary font-medium">Págs 12 a 28</span>
+</div>
+</div>
+</div>
+<!-- Task Item 3 -->
+<div class="task-item group flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low shadow-xs transition-all" data-category="repaso">
+<input class="mt-1 w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" onchange="toggleTaskDone(this)" type="checkbox"/>
+<div class="flex-1 min-w-0 flex flex-col gap-0.5">
+<div class="flex items-center justify-between gap-2">
+<span class="task-title font-body-md text-body-md text-on-surface font-semibold truncate">Auto-evaluación IA: Dialéctica & Modernidad</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-code text-label-code font-bold uppercase shrink-0">Repaso Espaciado</span>
+</div>
+<div class="flex items-center gap-2 font-label-code text-label-code text-outline">
+<span class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-outlined text-[14px]">description</span>
+                    Historia_Filosofica_Sintesis.pdf
+                  </span>
+<span>•</span>
+<span>Est: 20m</span>
+<span>•</span>
+<span class="text-[#059669] font-medium">Test de 15 preguntas</span>
+</div>
+</div>
+</div>
+<!-- Task Item 4 (Already completed) -->
+<div class="task-item group flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-high opacity-70" data-category="lectura">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" onchange="toggleTaskDone(this)" type="checkbox"/>
+<div class="flex-1 min-w-0 flex flex-col gap-0.5">
+<div class="flex items-center justify-between gap-2">
+<span class="task-title font-body-md text-body-md line-through text-outline truncate">Glosario de términos vasculares</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-variant text-outline font-label-code text-label-code font-bold uppercase shrink-0">Completada</span>
+</div>
+<div class="flex items-center gap-2 font-label-code text-label-code text-outline">
+<span>Neuroanatomía_Cap4.pdf</span>
+<span>•</span>
+<span>Completado a las 10:15</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Document Management & PDF Vault (7 cols on lg) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<span class="font-label-code text-label-code uppercase tracking-wider text-outline">Bóveda Documental</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Gestión de PDFs & Resúmenes IA</h3>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-on-surface-variant bg-surface-container-low px-2 py-1 rounded-lg">3 documentos cargados</span>
+</div>
+</div>
+<!-- Drag and Drop Interactive Upload Zone -->
+<div class="relative p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col items-center justify-center text-center cursor-pointer group shadow-inner" id="drop-zone" ondragleave="handleDragLeave(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+<input accept=".pdf" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full z-10" id="file-input" onchange="handleFileSelect(event)" type="file"/>
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform mb-space-sm">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<p class="font-headline-sm text-label-md text-on-surface font-bold">Arrastra tus archivos PDF aquí o <span class="text-primary-container underline">explora tu equipo</span></p>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Compatibilidad nativa con PDF con capa de texto y escaneos OCR automáticos</p>
+<div class="mt-space-sm flex items-center gap-space-md font-label-code text-label-code text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#059669]">check_circle</span>
+                Máx. 50 MB por archivo
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">auto_awesome</span>
+                Indexación semántica inmediata
+              </span>
+</div>
+</div>
+<!-- Documents List Organised by Subject -->
+<div class="flex flex-col gap-space-sm mt-space-xs" id="pdf-list-container">
+<!-- PDF Item 1: Medicina / Anatomía -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md transition-all" id="doc-card-1">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-[#ffdad6] text-[#93000a] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h5 class="font-body-md text-body-md font-bold text-on-surface truncate">Neuroanatomía_Cap4.pdf</h5>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-label-code font-semibold">Medicina</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm mt-1 font-label-code text-label-code text-outline">
+<span>48 páginas</span>
+<span>•</span>
+<span>14.2 MB</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#ecfdf5] text-[#059669] font-bold">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+                      Resumen IA Listo
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" onclick="previewDoc('Neuroanatomía_Cap4.pdf', 'Dr. Carpenter - Sistema Nervioso Central', 48)">
+<span class="material-symbols-outlined text-[16px] text-primary-container">visibility</span>
+<span>Vista Previa</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-on-error-container transition-colors" onclick="deleteDoc('doc-card-1', 'Neuroanatomía_Cap4.pdf')" title="Eliminar documento">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- PDF Item 2: Derecho / Mercantil -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md transition-all" id="doc-card-2">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-[#ffdad6] text-[#93000a] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h5 class="font-body-md text-body-md font-bold text-on-surface truncate">Contratos_Mercantiles_2025.pdf</h5>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-label-code font-semibold">Derecho</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm mt-1 font-label-code text-label-code text-outline">
+<span>112 páginas</span>
+<span>•</span>
+<span>28.7 MB</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#ecfdf5] text-[#059669] font-bold">
+<span class="material-symbols-outlined text-[12px]">done_all</span>
+                      Resumen IA Listo
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" onclick="previewDoc('Contratos_Mercantiles_2025.pdf', 'Código de Comercio & Jurisprudencia Reciente', 112)">
+<span class="material-symbols-outlined text-[16px] text-primary-container">visibility</span>
+<span>Vista Previa</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-on-error-container transition-colors" onclick="deleteDoc('doc-card-2', 'Contratos_Mercantiles_2025.pdf')" title="Eliminar documento">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- PDF Item 3: Humanidades / Filosofía -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md transition-all" id="doc-card-3">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-[#ffdad6] text-[#93000a] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h5 class="font-body-md text-body-md font-bold text-on-surface truncate">Historia_Filosofica_Sintesis.pdf</h5>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-label-code font-semibold">Filosofía</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm mt-1 font-label-code text-label-code text-outline">
+<span>32 páginas</span>
+<span>•</span>
+<span>8.4 MB</span>
+<span>•</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#fff7ed] text-[#c2410c] font-bold">
+<span class="material-symbols-outlined text-[12px] animate-spin">sync</span>
+                      Generando flashcards
+                    </span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" onclick="previewDoc('Historia_Filosofica_Sintesis.pdf', 'G.W.F Hegel & Crítica Posmoderna', 32)">
+<span class="material-symbols-outlined text-[16px] text-primary-container">visibility</span>
+<span>Vista Previa</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-on-error-container transition-colors" onclick="deleteDoc('doc-card-3', 'Historia_Filosofica_Sintesis.pdf')" title="Eliminar documento">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Summary of Document Space -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low font-label-code text-label-code text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-[#059669]">verified</span>
+              Todos los archivos cifrados de extremo a extremo
+            </span>
+<a class="text-primary-container hover:underline font-bold" href="#">Abrir Visor Completo →</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Document Preview Modal Overlay (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-[#1b1b24]/50 backdrop-blur-xs hidden items-center justify-center p-space-md" id="preview-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-2xl w-full max-h-[921px] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">picture_as_pdf</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="preview-title">Documento</h4>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container-high text-on-surface-variant" onclick="closePreviewModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md overflow-y-auto">
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<span class="font-label-code text-label-code text-outline uppercase">Descripción & Metadatos</span>
+<p class="font-body-md text-body-md text-on-surface font-medium" id="preview-meta"></p>
+</div>
+<!-- Document page preview placeholder simulation -->
+<div class="relative w-full h-72 rounded-lg bg-surface-container flex flex-col items-center justify-center p-space-lg text-center overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-85" data-alt="Render of a clean academic textbook open page spread layout with anatomical medical diagrams, neat typography columns, terracotta highlight annotations and clean white stationery paper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9yXQ9wpdEwFDNc7B_ltP_YvPVWeJUcBjJm4aqvfDSp-u5VTX5RmGCXn2XuKQBy9Ygu3K6EqKTY5a2XdRh52MntCe0y8Q-QT-GDCbFkycmZuuVV1SqQ-XcnpRcY4zE70jrl7A8Q3UIY_yEOKj8jm4RQACEm4wLSgUfJ0ddZGvGF7d_Wz151CSwS1A2uHZyquL3m69fOHTbUK5Ns9BjpcinW-BX-JGbj4pLnB7aQfb"/>
+<div class="relative z-10 bg-surface-container-lowest/90 backdrop-blur-xs p-space-md rounded-lg shadow-sm max-w-md">
+<span class="font-label-code text-label-code text-primary-container font-bold">VISTA PREVIA ACTIVA</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">El analizador OCR ha extraído 14 conceptos clave y 3 mapas mentales listos en el módulo de lectura.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-code text-label-code text-outline" id="preview-pages"></span>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface font-semibold" onclick="closePreviewModal()">Cerrar</button>
+<a class="px-space-md py-1.5 rounded-lg bg-primary-container hover:bg-tertiary font-label-md text-label-md text-on-primary font-semibold shadow-sm flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Iniciar Lectura con IA</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Trash Confirmation Modal (Hidden by default) -->
+<div class="fixed inset-0 z-50 bg-[#1b1b24]/50 backdrop-blur-xs hidden items-center justify-center p-space-md" id="delete-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-space-lg flex flex-col gap-space-md shadow-2xl">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">delete_forever</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">¿Mover documento a la papelera?</h4>
+<p class="font-body-md text-body-md text-secondary mt-1" id="delete-modal-msg">El archivo se conservará durante 30 días en la papelera académica antes de su eliminación permanente.</p>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold" onclick="closeDeleteModal()">Cancelar</button>
+<button class="px-space-md py-2 rounded-lg bg-error hover:bg-[#93000a] text-on-error font-label-md text-label-md font-semibold shadow-sm flex items-center gap-1" onclick="confirmDeletion()">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span>Enviar a Papelera</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Micro-interaction / Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none px-space-md py-3 rounded-lg bg-[#1b1b24] text-[#ffffff] shadow-2xl flex items-center gap-space-sm font-body-sm text-body-sm" id="toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed" id="toast-icon">info</span>
+<span id="toast-message">Acción realizada correctamente</span>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    let currentMode = 'focus';
+    let pomodoroSeconds = 45 * 60;
+    let isTimerRunning = false;
+    let timerInterval = null;
+    let targetCardToDelete = null;
+
+    // Toast utility
+    function showToast(msg, icon = 'info') {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      const iconEl = document.getElementById('toast-icon');
+      msgEl.textContent = msg;
+      iconEl.textContent = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+
+    // Toggle Modes (Concentración vs Estudio)
+    function toggleMainMode(mode) {
+      currentMode = mode;
+      const btnFocus = document.getElementById('btn-mode-focus');
+      const btnStudy = document.getElementById('btn-mode-study');
+      const shield = document.getElementById('shield-badge');
+
+      if (mode === 'focus') {
+        btnFocus.className = "px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary shadow-sm font-semibold flex items-center gap-1.5 transition-all";
+        btnStudy.className = "px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1.5";
+        shield.classList.remove('hidden');
+        showToast('Modo Concentración activado. Escudo anti-distracción habilitado.', 'shield');
+      } else {
+        btnStudy.className = "px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-xs font-semibold flex items-center gap-1.5 transition-all";
+        btnFocus.className = "px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1.5";
+        shield.classList.add('hidden');
+        showToast('Modo Estudio flexible activado.', 'menu_book');
+      }
+    }
+
+    // Pomodoro Timer Logic
+    function updateTimerDisplay() {
+      const minutes = Math.floor(pomodoroSeconds / 60);
+      const seconds = pomodoroSeconds % 60;
+      document.getElementById('timer-display').textContent = 
+        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function togglePomodoroTimer() {
+      const text = document.getElementById('timer-text');
+      const icon = document.getElementById('timer-icon');
+      if (isTimerRunning) {
+        clearInterval(timerInterval);
+        isTimerRunning = false;
+        text.textContent = 'Reanudar';
+        icon.textContent = 'play_arrow';
+        showToast('Temporizador pausado');
+      } else {
+        isTimerRunning = true;
+        text.textContent = 'Pausar';
+        icon.textContent = 'pause';
+        timerInterval = setInterval(() => {
+          if (pomodoroSeconds > 0) {
+            pomodoroSeconds--;
+            updateTimerDisplay();
+          } else {
+            clearInterval(timerInterval);
+            isTimerRunning = false;
+            showToast('¡Bloque de Foco completado! Tómate 5 minutos de descanso.', 'celebration');
+          }
+        }, 1000);
+        showToast('Bloque de concentración en marcha.');
+      }
+    }
+
+    function resetPomodoroTimer() {
+      clearInterval(timerInterval);
+      isTimerRunning = false;
+      pomodoroSeconds = 45 * 60;
+      updateTimerDisplay();
+      document.getElementById('timer-text').textContent = 'Iniciar';
+      document.getElementById('timer-icon').textContent = 'play_arrow';
+      showToast('Temporizador reiniciado a 45:00');
+    }
+
+    // Export Dropdown
+    function toggleExportMenu() {
+      const menu = document.getElementById('export-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function simulateExport(format) {
+      document.getElementById('export-menu').classList.add('hidden');
+      showToast(`Generando y descargando datos en formato ${format}...`, 'download');
+    }
+
+    // Close export on outer click
+    document.addEventListener('click', function(e) {
+      const wrapper = document.getElementById('export-dropdown-wrapper');
+      if (wrapper && !wrapper.contains(e.target)) {
+        document.getElementById('export-menu').classList.add('hidden');
+      }
+    });
+
+    // Task Filter
+    function filterTasks(cat) {
+      const items = document.querySelectorAll('.task-item');
+      const buttons = document.querySelectorAll('.task-filter-btn');
+
+      buttons.forEach(b => {
+        b.className = 'task-filter-btn px-2.5 py-1 rounded-lg font-label-code text-label-code text-secondary hover:text-on-surface';
+      });
+      event.target.className = 'task-filter-btn px-2.5 py-1 rounded-lg font-label-code text-label-code bg-surface-container-lowest text-on-surface font-bold shadow-xs';
+
+      items.forEach(item => {
+        if (cat === 'all' || item.dataset.category === cat) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Task Checklist Toggle
+    function toggleTaskDone(cb) {
+      const container = cb.closest('.task-item');
+      const title = container.querySelector('.task-title');
+      if (cb.checked) {
+        title.classList.add('line-through', 'text-outline');
+        showToast('Tarea completada.', 'check_circle');
+      } else {
+        title.classList.remove('line-through', 'text-outline');
+      }
+    }
+
+    // Add Task
+    function handleAddTask(e) {
+      e.preventDefault();
+      const titleInput = document.getElementById('task-title-input');
+      const docSelect = document.getElementById('task-doc-select');
+      const prioSelect = document.getElementById('task-prio-select');
+      const timeInput = document.getElementById('task-time-input');
+
+      const title = titleInput.value.trim();
+      if (!title) return;
+
+      const prioLabelMap = {
+        urgente: { text: 'Urgente', class: 'bg-[#fee2e2] text-[#991b1b]' },
+        lectura: { text: 'Lectura Hoy', class: 'bg-[#fef3c7] text-[#92400e]' },
+        repaso: { text: 'Repaso Espaciado', class: 'bg-secondary-container text-on-secondary-container' }
+      };
+
+      const prioData = prioLabelMap[prioSelect.value];
+
+      const itemHtml = document.createElement('div');
+      itemHtml.className = 'task-item group flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low shadow-xs transition-all';
+      itemHtml.setAttribute('data-category', prioSelect.value);
+      itemHtml.innerHTML = `
+        <input type="checkbox" onchange="toggleTaskDone(this)" class="mt-1 w-4 h-4 rounded text-primary-container accent-primary-container cursor-pointer" />
+        <div class="flex-1 min-w-0 flex flex-col gap-0.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="task-title font-body-md text-body-md text-on-surface font-semibold truncate">${title}</span>
+            <span class="px-1.5 py-0.5 rounded ${prioData.class} font-label-code text-label-code font-bold uppercase shrink-0">${prioData.text}</span>
+          </div>
+          <div class="flex items-center gap-2 font-label-code text-label-code text-outline">
+            <span class="flex items-center gap-0.5 text-secondary">
+              <span class="material-symbols-outlined text-[14px]">description</span>
+              ${docSelect.value}
+            </span>
+            <span>•</span>
+            <span>Est: ${timeInput.value || '25m'}</span>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('tasks-container').prepend(itemHtml);
+      titleInput.value = '';
+      showToast('Nueva tarea añadida a la lista de estudio.', 'task_alt');
+    }
+
+    // Drag and Drop simulation
+    function handleDragOver(e) {
+      e.preventDefault();
+      document.getElementById('drop-zone').classList.add('bg-surface-container-high', 'scale-[1.01]');
+    }
+
+    function handleDragLeave(e) {
+      document.getElementById('drop-zone').classList.remove('bg-surface-container-high', 'scale-[1.01]');
+    }
+
+    function handleDrop(e) {
+      e.preventDefault();
+      document.getElementById('drop-zone').classList.remove('bg-surface-container-high', 'scale-[1.01]');
+      if (e.dataTransfer.files.length > 0) {
+        processUploadedFile(e.dataTransfer.files[0].name);
+      }
+    }
+
+    function handleFileSelect(e) {
+      if (e.target.files.length > 0) {
+        processUploadedFile(e.target.files[0].name);
+      }
+    }
+
+    function processUploadedFile(fileName) {
+      showToast(`Procesando documento "${fileName}" con OCR semántico...`, 'cloud_sync');
+      setTimeout(() => {
+        const list = document.getElementById('pdf-list-container');
+        const newCard = document.createElement('div');
+        const id = 'doc-card-' + Date.now();
+        newCard.id = id;
+        newCard.className = 'p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md transition-all animate-in fade-in slide-in-from-top-2';
+        newCard.innerHTML = `
+          <div class="flex items-start gap-space-sm min-w-0">
+            <div class="w-10 h-10 rounded-lg bg-[#ffdad6] text-[#93000a] flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-2">
+                <h5 class="font-body-md text-body-md font-bold text-on-surface truncate">${fileName}</h5>
+                <span class="px-2 py-0.5 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-label-code font-semibold">General</span>
+              </div>
+              <div class="flex flex-wrap items-center gap-space-sm mt-1 font-label-code text-label-code text-outline">
+                <span>Págs extraídas</span>
+                <span>•</span>
+                <span>12.5 MB</span>
+                <span>•</span>
+                <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#ecfdf5] text-[#059669] font-bold">
+                  <span class="material-symbols-outlined text-[12px]">done_all</span>
+                  Resumen IA Listo
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-xs self-end md:self-center">
+            <button onclick="previewDoc('${fileName}', 'Documento importado recientemente', 18)" class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px] text-primary-container">visibility</span>
+              <span>Vista Previa</span>
+            </button>
+            <button onclick="deleteDoc('${id}', '${fileName}')" class="p-1.5 rounded-lg hover:bg-error-container text-outline hover:text-on-error-container transition-colors" title="Eliminar documento">
+              <span class="material-symbols-outlined text-[18px]">delete</span>
+            </button>
+          </div>
+        `;
+        list.prepend(newCard);
+        showToast(`Documento ${fileName} analizado e indexado correctamente.`, 'check_circle');
+      }, 1200);
+    }
+
+    // Document Preview Modal
+    function previewDoc(title, meta, pages) {
+      document.getElementById('preview-title').textContent = title;
+      document.getElementById('preview-meta').textContent = meta;
+      document.getElementById('preview-pages').textContent = `Total: ${pages} páginas • Formato OCR estructurado`;
+      document.getElementById('preview-modal').classList.remove('hidden');
+      document.getElementById('preview-modal').classList.add('flex');
+    }
+
+    function closePreviewModal() {
+      document.getElementById('preview-modal').classList.add('hidden');
+      document.getElementById('preview-modal').classList.remove('flex');
+    }
+
+    // Document Deletion
+    function deleteDoc(cardId, name) {
+      targetCardToDelete = cardId;
+      document.getElementById('delete-modal-msg').textContent = `¿Mover "${name}" a la papelera? Podrás recuperarlo durante 30 días.`;
+      document.getElementById('delete-modal').classList.remove('hidden');
+      document.getElementById('delete-modal').classList.add('flex');
+    }
+
+    function closeDeleteModal() {
+      document.getElementById('delete-modal').classList.add('hidden');
+      document.getElementById('delete-modal').classList.remove('flex');
+      targetCardToDelete = null;
+    }
+
+    function confirmDeletion() {
+      if (targetCardToDelete) {
+        const el = document.getElementById(targetCardToDelete);
+        if (el) el.remove();
+        closeDeleteModal();
+        showToast('Documento trasladado a la papelera académica.', 'delete');
+      }
+    }
+  </script>
+</div></main></div></body></html>

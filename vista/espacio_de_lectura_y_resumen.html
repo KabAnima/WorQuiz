@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#e3e1ed","surface-bright":"#fbf8ff","primary-container":"#a54310","surface-container":"#efecf9","tertiary-container":"#964f19","on-secondary-container":"#5c6274","on-tertiary":"#ffffff","on-primary-fixed-variant":"#7d2d00","tertiary":"#783800","on-secondary":"#ffffff","tertiary-fixed":"#ffdbc7","on-secondary-fixed":"#141b2b","tertiary-fixed-dim":"#ffb688","on-error-container":"#93000a","surface-dim":"#dbd8e5","on-error":"#ffffff","on-secondary-fixed-variant":"#404758","secondary-fixed-dim":"#c0c6db","error":"#ba1a1a","surface-container-high":"#e9e7f3","surface-container-highest":"#e3e1ed","on-primary-fixed":"#360f00","primary-fixed-dim":"#ffb597","inverse-primary":"#ffb597","on-background":"#1b1b24","surface-container-lowest":"#ffffff","inverse-on-surface":"#f2effc","secondary-container":"#d9dff5","primary-fixed":"#ffdbcd","outline":"#8a7269","secondary":"#575e70","primary":"#822f00","on-primary":"#ffffff","surface-container-low":"#f5f2ff","on-primary-container":"#ffd4c4","surface-tint":"#a1400c","on-tertiary-fixed-variant":"#733500","on-tertiary-container":"#ffd5bd","on-surface-variant":"#57423a","background":"#fbf8ff","on-tertiary-fixed":"#311300","outline-variant":"#dec0b6","secondary-fixed":"#dce2f7","surface":"#fbf8ff","on-surface":"#1b1b24","error-container":"#ffdad6","inverse-surface":"#303039"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-sm":"1rem","space-md":"1rem","space-sm":"0.5rem","margin":"2rem","space-xl":"2rem","space-lg":"1.5rem","gutter":"1.5rem","space-xs":"0.25rem","gutter-sm":"1rem"},fontFamily:{"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-sm":["Inter"],"display-hero":["Hanken Grotesk"],"label-md":["Inter"],"code-mono":["JetBrains Mono"],"headline-md":["Hanken Grotesk"],"label-code":["JetBrains Mono"],"body-sm":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"]},fontSize:{"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest border-r border-[#e2e8f0] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-[#e2e8f0]"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none font-bold">WordQuiz</span><span class="font-label-code text-label-code text-outline uppercase tracking-wider mt-0.5">Academic Suite</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm mb-space-xs block">Espacio Principal</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-bold shadow-sm"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="panel-analitica" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Panel & Analítica</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Mis Documentos</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="espacio-de-lectura-resumen-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Espacio de Lectura & Resumen IA</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="sala-de-enfoque-alertas" href="#"><span class="material-symbols-outlined text-[20px]">timer</span><span>Sala de Enfoque & Alertas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md border-t border-[#e2e8f0] flex flex-col gap-space-sm bg-surface-container-low"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-[#059669] animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Sesión Activa</span></div><span class="font-label-code text-label-code text-outline">Estudiante</span></div><div class="flex flex-col gap-1"><div class="flex justify-between font-label-code text-label-code text-on-surface-variant"><span>Almacenamiento PDF</span><span>420 MB / 1 GB</span></div><div class="w-full h-1.5 bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 42%"></div></div></div><button class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-all font-body-sm text-body-sm w-full text-left mt-space-xs"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></button></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-[#ffffff] border-b border-[#e2e8f0] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full max-w-sm"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-3 rounded-lg border border-[#e2e8f0] bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-all" placeholder="Buscar resúmenes, PDFs, términos..." type="text"/></div><div class="inline-flex p-1 bg-surface-container rounded-lg"><button class="px-space-sm py-1 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-xs font-semibold">Modo Estudio</button><button class="px-space-sm py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface">Modo Concentración</button></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low border border-[#e2e8f0]"><span class="material-symbols-outlined text-[16px] text-tertiary-container">bolt</span><span class="font-label-code text-label-code text-on-surface-variant">Foco continuo:</span><span class="font-label-code text-label-code text-tertiary font-bold">52m</span></div><button class="relative p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Document & Viewport Action Bar -->
+<div class="w-full bg-surface-container-lowest px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-md shadow-xs">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate font-bold">Neuroanatomía Clínica - Fascículo Corticoespinal.pdf</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-code bg-surface-container text-on-surface-variant shrink-0 uppercase tracking-wider font-semibold">OCR 99.4%</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-code text-label-code text-on-surface-variant">
+<span>Pág. <span class="text-on-surface font-semibold" id="current-page-num">14</span> de 68</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 text-[#059669]">
+<span class="material-symbols-outlined text-[13px]">cloud_done</span>
+<span>Sincronizado hace 10s</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Viewer Tools & Flexible Mode Switcher -->
+<div class="flex items-center gap-space-md flex-wrap">
+<!-- PDF Canvas Utilities -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-high transition-colors" id="zoom-out-btn" title="Reducir">
+<span class="material-symbols-outlined text-[18px]">zoom_out</span>
+</button>
+<span class="px-2 font-label-code text-label-code text-on-surface select-none font-medium" id="zoom-level-label">100%</span>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-high transition-colors" id="zoom-in-btn" title="Aumentar">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<div class="h-4 w-px bg-surface-variant mx-1"></div>
+<button class="p-1.5 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-high transition-colors" title="Ajustar a ancho">
+<span class="material-symbols-outlined text-[18px]">fit_screen</span>
+</button>
+</div>
+<!-- Segmented View Mode Controller -->
+<div class="bg-surface-container rounded-lg p-1 flex items-center">
+<button class="view-mode-tab active px-3 py-1 rounded font-label-md text-label-md font-semibold bg-surface-container-lowest text-on-surface shadow-xs transition-all flex items-center gap-1" id="view-mode-split">
+<span class="material-symbols-outlined text-[16px]">vertical_split</span>
+<span>Vista Dividida</span>
+</button>
+<button class="view-mode-tab px-3 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="view-mode-pdf">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Solo PDF</span>
+</button>
+<button class="view-mode-tab px-3 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-1" id="view-mode-focus">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Foco Resumen & Tarjetas</span>
+</button>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" title="Buscar en página">
+<span class="material-symbols-outlined text-[18px]">find_in_page</span>
+</button>
+</div>
+</div>
+<!-- Primary Workspace Content Canvas -->
+<div class="w-full p-space-lg flex gap-space-lg items-start">
+<!-- LEFT PANE: Document & Extracted Semantic Stream -->
+<section class="flex-1 flex flex-col gap-space-md transition-all duration-300 min-w-0" id="pane-document">
+<!-- OCR & Highlighting Floating Context Action Bar -->
+<div class="w-full bg-surface-container-lowest rounded-lg p-space-sm flex items-center justify-between gap-space-md shadow-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-xs font-semibold">Herramientas de Estudio:</span>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-[#fffbeb] text-[#b45309] font-label-code text-label-code font-medium hover:bg-[#fef3c7] transition-all" id="tool-hl-yellow">
+<span class="w-2.5 h-2.5 rounded-full bg-[#f59e0b]"></span>
+<span>Concepto Clave</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-code text-label-code font-medium hover:bg-tertiary-fixed-dim transition-all" id="tool-hl-orange">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Vía Descendente</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-code text-label-code font-medium hover:bg-secondary-fixed transition-all" id="tool-hl-term">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Definición Clínica</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-label-code text-label-code">
+<span class="material-symbols-outlined text-[16px] text-primary-container">touch_app</span>
+<span>Selecciona texto para generar tarjetas al vuelo</span>
+</div>
+</div>
+<!-- Rendered Document Viewport Sheet -->
+<article class="bg-surface-container-lowest rounded-xl p-8 sm:p-10 shadow-sm relative flex flex-col gap-6 text-on-surface" id="pdf-interactive-sheet">
+<!-- Header of PDF Page Document -->
+<header class="flex justify-between items-center pb-4 border-b border-surface-container">
+<span class="font-label-code text-label-code text-outline uppercase tracking-widest font-semibold">CAPÍTULO 4 • TRACTOS MOTORES Y CONTROL VOLUNTARIO</span>
+<span class="font-label-code text-label-code text-on-surface-variant">PÁG. [14]</span>
+</header>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight mt-1">
+          Fascículo Corticoespinal: Trayecto, Decusación Piramidal y Lesiones de la Primera Motoneurona
+        </h1>
+<!-- Visual Scientific Figure Box -->
+<figure class="relative rounded-lg overflow-hidden bg-surface-container-low p-4 flex flex-col gap-3">
+<div class="relative w-full h-56 rounded-md overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-95" data-alt="High precision anatomical illustration of the human brainstem and medulla oblongata showing descending corticospinal tract fibers crossing at the pyramidal decussation in warm terracotta, amber and dark grey ink line art style with medical callouts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB91ACcw4EREsnrN3eAXsSdjx1xIKOqVQO8O1nYoRW8SQCsHjQ1JosV1gfCS8KqKmHgzZOQueBq0jmYhXiuakId-aQtc_pz2vn63CZGKRIXlgbYshpiMDxO7IAoVl1SapIBI15ECcCP0LZpssknGAOTVXMvP9I-6NmfmkwOVUEy9k_wVXLSwJ3iHCx64vTgnJsLzuIvoOqbmqvKUQsjq8HD0AFCdWWSc4U4L3DTTqp7"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded text-on-surface font-label-code text-label-code font-semibold flex items-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-primary-container text-[14px]">insights</span>
+<span>Fig 4.2 • Trayecto Pontino y Decusación Bulbar (85% Fibras)</span>
+</div>
+</div>
+<figcaption class="font-body-sm text-body-sm text-on-surface-variant italic">
+            Diagrama esquemático de las proyecciones desde el área motora primaria (área 4 de Brodmann) descendiendo a través del brazo posterior de la cápsula interna.
+          </figcaption>
+</figure>
+<!-- Document Text Block 1 with Interactive Extraction Layer -->
+<section class="flex flex-col gap-3 font-body-lg text-body-lg leading-relaxed text-on-surface">
+<p class="text-justify selection:bg-primary-fixed selection:text-on-primary-fixed">
+            El <mark class="bg-[#fef3c7] text-[#92400e] px-1 py-0.5 rounded font-semibold cursor-pointer" title="Concepto Clave">fascículo corticoespinal (vía piramidal)</mark> es la principal vía eferente encargada del control de los movimientos voluntarios discretos y fraccionados, en particular los que involucran la musculatura distal de las extremidades superiores e inferiores.
+          </p>
+<p class="text-justify selection:bg-primary-fixed selection:text-on-primary-fixed">
+            Se origina a partir de los somas de las <mark class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-1 py-0.5 rounded font-semibold cursor-pointer" title="Células gigantes de Betz">células piramidales gigantes (de Betz)</mark> situadas en la capa V del giro precentral (corteza motora primaria, área 4 de Brodmann), así como en la corteza premotora suplementaria (área 6) y partes de la corteza somatosensorial parietal (áreas 3, 1 y 2).
+          </p>
+</section>
+<!-- Document Text Block 2: Key Sub-Topic -->
+<section class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">alt_route</span>
+            Decusación Piramidal y Organización Medular
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Alcanzando el tercio caudal de la médula oblongada, aproximadamente el <strong class="text-on-surface font-semibold">85% al 90%</strong> de las fibras cruzan la línea media conformando la denominada <span class="bg-[#fee2e2] text-[#991b1b] px-1 py-0.5 rounded font-medium">decusación de las pirámides</span>. Este contingente decusado desciende por el cordón lateral de la médula espinal como el <mark class="bg-secondary-container text-on-secondary-fixed-variant px-1 py-0.5 rounded font-medium">tracto corticoespinal lateral</mark>, haciendo sinapsis en las astas anteriores con las alfa-motoneuronas. El 10-15% restante desciende homolateralmente en el cordón anterior.
+          </p>
+</section>
+<!-- Text Selection Action Floating Prompt (Simulated UI) -->
+<div class="w-full py-2 px-3 rounded-lg bg-surface-container-high flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_stories</span>
+<span>Párrafo procesado por motor semántico OCR 3.2. Formato enriquecido disponible.</span>
+</div>
+<button class="px-2.5 py-1 bg-surface-container-lowest hover:bg-surface-variant text-primary-container font-semibold rounded shadow-xs transition-colors flex items-center gap-1 font-label-sm text-label-sm" id="send-to-quiz-btn">
+<span>Extraer Pregunta Rápida</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Page Pagination Control Deck -->
+<footer class="w-full flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest rounded-lg shadow-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center gap-1 transition-all" id="prev-page-btn">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span>Pág. Anterior</span>
+</button>
+<span class="font-label-code text-label-code text-outline">Pág. 14 / 68 • Segmento 3/12 completado</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold flex items-center gap-1 transition-all" id="next-page-btn">
+<span>Pág. Siguiente</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</footer>
+</section>
+<!-- RIGHT PANE: AI Intelligence Hub (Resumen, Detalle y Cuestionario Dinámico) -->
+<aside class="w-[450px] shrink-0 flex flex-col gap-space-lg transition-all duration-300" id="pane-ai-hub">
+<!-- SECTION 1: Resumen Automático Multi-Nivel -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Resumen IA Adaptativo</h3>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-label-code bg-surface-container-high text-on-surface-variant font-semibold">Gemini 1.5 Flash</span>
+</div>
+<!-- Level of Detail Segmented Controller -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Ajuste de Profundidad</label>
+<div class="grid grid-cols-3 gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="summary-depth-btn active py-1.5 px-2 rounded font-label-md text-label-md font-semibold text-center bg-surface-container-lowest text-primary-container shadow-xs transition-all" data-level="concise">
+              Conciso
+            </button>
+<button class="summary-depth-btn py-1.5 px-2 rounded font-label-md text-label-md font-medium text-center text-on-surface-variant hover:text-on-surface transition-all" data-level="exam">
+              Intermedio
+            </button>
+<button class="summary-depth-btn py-1.5 px-2 rounded font-label-md text-label-md font-medium text-center text-on-surface-variant hover:text-on-surface transition-all" data-level="deep">
+              Extenso
+            </button>
+</div>
+</div>
+<!-- Dynamic Summary Content Container (Replaced dynamically via JS) -->
+<div class="flex flex-col gap-3 font-body-md text-body-md text-on-surface" id="summary-content-display">
+<!-- Default: Concise / Flashcards Mode -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">check_circle</span>
+<p><strong class="text-on-surface font-semibold">Vía Eferente Principal:</strong> Control motor fino y voluntario distal derivado de células de Betz (Capa V, Área 4 Brodmann).</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">check_circle</span>
+<p><strong class="text-on-surface font-semibold">Regla Decusación 85/15:</strong> 85% cruza a contralateral en médula oblongada (haz lateral); 15% permanece directo homolateral (haz anterior).</p>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">check_circle</span>
+<p><strong class="text-on-surface font-semibold">Correlato Clínico:</strong> Lesión sobre la decusación = Hemiparesia espástica contralateral + Signo de Babinski.</p>
+</div>
+</div>
+</div>
+<!-- Mnemonic Capsule Widget -->
+<div class="w-full bg-surface-container-low rounded-lg p-3 flex flex-col gap-1.5">
+<div class="flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">lightbulb</span>
+<span>Cápsula Mnemotécnica</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-primary">"BETZ-4-85-BULBO":</strong> Células de <strong>Betz</strong> en área <strong>4</strong>, el <strong>85%</strong> decusa en el <strong>Bulbo</strong> raquídeo inferior.
+          </p>
+</div>
+<!-- Audio Recap & Copy Actions -->
+<div class="flex items-center justify-between pt-1">
+<button class="flex items-center gap-1.5 text-primary-container hover:text-primary font-label-sm text-label-sm font-semibold transition-colors" id="tts-summary-btn">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+<span id="tts-label">Escuchar Resumen (45s)</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Copiar texto">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- SECTION 2: Cuestionario Interactivo al Vuelo -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">quiz</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Quiz de Comprensión</h3>
+<span class="font-label-code text-label-code text-outline">Generado desde Pág. 14</span>
+</div>
+</div>
+<!-- Live Score Counter -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low rounded-lg">
+<span class="font-label-code text-label-code text-on-surface-variant">Aciertos:</span>
+<span class="font-label-code text-label-code font-bold text-primary-container" id="quiz-score-badge">1 / 1</span>
+</div>
+</div>
+<!-- Interactive Question Card Component -->
+<div class="flex flex-col gap-3" id="active-quiz-card">
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-snug" id="quiz-question-text">
+            ¿Qué porcentaje aproximado de las fibras del fascículo corticoespinal sufre decusación en el tercio caudal de la médula oblongada?
+          </p>
+<!-- Multiple Choice Options -->
+<div class="flex flex-col gap-2" id="quiz-options-group">
+<label class="quiz-option-label relative flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<input class="accent-primary-container w-4 h-4" name="corticospinal-q1" type="radio" value="A"/>
+<span class="font-body-md text-body-md text-on-surface">A) Aproximadamente el 50%</span>
+</label>
+<label class="quiz-option-label relative flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<input class="accent-primary-container w-4 h-4" name="corticospinal-q1" type="radio" value="B"/>
+<span class="font-body-md text-body-md text-on-surface">B) Entre el 85% y el 90%</span>
+</label>
+<label class="quiz-option-label relative flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<input class="accent-primary-container w-4 h-4" name="corticospinal-q1" type="radio" value="C"/>
+<span class="font-body-md text-body-md text-on-surface">C) El 100% de las fibras piramidales</span>
+</label>
+<label class="quiz-option-label relative flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all">
+<input class="accent-primary-container w-4 h-4" name="corticospinal-q1" type="radio" value="D"/>
+<span class="font-body-md text-body-md text-on-surface">D) Menos del 25% (la mayoría es homolateral)</span>
+</label>
+</div>
+<!-- Question Action Button -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 rounded-lg bg-primary-container hover:bg-[#8c370b] text-on-primary font-label-md text-label-md font-semibold transition-all shadow-xs flex items-center justify-center gap-1.5" id="check-answer-btn">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Comprobar Respuesta</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md transition-all" id="skip-question-btn">
+              Omitir
+            </button>
+</div>
+<!-- Feedback Notification Banner (Revealed on check) -->
+<div class="hidden rounded-lg p-3 flex flex-col gap-1 transition-all" id="quiz-feedback-box">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[18px]" id="feedback-icon"></span>
+<span id="feedback-title"></span>
+</div>
+<p class="font-body-sm text-body-sm" id="feedback-explanation"></p>
+</div>
+</div>
+<!-- Add Additional Questions Trigger -->
+<button class="w-full py-2.5 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-2" id="generate-more-quiz-btn">
+<span class="material-symbols-outlined text-primary-container text-[18px]">add_circle</span>
+<span>Generar 5 preguntas adicionales con IA</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function initStudyWorkspace() {
+    // 1. Flexible Viewport Switcher
+    const splitBtn = document.getElementById('view-mode-split');
+    const pdfBtn = document.getElementById('view-mode-pdf');
+    const focusBtn = document.getElementById('view-mode-focus');
+    const docPane = document.getElementById('pane-document');
+    const aiPane = document.getElementById('pane-ai-hub');
+    const tabs = [splitBtn, pdfBtn, focusBtn];
+
+    function setTabActive(activeTab) {
+      tabs.forEach(tab => {
+        if (!tab) return;
+        tab.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-semibold');
+        tab.classList.add('text-on-surface-variant');
+      });
+      activeTab.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-semibold');
+      activeTab.classList.remove('text-on-surface-variant');
+    }
+
+    if (splitBtn && pdfBtn && focusBtn) {
+      splitBtn.addEventListener('click', () => {
+        setTabActive(splitBtn);
+        docPane.classList.remove('hidden', 'w-full');
+        docPane.classList.add('flex-1');
+        aiPane.classList.remove('hidden');
+        aiPane.style.width = '450px';
+      });
+
+      pdfBtn.addEventListener('click', () => {
+        setTabActive(pdfBtn);
+        docPane.classList.remove('hidden');
+        docPane.classList.add('w-full');
+        aiPane.classList.add('hidden');
+      });
+
+      focusBtn.addEventListener('click', () => {
+        setTabActive(focusBtn);
+        docPane.classList.add('hidden');
+        aiPane.classList.remove('hidden');
+        aiPane.style.width = '100%';
+        aiPane.classList.add('max-w-4xl', 'mx-auto');
+      });
+    }
+
+    // 2. Summary Level of Detail Switcher
+    const depthButtons = document.querySelectorAll('.summary-depth-btn');
+    const summaryDisplay = document.getElementById('summary-content-display');
+
+    const summaryData = {
+      concise: `
+        <div class="flex flex-col gap-2.5">
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">check_circle</span>
+            <p><strong class="text-on-surface font-semibold">Vía Eferente Principal:</strong> Control motor fino y voluntario distal derivado de células de Betz (Capa V, Área 4 Brodmann).</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">check_circle</span>
+            <p><strong class="text-on-surface font-semibold">Regla Decusación 85/15:</strong> 85% cruza a contralateral en médula oblongada (haz lateral); 15% permanece directo homolateral (haz anterior).</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-primary-container text-[18px] shrink-0 mt-0.5">check_circle</span>
+            <p><strong class="text-on-surface font-semibold">Correlato Clínico:</strong> Lesión sobre la decusación = Hemiparesia espástica contralateral + Signo de Babinski.</p>
+          </div>
+        </div>
+      `,
+      exam: `
+        <div class="flex flex-col gap-3">
+          <p><strong class="text-primary font-semibold">Puntos Críticos para Examen:</strong></p>
+          <ul class="list-disc pl-5 space-y-1.5 text-on-surface">
+            <li><strong>Origen Neuronal:</strong> 31% del giro precentral (Área 4), 29% corteza premotora suplementaria (Área 6), 40% áreas parietales sensitivas (3, 1, 2).</li>
+            <li><strong>Trayecto Troncoencefálico:</strong> Corona radiata → Brazo posterior de la cápsula interna → Pedúnculos cerebrales (pie) → Porción ventral del puente → Pirámides bulbares.</li>
+            <li><strong>Fisiopatología:</strong> La afección de primera motoneurona (UMN) genera hiperreflexia, hipertonía en 'navaja' y clonus, distinguiéndose de la flacidez y fasciculaciones de la segunda motoneurona (LMN).</li>
+          </ul>
+        </div>
+      `,
+      deep: `
+        <div class="flex flex-col gap-3 leading-relaxed">
+          <p class="text-justify">
+            El sistema corticoespinal representa la culminación filogenética del control voluntario en primates. Histológicamente, mientras que las células piramidales gigantes de Betz proporcionan los axones mielinizados de mayor calibre (con velocidades de conducción de hasta 70 m/s), constituyen menos del 5% del total de las aproximadamente 1 millón de fibras que componen cada tracto.
+          </p>
+          <p class="text-justify">
+            La <strong class="text-on-surface">decusación de las pirámides</strong> en el límite bulbomedular reconfigura la somatotopía: las fibras destinadas a inervar los segmentos motores cervicales superiores cruzan más rostralmente que aquellas orientadas a los cordones lumbosacros. Esta disposición segmentaria explica los síndromes cruzados o 'hemiplejía alternante' ante lesiones vasculares de la arteria espinal anterior.
+          </p>
+        </div>
+      `
+    };
+
+    depthButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        depthButtons.forEach(b => {
+          b.classList.remove('active', 'bg-surface-container-lowest', 'text-primary-container', 'shadow-xs', 'font-semibold');
+          b.classList.add('text-on-surface-variant', 'font-medium');
+        });
+        btn.classList.add('active', 'bg-surface-container-lowest', 'text-primary-container', 'shadow-xs', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant', 'font-medium');
+        
+        const level = btn.getAttribute('data-level');
+        if (summaryDisplay && summaryData[level]) {
+          summaryDisplay.innerHTML = summaryData[level];
+        }
+      });
+    });
+
+    // 3. Zoom Simulation
+    const zoomInBtn = document.getElementById('zoom-in-btn');
+    const zoomOutBtn = document.getElementById('zoom-out-btn');
+    const zoomLabel = document.getElementById('zoom-level-label');
+    let zoomCurrent = 100;
+
+    if (zoomInBtn && zoomOutBtn && zoomLabel) {
+      zoomInBtn.addEventListener('click', () => {
+        if (zoomCurrent < 160) {
+          zoomCurrent += 15;
+          zoomLabel.textContent = `${zoomCurrent}%`;
+        }
+      });
+      zoomOutBtn.addEventListener('click', () => {
+        if (zoomCurrent > 70) {
+          zoomCurrent -= 15;
+          zoomLabel.textContent = `${zoomCurrent}%`;
+        }
+      });
+    }
+
+    // 4. Interactive Quiz Evaluation
+    const checkBtn = document.getElementById('check-answer-btn');
+    const feedbackBox = document.getElementById('quiz-feedback-box');
+    const feedbackIcon = document.getElementById('feedback-icon');
+    const feedbackTitle = document.getElementById('feedback-title');
+    const feedbackExplanation = document.getElementById('feedback-explanation');
+    const scoreBadge = document.getElementById('quiz-score-badge');
+    let scoreCount = 1;
+    let totalQuestions = 1;
+
+    if (checkBtn && feedbackBox) {
+      checkBtn.addEventListener('click', () => {
+        const selectedOption = document.querySelector('input[name="corticospinal-q1"]:checked');
+        if (!selectedOption) {
+          feedbackBox.className = 'rounded-lg p-3 flex flex-col gap-1 bg-[#fef3c7] text-[#92400e] border border-[#fde68a]';
+          feedbackIcon.textContent = 'warning';
+          feedbackTitle.textContent = 'Selecciona una respuesta';
+          feedbackExplanation.textContent = 'Elige una de las cuatro opciones disponibles antes de verificar.';
+          feedbackBox.classList.remove('hidden');
+          return;
+        }
+
+        feedbackBox.classList.remove('hidden');
+        if (selectedOption.value === 'B') {
+          feedbackBox.className = 'rounded-lg p-3 flex flex-col gap-1 bg-[#ecfdf5] text-[#065f46]';
+          feedbackIcon.textContent = 'check_circle';
+          feedbackTitle.textContent = '¡Correcto!';
+          feedbackExplanation.textContent = 'Exacto. Del 85% al 90% de las fibras se decusan en el tercio caudal de la médula oblongada constituyendo el fascículo corticoespinal lateral.';
+          scoreCount++;
+          totalQuestions++;
+          if (scoreBadge) scoreBadge.textContent = `${scoreCount} / ${totalQuestions}`;
+          checkBtn.disabled = true;
+          checkBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        } else {
+          feedbackBox.className = 'rounded-lg p-3 flex flex-col gap-1 bg-error-container text-on-error-container';
+          feedbackIcon.textContent = 'cancel';
+          feedbackTitle.textContent = 'Respuesta Incorrecta';
+          feedbackExplanation.textContent = 'La respuesta correcta es la B. Aproximadamente el 85% al 90% sufre decusación; sólo un 10-15% permanece como tracto ventral directo.';
+          totalQuestions++;
+          if (scoreBadge) scoreBadge.textContent = `${scoreCount} / ${totalQuestions}`;
+        }
+      });
+    }
+
+    // 5. Generate More Questions Simulation
+    const genMoreBtn = document.getElementById('generate-more-quiz-btn');
+    if (genMoreBtn) {
+      genMoreBtn.addEventListener('click', () => {
+        const originalHtml = genMoreBtn.innerHTML;
+        genMoreBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] animate-spin text-primary-container">sync</span>
+          <span>Procesando PDF con Gemini...</span>
+        `;
+        setTimeout(() => {
+          genMoreBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[18px] text-[#059669]">check</span>
+            <span>5 preguntas agregadas al cuestionario</span>
+          `;
+          setTimeout(() => {
+            genMoreBtn.innerHTML = originalHtml;
+          }, 2200);
+        }, 1200);
+      });
+    }
+
+    // 6. Text-to-speech visual toggle
+    const ttsBtn = document.getElementById('tts-summary-btn');
+    const ttsLabel = document.getElementById('tts-label');
+    let isPlayingAudio = false;
+    if (ttsBtn && ttsLabel) {
+      ttsBtn.addEventListener('click', () => {
+        isPlayingAudio = !isPlayingAudio;
+        if (isPlayingAudio) {
+          ttsLabel.textContent = 'Reproduciendo audio síntesis...';
+          ttsBtn.classList.add('animate-pulse');
+        } else {
+          ttsLabel.textContent = 'Escuchar Resumen (45s)';
+          ttsBtn.classList.remove('animate-pulse');
+        }
+      });
+    }
+
+    // 7. Page Traversal Simulation
+    const currentPageNum = document.getElementById('current-page-num');
+    const prevBtn = document.getElementById('prev-page-btn');
+    const nextBtn = document.getElementById('next-page-btn');
+    let pageNum = 14;
+
+    if (prevBtn && nextBtn && currentPageNum) {
+      prevBtn.addEventListener('click', () => {
+        if (pageNum > 1) {
+          pageNum--;
+          currentPageNum.textContent = pageNum;
+        }
+      });
+      nextBtn.addEventListener('click', () => {
+        if (pageNum < 68) {
+          pageNum++;
+          currentPageNum.textContent = pageNum;
+        }
+      });
+    }
+  })();
+</script></main></div></body></html>

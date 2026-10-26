@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-dim":"#dbd8e5","surface-container-high":"#e9e7f3","secondary-container":"#d9dff5","on-background":"#1b1b24","error":"#ba1a1a","surface-container-lowest":"#ffffff","on-primary":"#ffffff","inverse-on-surface":"#f2effc","secondary-fixed":"#dce2f7","on-secondary-fixed-variant":"#404758","outline":"#8a7269","on-error":"#ffffff","tertiary":"#783800","on-tertiary-fixed":"#311300","surface-container-highest":"#e3e1ed","surface-container":"#efecf9","primary-fixed":"#ffdbcd","surface-bright":"#fbf8ff","on-primary-fixed":"#360f00","surface-variant":"#e3e1ed","tertiary-container":"#964f19","on-secondary-fixed":"#141b2b","primary-container":"#a54310","tertiary-fixed":"#ffdbc7","inverse-surface":"#303039","primary-fixed-dim":"#ffb597","on-surface-variant":"#57423a","secondary":"#575e70","inverse-primary":"#ffb597","on-secondary-container":"#5c6274","tertiary-fixed-dim":"#ffb688","on-surface":"#1b1b24","on-tertiary":"#ffffff","outline-variant":"#dec0b6","on-tertiary-container":"#ffd5bd","surface":"#fbf8ff","on-error-container":"#93000a","on-primary-fixed-variant":"#7d2d00","primary":"#822f00","on-secondary":"#ffffff","surface-tint":"#a1400c","on-tertiary-fixed-variant":"#733500","on-primary-container":"#ffd4c4","error-container":"#ffdad6","secondary-fixed-dim":"#c0c6db","surface-container-low":"#f5f2ff","background":"#fbf8ff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-sm":"1rem","gutter-sm":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","margin":"2rem","gutter":"1.5rem","space-md":"1rem","space-xl":"2rem"},"fontFamily":{"code-mono":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"display-hero":["Hanken Grotesk"],"label-sm":["Inter"],"label-code":["JetBrains Mono"],"body-lg":["Inter"],"display-hero-mobile":["Hanken Grotesk"],"label-md":["Inter"],"headline-md":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"]},"fontSize":{"code-mono":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"label-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-space-md flex items-center gap-space-sm bg-surface-container-low"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-[0_1px_2px_rgba(0,0,0,0.08)]"><span class="material-symbols-outlined text-[20px]">menu_book</span></div><div class="flex flex-col leading-tight"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">WordQuiz</span><span class="font-label-code text-label-code text-primary font-medium uppercase">Academic Suite</span></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Espacio Principal</span></div><nav class="flex-1 px-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="panel-analitica" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Panel &amp; Analítica</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="mis-documentos" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Mis Documentos</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="espacio-lectura-resumen-ia" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Lectura &amp; Resumen IA</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="sala-enfoque-alertas" href="#"><span class="material-symbols-outlined text-[20px]">timelapse</span><span>Sala Enfoque &amp; Alertas</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="banco-cuestionarios" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Banco Cuestionarios</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="evaluaciones-simulacros" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span>Evaluaciones &amp; Test</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="historial-auditoria" href="#"><span class="material-symbols-outlined text-[20px]">history_edu</span><span>Historial &amp; Auditoría</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="configuracion-politicas" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Configuración &amp; Políticas</span></a></nav><div class="p-space-sm m-space-sm bg-surface-container rounded-lg"><div class="flex items-center justify-between"><span class="font-label-code text-label-code text-on-surface-variant">Sincronización</span><span class="font-label-code text-label-code text-primary font-semibold">Activa</span></div><div class="mt-1 w-full bg-surface-dim rounded-full h-1"><div class="bg-primary-container h-1 rounded-full w-4/5"></div></div><p class="mt-space-xs font-body-sm text-body-sm text-on-surface-variant">Módulo IA calibrado</p></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 w-full px-space-md flex items-center justify-between gap-space-md"><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-4 bg-surface-container-lowest text-on-surface rounded-lg font-body-md text-body-md outline-none placeholder:text-on-surface-variant shadow-[0_1px_2px_rgba(17,24,39,0.04)] focus:ring-1 focus:ring-primary-container" placeholder="Buscar resúmenes, fichas nemotécnicas, lecturas..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center bg-surface-container-high p-0.5 rounded-lg"><button class="px-3 py-1 rounded font-label-md text-label-md bg-surface-container-lowest text-on-surface font-medium shadow-[0_1px_2px_rgba(0,0,0,0.04)]" type="button">Estudio</button><button class="px-3 py-1 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">Concentración</button></div><div class="flex items-center gap-space-xs bg-surface-container-lowest px-3 py-1 rounded-lg shadow-[0_1px_2px_rgba(17,24,39,0.04)]"><span class="material-symbols-outlined text-[18px] text-primary">timer</span><span class="font-code-mono text-code-mono text-on-surface font-medium">00:48:15</span><span class="inline-flex items-center gap-1 ml-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-code text-label-code font-medium"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>Anti-abandono</span></div><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative w-full pt-14 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full bg-surface px-margin py-space-md shadow-sm">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-primary text-on-primary font-label-code text-label-code font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-bright animate-ping"></span>
+            SIM-ACTIVO • #MED-8812
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+            Escudo Anti-Abandono Nivel 3
+          </span>
+<span class="text-on-surface-variant font-label-code text-label-code">Doc Ref: Neuro_Farmaco_V3_Final.pdf</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight truncate">
+          Farmacología &amp; Neuroanatomía Clínica <span class="font-headline-sm text-headline-sm font-normal text-on-surface-variant">— Módulo Consolidación</span>
+</h1>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-sm bg-surface-container px-space-md py-2 rounded-xl shadow-sm">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold tracking-wider">Tiempo Restante</span>
+<div class="flex items-baseline gap-1">
+<span class="font-code-mono text-headline-sm text-primary font-bold" id="exam-timer">38:15</span>
+<span class="font-code-mono text-body-sm text-on-surface-variant">/ 50:00</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">hourglass_top</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-high hover:bg-surface-dim text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1.5" id="pause-btn">
+<span class="material-symbols-outlined text-[18px]">bedtime</span>
+<span>Pausa Pomodoro (1/2)</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary hover:bg-tertiary text-on-primary font-label-md text-label-md font-semibold transition-all shadow-sm flex items-center gap-1.5" id="submit-exam-btn">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>Entregar Examen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full bg-error-container text-on-error-container px-margin py-2 text-center flex items-center justify-center gap-2 transition-all duration-300" id="violation-banner">
+<span class="material-symbols-outlined text-[18px] text-error">gpp_maybe</span>
+<span class="font-label-md text-label-md font-medium">Protocolo Estricto Activo: Detectada ventana en foco continuo. Intentos de cambio de pestaña: <strong class="font-code-mono">0/2 autorizados</strong> antes de anulación automática.</span>
+<span class="ml-2 px-2 py-0.5 bg-surface-container-lowest text-error rounded font-label-code text-label-code font-bold">Micrófono &amp; Visor OK</span>
+</div>
+<div class="max-w-7xl mx-auto w-full px-margin py-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-surface-container">
+<div class="h-1 bg-primary w-[35%] transition-all duration-500"></div>
+</div>
+<div class="flex items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface font-semibold">
+                Ítem 07 de 20
+              </span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+                Alta Complejidad
+              </span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                Neurología Vascular &amp; Fármacos
+              </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-tertiary-fixed text-on-surface-variant hover:text-tertiary transition-colors font-label-md text-label-md" id="flag-btn">
+<span class="material-symbols-outlined text-[18px] text-tertiary">bookmark</span>
+<span>Marcar para revisión <kbd class="px-1.5 py-0.2 rounded bg-surface-container-lowest text-on-surface font-code-mono text-[10px]">F</kbd></span>
+</button>
+</div>
+</div>
+<div class="mt-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-relaxed">
+              Viñeta Clínica Estructurada — Caso Agudo
+            </h2>
+<div class="mt-space-sm bg-surface-container-low p-space-md rounded-lg font-body-lg text-body-lg text-on-surface leading-relaxed shadow-sm">
+<p>
+                Paciente masculino de 58 años con antecedentes de hipertensión arterial mal controlada y fibrilación auricular paroxística sin anticoagulación previa acude al servicio de urgencias. Presenta cuadro de <strong>debilidad súbita en hemicuerpo derecho</strong>, desviación marcada de la comisura labial hacia la izquierda y <strong>afasia global</strong> instaurada hace exactamente <strong>110 minutos</strong>.
+              </p>
+<div class="mt-space-sm pt-space-sm grid grid-cols-2 sm:grid-cols-4 gap-2 text-on-surface-variant font-label-code text-label-code bg-surface-container-lowest p-space-sm rounded">
+<div><span class="text-secondary">PA:</span> 165/95 mmHg</div>
+<div><span class="text-secondary">FC:</span> 98 lpm (irregular)</div>
+<div><span class="text-secondary">TC simple:</span> Sin hemorragia</div>
+<div><span class="text-secondary">ASPECTS:</span> 9/10</div>
+</div>
+<p class="mt-space-sm">
+                En base a las guías AHA/ASA vigentes y al perfil farmacológico de los agentes trombolíticos y antiagregantes, ¿cuál es la conducta terapéutica farmacológica inicial y de elección para este intervalo de ventana?
+              </p>
+</div>
+</div>
+<div class="mt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Opciones de Respuesta</span>
+<span class="font-label-code text-label-code text-on-surface-variant">Usa teclas [1, 2, 3, 4]</span>
+</div>
+<div class="flex flex-col gap-2.5" id="options-group">
+<label class="group relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all shadow-sm">
+<input class="mt-1 w-4 h-4 text-primary focus:ring-0 focus:ring-offset-0" name="clinical-option" type="radio" value="A"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container text-on-surface flex items-center justify-center font-code-mono text-label-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-colors">A</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Alteplasa (rtPA) intravenosa a dosis de 0.9 mg/kg tras verificar ausencia de contraindicaciones inmediatas.</span>
+</div>
+<p class="mt-1 ml-8 font-body-sm text-body-sm text-on-surface-variant">Ventana terapéutica &lt; 4.5 horas; dosis máxima 90 mg (10% en bolo inicial, 90% restante en infusión durante 60 minutos).</p>
+</div>
+</label>
+<label class="group relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all shadow-sm">
+<input class="mt-1 w-4 h-4 text-primary focus:ring-0 focus:ring-offset-0" name="clinical-option" type="radio" value="B"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container text-on-surface flex items-center justify-center font-code-mono text-label-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-colors">B</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Administración precoz de ácido acetilsalicílico (300 mg) vía rectal asociada a heparina sódica en bolo.</span>
+</div>
+<p class="mt-1 ml-8 font-body-sm text-body-sm text-on-surface-variant">Tromboprofilaxis arterial aguda antes de cualquier estudio vascular complementario por angiografía.</p>
+</div>
+</label>
+<label class="group relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all shadow-sm">
+<input class="mt-1 w-4 h-4 text-primary focus:ring-0 focus:ring-offset-0" name="clinical-option" type="radio" value="C"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container text-on-surface flex items-center justify-center font-code-mono text-label-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-colors">C</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Iniciar infusión continua de Labetalol hasta reducir la presión arterial por debajo de 120/70 mmHg previo a fibrinolisis.</span>
+</div>
+<p class="mt-1 ml-8 font-body-sm text-body-sm text-on-surface-variant">Protección contra transformación hemorrágica mediante hipotensión forzada inmediata en sala de reanimación.</p>
+</div>
+</label>
+<label class="group relative flex items-start gap-space-md p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-all shadow-sm">
+<input class="mt-1 w-4 h-4 text-primary focus:ring-0 focus:ring-offset-0" name="clinical-option" type="radio" value="D"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded bg-surface-container text-on-surface flex items-center justify-center font-code-mono text-label-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-colors">D</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Conducta expectante hasta completar resonancia magnética con difusión (DWI/FLAIR) de perfusión cerebral.</span>
+</div>
+<p class="mt-1 ml-8 font-body-sm text-body-sm text-on-surface-variant">Descartar miméticos de ictus isquémico por déficit metabólico cortical focal previo a medicación trombolítica.</p>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full px-space-lg py-space-md flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" id="toggle-ai-btn">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-md bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tutor IA: Justificación Semántica &amp; Evidencia Documental</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cita directa: Cap. 14 "Manejo Trombolítico en Ictus Isquémico", pág. 218</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-code text-label-code text-primary bg-primary-fixed px-2 py-0.5 rounded font-semibold">Explicación Post-Selección</span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform" id="toggle-icon">expand_more</span>
+</div>
+</button>
+<div class="px-space-lg pb-space-lg pt-space-xs hidden flex flex-col gap-space-md bg-surface-container-lowest" id="ai-panel-body">
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                  Por qué la Opción A es la respuesta óptima (Gold Standard):
+                </span>
+<span class="font-code-mono text-label-code text-on-surface-variant">Confianza OCR/NLP: 98.4%</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                El paciente se encuentra dentro de la ventana dorada (&lt; 4.5 h, lleva 110 min). Con TC craneal normal que excluye hemorragia y PA menor a 185/110 mmHg, no existen contraindicaciones inmediatas. El tratamiento de reperfusión de elección es alteplasa (rtPA) 0.9 mg/kg o tenecteplasa según protocolo institucional.
+              </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm text-body-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-code text-label-code font-bold text-error block mb-1">Fallo Distractor B</span>
+<p class="text-on-surface-variant">La aspirina y anticoagulantes plenos están contraindicados durante las primeras 24 horas posteriores a la trombólisis para evitar riesgo hemorrágico letal.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-code text-label-code font-bold text-error block mb-1">Fallo Distractor C</span>
+<p class="text-on-surface-variant">Bajar la PA por debajo de 120 mmHg compromete drásticamente el área de penumbra isquémica dependiente de flujo colateral crítico.</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-code text-label-code font-bold text-error block mb-1">Fallo Distractor D</span>
+<p class="text-on-surface-variant">Esperar RM retrasa fútilmente el tiempo puerta-aguja ("tiempo es cerebro"). La TC simple sin contraste es suficiente para descartar hemorragia.</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded bg-surface-container-high font-label-code text-label-code text-on-surface-variant">
+<span>Extracto en PDF: Líneas 442-459 | Hash de Cotejo: #sha256:d8a9f201</span>
+<a class="text-primary hover:underline flex items-center gap-1 font-semibold" href="#">
+                Abrir PDF en visor flotante <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Matriz de Preguntas</h3>
+<span class="font-label-code text-label-code px-2 py-0.5 rounded bg-surface-container font-semibold">Progreso: 6/20</span>
+</div>
+<div class="grid grid-cols-5 gap-2" id="question-matrix">
+<button class="h-9 rounded-lg bg-surface-dim text-on-surface font-code-mono text-label-sm font-semibold hover:bg-primary-fixed transition-colors flex items-center justify-center">01</button>
+<button class="h-9 rounded-lg bg-surface-dim text-on-surface font-code-mono text-label-sm font-semibold hover:bg-primary-fixed transition-colors flex items-center justify-center">02</button>
+<button class="h-9 rounded-lg bg-surface-dim text-on-surface font-code-mono text-label-sm font-semibold hover:bg-primary-fixed transition-colors flex items-center justify-center">03</button>
+<button class="h-9 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant font-code-mono text-label-sm font-bold flex items-center justify-center shadow-xs" title="Marcada para revisión">
+<span class="flex items-center gap-0.5">04 <span class="material-symbols-outlined text-[11px]">flag</span></span>
+</button>
+<button class="h-9 rounded-lg bg-surface-dim text-on-surface font-code-mono text-label-sm font-semibold hover:bg-primary-fixed transition-colors flex items-center justify-center">05</button>
+<button class="h-9 rounded-lg bg-surface-dim text-on-surface font-code-mono text-label-sm font-semibold hover:bg-primary-fixed transition-colors flex items-center justify-center">06</button>
+<button class="h-9 rounded-lg bg-primary text-on-primary font-code-mono text-label-sm font-bold shadow-md flex items-center justify-center scale-105" title="Pregunta Actual">
+              07
+            </button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">08</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">09</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">10</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">11</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">12</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">13</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">14</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">15</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">16</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">17</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">18</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">19</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface-variant font-code-mono text-label-sm flex items-center justify-center hover:bg-surface-container-high transition-colors">20</button>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-space-xs font-label-code text-label-code text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-surface-dim"></span>
+<span>Respondida (5)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span>Actual (1)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-tertiary-fixed"></span>
+<span>Marcada (1)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-surface-container"></span>
+<span>Pendiente (13)</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">monitor_heart</span>
+              Telemetría de Foco
+            </h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-code text-label-code font-bold">Activo</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">Estabilidad de Atención:</span>
+<span class="font-code-mono font-bold text-on-surface">97.8%</span>
+</div>
+<div class="w-full bg-surface-dim rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full w-[97%]"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm pt-1">
+<span class="text-on-surface-variant">Eventos de desenfoque:</span>
+<span class="font-code-mono font-bold text-primary">0 incidentes</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Gráfica de Concentración (Últimos 10 min)</span>
+<div class="h-16 w-full bg-surface-container-low rounded-lg p-2 flex items-end justify-between gap-1">
+<div class="w-full bg-primary/20 hover:bg-primary h-[85%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary/30 hover:bg-primary h-[90%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary/40 hover:bg-primary h-[95%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary/30 hover:bg-primary h-[88%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary/50 hover:bg-primary h-[92%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary/70 hover:bg-primary h-[98%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary/60 hover:bg-primary h-[94%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary/80 hover:bg-primary h-[96%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary hover:bg-primary-container h-[100%] rounded-xs transition-all"></div>
+<div class="w-full bg-primary hover:bg-primary-container h-[99%] rounded-xs transition-all"></div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors" id="test-audio-btn">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+<span>Test Alarma Anti-Fuga Sonora</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Atajos Rápidos de Examen</span>
+<div class="grid grid-cols-2 gap-2 text-label-code font-code-mono text-on-surface-variant">
+<div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded">
+<kbd class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface font-bold">1-4</kbd>
+<span>Seleccionar</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded">
+<kbd class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface font-bold">Space</kbd>
+<span>Siguiente</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded">
+<kbd class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface font-bold">F</kbd>
+<span>Bandera</span>
+</div>
+<div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded">
+<kbd class="px-1.5 py-0.5 bg-surface-container rounded text-on-surface font-bold">J</kbd>
+<span>Justificar</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest px-margin py-3 shadow-[0_-2px_10px_rgba(0,0,0,0.03)] sticky bottom-0 z-30">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-code text-label-code">
+<span>Sincronización en la Nube Activa</span>
+<span class="text-surface-dim">•</span>
+<span id="sync-status">Guardado hace 4 seg</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors flex items-center gap-1.5" id="prev-btn">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span>Anterior</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors hidden md:flex items-center gap-1.5" id="summary-btn">
+<span class="material-symbols-outlined text-[18px]">view_comfy</span>
+<span>Resumen de Respuestas</span>
+</button>
+<button class="px-5 py-2 rounded-lg bg-primary hover:bg-tertiary text-on-primary font-label-md text-label-md font-bold transition-all shadow-sm flex items-center gap-1.5" id="next-btn">
+<span>Siguiente Pregunta</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-xs z-50 flex items-center justify-center p-margin-sm hidden" id="modal-submit">
+<div class="bg-surface-container-lowest max-w-md w-full rounded-xl shadow-xl p-space-lg flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-primary flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[28px]">notification_important</span>
+</div>
+<div class="text-center">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">¿Finalizar y Calificar Simulacro?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Has contestado <strong>6 de 20 preguntas</strong>. Las 14 preguntas restantes computarán con 0 puntos si concluyes ahora mismo.
+        </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low font-label-code text-label-code text-on-surface-variant flex flex-col gap-1">
+<div class="flex justify-between"><span>Tiempo no utilizado:</span> <strong class="text-on-surface">38 min 15 seg</strong></div>
+<div class="flex justify-between"><span>Preguntas marcadas (Flag):</span> <strong class="text-tertiary">1 ítem</strong></div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-xs">
+<button class="py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-dim font-label-md text-label-md text-on-surface font-semibold transition-colors" id="modal-cancel-btn">
+          Continuar Examen
+        </button>
+<button class="py-2.5 rounded-lg bg-primary hover:bg-tertiary text-on-primary font-label-md text-label-md font-bold transition-colors" id="modal-confirm-btn">
+          Confirmar Entrega
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initExamEngine() {
+    let secondsLeft = 38 * 60 + 15;
+    const timerEl = document.getElementById('exam-timer');
+    const syncStatusEl = document.getElementById('sync-status');
+    const toggleAIBtn = document.getElementById('toggle-ai-btn');
+    const aiPanelBody = document.getElementById('ai-panel-body');
+    const toggleIcon = document.getElementById('toggle-icon');
+    const flagBtn = document.getElementById('flag-btn');
+    const testAudioBtn = document.getElementById('test-audio-btn');
+    const submitBtn = document.getElementById('submit-exam-btn');
+    const modalSubmit = document.getElementById('modal-submit');
+    const modalCancel = document.getElementById('modal-cancel-btn');
+    const modalConfirm = document.getElementById('modal-confirm-btn');
+    const options = document.querySelectorAll('input[name="clinical-option"]');
+
+    // Countdown interval
+    setInterval(() => {
+      if (secondsLeft > 0) {
+        secondsLeft--;
+        const mins = Math.floor(secondsLeft / 60);
+        const secs = secondsLeft % 60;
+        timerEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      }
+    }, 1000);
+
+    // Dynamic save ping
+    let lastSave = 4;
+    setInterval(() => {
+      lastSave = (lastSave + 1) % 15;
+      if (syncStatusEl) {
+        syncStatusEl.textContent = `Guardado hace ${lastSave} seg`;
+      }
+    }, 1000);
+
+    // AI Panel Toggle
+    if (toggleAIBtn && aiPanelBody && toggleIcon) {
+      toggleAIBtn.addEventListener('click', () => {
+        const isHidden = aiPanelBody.classList.contains('hidden');
+        if (isHidden) {
+          aiPanelBody.classList.remove('hidden');
+          toggleIcon.textContent = 'expand_less';
+        } else {
+          aiPanelBody.classList.add('hidden');
+          toggleIcon.textContent = 'expand_more';
+        }
+      });
+    }
+
+    // Flag toggle
+    let isFlagged = false;
+    if (flagBtn) {
+      flagBtn.addEventListener('click', () => {
+        isFlagged = !isFlagged;
+        if (isFlagged) {
+          flagBtn.classList.add('bg-tertiary-fixed', 'text-tertiary', 'font-bold');
+        } else {
+          flagBtn.classList.remove('bg-tertiary-fixed', 'text-tertiary', 'font-bold');
+        }
+      });
+    }
+
+    // Audio warning simulation
+    if (testAudioBtn) {
+      testAudioBtn.addEventListener('click', () => {
+        const originalText = testAudioBtn.innerHTML;
+        testAudioBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-error">campaign</span><span class="text-error font-bold">Pitido Emitido (800Hz / 0.4s)</span>';
+        setTimeout(() => {
+          testAudioBtn.innerHTML = originalText;
+        }, 1800);
+      });
+    }
+
+    // Modal submit flow
+    if (submitBtn && modalSubmit && modalCancel && modalConfirm) {
+      submitBtn.addEventListener('click', () => modalSubmit.classList.remove('hidden'));
+      modalCancel.addEventListener('click', () => modalSubmit.classList.add('hidden'));
+      modalConfirm.addEventListener('click', () => {
+        modalSubmit.classList.add('hidden');
+        alert('Examen enviado con éxito al motor de evaluación clínica.');
+      });
+    }
+
+    // Keybindings: 1-4 selection, F flag, J justify
+    window.addEventListener('keydown', (e) => {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const idx = parseInt(e.key, 10) - 1;
+        if (options[idx]) {
+          options[idx].checked = true;
+          // Auto reveal explanation when an option is picked
+          if (aiPanelBody && aiPanelBody.classList.contains('hidden')) {
+            aiPanelBody.classList.remove('hidden');
+            if (toggleIcon) toggleIcon.textContent = 'expand_less';
+          }
+        }
+      } else if (e.key.toLowerCase() === 'f') {
+        if (flagBtn) flagBtn.click();
+      } else if (e.key.toLowerCase() === 'j') {
+        if (toggleAIBtn) toggleAIBtn.click();
+      }
+    });
+
+    // Auto reveal AI when selecting with click
+    options.forEach(opt => {
+      opt.addEventListener('change', () => {
+        if (aiPanelBody && aiPanelBody.classList.contains('hidden')) {
+          aiPanelBody.classList.remove('hidden');
+          if (toggleIcon) toggleIcon.textContent = 'expand_less';
+        }
+      });
+    });
+  })();
+</script></main></div></body></html>
